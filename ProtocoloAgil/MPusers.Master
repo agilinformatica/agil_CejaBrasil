@@ -1,0 +1,516 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MPusers.master.cs" Inherits="ProtocoloAgil.MPusers" %>
+
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit, Version=4.1.50731.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server" enableviewstate="True">
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+    <title>Gestão de Jovem Aprendiz </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="Styles/cdl_bh.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        .style2 {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .style4 {
+            font-family: "Century Gothic";
+            font-size: x-large;
+            color: #0066FF;
+        }
+
+        .style3 {
+            font-family: "Century Gothic";
+        }
+
+        .style5 {
+            font-family: "Century Gothic";
+            color: #0033CC;
+        }
+
+        .clearboth {
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript">
+        function inicia() {
+
+            $("#configuracoes").removeClass("active");
+            $("#aprendiz").removeClass("active");
+            $("#pedagogico").removeClass("active");
+            $("#estatisticas").removeClass("active");
+            //display selected division, hide others
+            $("div.configuracoes").css("display", "none");
+            $("div.aprendiz").css("display", "none");
+            $("div.pedagogico").css("display", "none");
+            $("div.estatisticas").css("display", "none");
+            $('<%# "#" + Session["CurrentPage"] %>').addClass("active");
+            $('<%# "div." + Session["CurrentPage"] %>').fadeIn();
+        }
+
+    </script>
+</head>
+<body onload="inicia();">
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true"
+            EnableScriptLocalization="true" ScriptMode="Release">
+        </asp:ToolkitScriptManager>
+        <div id="header">
+            <div id="cabecalho">
+                <div class="logo02">
+                </div>
+                <div class="Nome" style="width: 400px;">
+                    Gestão do Programa Jovem Aprendiz
+                </div>
+                <div id="sair">
+                    <div class="userlinks">
+                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="quit" NavigateUrl="~/Default.aspx">Sair</asp:HyperLink>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="content_home">
+                <div class="header">
+                    <div class="text_school" style="width: 30%; margin-left: 60px;">
+                        <asp:Label ID="LBnomeEscola" CssClass="NomeEscola02" runat="server" EnableTheming="True" Font-Strikeout="False"></asp:Label>
+                        <br />
+                        <a runat="server" id="LNKendWeb">
+                            <asp:Label ID="LBEndWeb" CssClass="NomeEscola02" runat="server" Text=""></asp:Label></a>
+                        <p>
+                            <asp:Label ID="LBenderecoEscola" CssClass="NomeEscola02" runat="server"></asp:Label>
+                        </p>
+                    </div>
+                    <div class="topmenu">
+                        <ul id="menu" class="menu">
+                            <li id="configuracoes">Configurações</li>
+                            <li id="aprendiz">Jovens</li>
+                            <li id="pedagogico">Pedagógico</li>
+                            <li id="estatisticas">Estatísticas</li>
+                        </ul>
+                    </div>
+                    <div class="submenu configuracoes" style="display: none;">
+                        <table class="itens_submenu">
+                            <tr>
+                                <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Cadastros</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_Unidades" runat="server" OnClick="LinkButton1_Click"> Cadastro de Unidades </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_Escolas" runat="server" OnClick="LinkButton1_Click"> Cadastro de Escolas </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_SituacaoAprendiz" runat="server" OnClick="LinkButton1_Click"> Status do Jovem</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Ocorrencias" runat="server" OnClick="LinkButton1_Click"> Cadastro de Ocorrências </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_Profissoes" runat="server" OnClick="LinkButton1_Click"> Cadastro de Profissões </asp:LinkButton>
+                                                </li>
+                                                <%--<li> <asp:LinkButton ID="LK_Tipo_Emprego" runat="server" OnClick="LinkButton1_Click"> Cadastro de Vínculo Empregatício </asp:LinkButton> </li>--%>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_cadastro_GrauParentesco" runat="server" OnClick="LinkButton1_Click"> Graus de Parentesco</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_cadastro_Escolaridade" runat="server" OnClick="LinkButton1_Click"> Graus de Escolaridade</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_feriado" runat="server" OnClick="LinkButton1_Click"> Cadastro de Feriados</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Motivo_Desligamento" runat="server" OnClick="LinkButton1_Click"> Motivos de Desligamento</asp:LinkButton>
+                                                </li>
+                                                <%--<li> <asp:LinkButton ID="LK_Indices_Sociais" runat="server" OnClick="LinkButton1_Click"> Cadastro de Índices Sociais</asp:LinkButton> </li>--%>
+                                                <%--<li> <asp:LinkButton ID="LK_CAdastroItinerario" runat="server" OnClick="LinkButton1_Click"> Cadastro de Itinerários</asp:LinkButton> </li>--%>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_CadastroInstituicoesParceiras" runat="server" OnClick="LinkButton1_Click"> Cadastro de Instituições Parceiras</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_CadastroStatusEncaminhamento" runat="server" OnClick="LinkButton1_Click"> Cadastro de Status Encaminhamento</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton Visible="false" ID="LK_CadastroDocumentos" runat="server" OnClick="LinkButton1_Click"> Cadastro de Requerimentos</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_Regiao" runat="server" OnClick="LinkButton1_Click"> Cadastro de Regiões</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton Visible="false" ID="LK_Cadastro_Bairro" runat="server" OnClick="LinkButton1_Click"> Cadastro de Bairros</asp:LinkButton>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Empresa</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Ramos_Atividade" runat="server" OnClick="LinkButton1_Click"> Cadastro de Ramos de Atividade </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_Parceiros" runat="server" OnClick="LinkButton1_Click"> Cadastro de Parceiros </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_unidades_parceiros" runat="server" OnClick="LinkButton1_Click"> Cadastro de Unidades do Parceiro </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Orientadores" runat="server" OnClick="LinkButton1_Click"> Cadastro de Orientadores </asp:LinkButton>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_CadastroUsuarios" runat="server" OnClick="LinkButton1_Click"> Cadastro de Usuários </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Controle de Acesso</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Controle_Acesso" runat="server" OnClick="LinkButton1_Click"> Designar Funções </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Perfil_Usuario" runat="server" OnClick="LinkButton1_Click"> Cadastro de Perfil </asp:LinkButton>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+
+
+                                <%--<td> <asp:LinkButton ID="LK_Data_Mace" runat="server" OnClick="LinkButton1_Click"> Data Mace</asp:LinkButton>  </td>--%>
+
+
+                                <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Vagas</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_CadastroVagas" runat="server" OnClick="LinkButton1_Click"> Cadastro de Vagas</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_PesquisaVagas" runat="server" OnClick="LinkButton1_Click"> Pesquisa de vagas </asp:LinkButton>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+
+
+                             <%--    <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Clientes/Contatos</a>
+                                            <ul>
+                                                 <li>
+                                                    <asp:LinkButton  ID="LK_StatusCliente" runat="server" OnClick="LinkButton1_Click"> Status Cliente</asp:LinkButton>
+                                                </li>
+                                                 <li>
+                                                    <asp:LinkButton  ID="LK_Cliente" runat="server" OnClick="LinkButton1_Click"> Cadastro de Cliente</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_TipoContato" runat="server" OnClick="LinkButton1_Click">Tipo Contato</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_FechamentoContato" runat="server" OnClick="LinkButton1_Click"> Fechamento Contato </asp:LinkButton>
+                                                </li>
+
+                                                 <li>
+                                                    <asp:LinkButton Visible="false" ID="LK_Contatos" runat="server" OnClick="LinkButton1_Click"> Cadastro Contatos </asp:LinkButton>
+                                                </li>
+
+                                                  <li>
+                                                    <asp:LinkButton ID="LK_ListaContatosAge" runat="server" OnClick="LinkButton1_Click"> Lista de contatos agendados por períodos </asp:LinkButton>
+                                                </li>
+
+                                                 <li>
+                                                    <asp:LinkButton ID="LK_RealizadosAge" runat="server" OnClick="LinkButton1_Click"> Lista de contatos realizados por períodos </asp:LinkButton>
+                                                </li>
+                                                   <li>
+                                                    <asp:LinkButton ID="LK_ContatosAtend" runat="server" OnClick="LinkButton1_Click"> Lista de contatos realizados por atendente </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_ContatoRetorno" runat="server" OnClick="LinkButton1_Click"> Lista de contatos por data retorno </asp:LinkButton>
+                                                </li>
+                                                 <li>
+                                                    <asp:LinkButton ID="LK_NiverCliente" runat="server" OnClick="LinkButton1_Click"> Aniversário cliente </asp:LinkButton>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>--%>
+                                
+                                <td></td>
+                                <td></td>
+
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="submenu aprendiz" style="display: none;">
+                        <table class="itens_submenu">
+                            <tr>
+                                <td>
+                                    <asp:LinkButton ID="LK_controle_alunos" runat="server" OnClick="LinkButton1_Click"> Cadastro de Jovens </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_Lanca_ocorrencia" runat="server" OnClick="LinkButton1_Click"> Cadastra Ocorrências </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_Aniversariantes" runat="server" OnClick="LinkButton1_Click"> Aniversariantes </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_Lista_Ativos" runat="server" OnClick="LinkButton1_Click"> Lista de Aprendizes Ativos </asp:LinkButton>
+                                </td>
+                                <%-- <td> <asp:LinkButton ID="LK_Gera_Frequencia" runat="server" OnClick="LinkButton1_Click"> Controle de Frequência </asp:LinkButton> </td>--%>
+                                <%--<td> <asp:LinkButton ID="LK_Destaque_aprendiz" runat="server" OnClick="LinkButton1_Click"> Destaque</asp:LinkButton> </td>--%>
+                                <%--<td> <asp:LinkButton ID="LK_eventos_aprendizes" runat="server" OnClick="LinkButton1_Click" > Eventos Aprendizes</asp:LinkButton></td>--%>
+                                <%--<td>
+                                    <asp:LinkButton ID="LK_realocacao" runat="server" OnClick="LinkButton1_Click"> Realocação de Aprendizes</asp:LinkButton></td>
+                                <td>
+                                    <asp:LinkButton ID="LK_lancamentoNotas" runat="server" OnClick="LinkButton1_Click"> Lançamento de Notas</asp:LinkButton></td>--%>
+                                <td>
+                                    <asp:LinkButton ID="LK_pesquisaCandidatos" runat="server" OnClick="LinkButton1_Click"> Pesquisa Candidatos</asp:LinkButton></td>
+                                <%--<td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Controle de Documentos</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton runat="server" ID="LK_GestaoDocumentos" href="../pages/GestaoDocumentos.aspx">Gestão de Requerimentos</asp:LinkButton>
+                                                </li>
+                                                <asp:LinkButton runat="server" ID="LKContDocFinalizado" href="../pages/GestaoDocumentosFinalizados.aspx">Protocolo Finalizado</asp:LinkButton></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>--%>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="submenu pedagogico" style="display: none;">
+                        <table class="itens_submenu">
+                            <tr>
+                                <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Cadastros</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_Curso" runat="server" OnClick="LinkButton1_Click"> Cadastro de Cursos </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Disciplinas" runat="server" OnClick="LinkButton1_Click"> Cadastro de Disciplinas </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_Turmas" runat="server" OnClick="LinkButton1_Click"> Cadastro de Turmas </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Cadastro_Conceito" runat="server" OnClick="LinkButton1_Click"> Cadastro de Conceitos </asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Area_Atuacao" runat="server" OnClick="LinkButton1_Click"> Áreas de Atuação</asp:LinkButton>
+                                                </li>
+                                                <%--  <li>
+                                                    <asp:LinkButton ID="LK_Eventos" runat="server" OnClick="LinkButton1_Click"> Cadastro de Eventos</asp:LinkButton>
+                                                </li>--%>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_Cadastro_Educadores" runat="server" OnClick="LinkButton1_Click"> Lista de Monitores </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_Modulos_Aprendizagem" runat="server" OnClick="LinkButton1_Click"> Módulos de Aprendizagem </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_Plano_curricular" runat="server" OnClick="LinkButton1_Click"> Planos Curriculares </asp:LinkButton>
+                                </td>
+                              
+
+
+
+                                 <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Lista de Presença</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Professor_disciplina" runat="server" OnClick="LinkButton1_Click">Lista de Presença</asp:LinkButton></li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_ListaPresencaCapacitacao" runat="server" Visible="false" OnClick="LinkButton1_Click">Lista Presença Capacitação</asp:LinkButton></li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_ListaPresencaIntrodutorio" runat="server" Visible="false" OnClick="LinkButton1_Click">Lista Presença Introdutório</asp:LinkButton></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+
+
+
+
+
+                                <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Cronogramas</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Gera_Cronograma" runat="server" OnClick="LinkButton1_Click">Cronogramas</asp:LinkButton></li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Gera_CronogramaTurmaDisciplina" runat="server" Visible="false" OnClick="LinkButton1_Click">Geração de Cronograma Turma Disciplina</asp:LinkButton></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+
+                                <td>
+                                    <asp:LinkButton ID="LK_Lista_Cursantes" runat="server" OnClick="LinkButton1_Click">Aprendizes por Turma</asp:LinkButton>
+                                </td>
+
+
+                                <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Lançamento de Falta</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Notas_Faltas" runat="server" OnClick="LinkButton1_Click">Lançar Faltas</asp:LinkButton></li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Notas_Faltas_Capacitacao" runat="server" Visible="false" OnClick="LinkButton1_Click">Lançar Faltas Capacitação</asp:LinkButton></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+
+                                <%--<td>  <asp:LinkButton ID="LK_notas_Periodo" runat="server" href="../pages/NotasPeriodo.aspx">Notas por Período</asp:LinkButton>  </td> --%>
+                                <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Controle de Presença</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Controle_Presenca" runat="server" OnClick="LinkButton1_Click">Por Data/Turma</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Controle_Presenca_Capacitacao" runat="server" Visible="false" OnClick="LinkButton1_Click">Por Data/Turma Capacitação</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Controle_Por_Periodo" runat="server" OnClick="LinkButton1_Click">Por Periodo/Turma</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Controle_Por_Parceiro" runat="server" OnClick="LinkButton1_Click">Por Periodo/Parceiro</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Total_Por_Turma" runat="server" OnClick="LinkButton1_Click">Total Periodo/Turma</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Total_Por_Parceiro" runat="server" OnClick="LinkButton1_Click">Total Periodo/Parceiros</asp:LinkButton>
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Total_Por_Parceiro_Faltas" runat="server" OnClick="LinkButton1_Click">Total Periodo/Faltas</asp:LinkButton>
+                                                </li>
+                                                 <li>
+                                                    <asp:LinkButton ID="LK_Contagem_Faltas_Periodo" runat="server" OnClick="LinkButton1_Click">Contagem Faltas Período</asp:LinkButton>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="submenu estatisticas" style="display: none;">
+                        <table class="itens_submenu">
+                            <tr>
+                                <td>
+                                    <asp:LinkButton ID="LK_AlunosSituacao_Estatistica" runat="server" OnClick="LinkButton1_Click"> Jovens por Status </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_AlunosGeral_Estatistica" runat="server" OnClick="LinkButton1_Click"> Estatística Geral de Jovens </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_AlunosEmpresa_Estatistica" runat="server" OnClick="LinkButton1_Click"> Aprendizes por Parceiro </asp:LinkButton>
+                                </td>
+                                <%--                                <td>
+                                    <asp:LinkButton ID="LK_Fechamento_Mensal" runat="server" OnClick="LinkButton1_Click"> Fechamento Mensal</asp:LinkButton>
+                                </td>--%>
+                                <td>
+                                    <asp:LinkButton ID="LK_Estatistica_pesquisa" runat="server" OnClick="LinkButton1_Click"> Gestão de Avaliações</asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="Lk_Atribuir_pesquisa" runat="server" OnClick="LinkButton1_Click"> Atribuição de Avaliações</asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_pesquisas_orientador" runat="server" OnClick="LinkButton1_Click">Avaliações Disponíveis Educadores </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_pesquisas_orientador_Empresa" runat="server" OnClick="LinkButton1_Click">Avaliações Disponíveis Empresa </asp:LinkButton>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_Realizadas_periodo" runat="server" OnClick="LinkButton1_Click">Avaliações Realizadas </asp:LinkButton>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <div id="ContentFake" style="display: none">
+                            <asp:Panel ID="Panel1" runat="server" CssClass="style2" Height="400px" Width="505px">
+                                <strong>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <asp:Label ID="Label1" runat="server" CssClass="style4" Font-Size="20px"></asp:Label>
+                                </strong>
+                                <br class="style3" />
+                                <span class="style5">Gestão do Programa Jovem Aprendiz
+                                    <br />
+                                </span>
+                                <div class="system_logo">
+                                    <a href="http://www.agilsist.com.br" target="_blank">Mestre Ágil</a>
+                                </div>
+                            </asp:Panel>
+                        </div>
+                        <div id="ContentHolder">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <div class="footer">
+                <div class="content_footer">
+                    <div class="copyright">
+                        <p>
+                            CEFORT - CONTAGEM - Gestão do Programa Jovem Aprendiz
+                        </p>
+                        <p>
+                            Desenvolvido por Agil Sistemas | <a href="http://www.agilsist.com.br">http://www.agilsist.com.br</a>&nbsp;&nbsp;&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <asp:HiddenField ID="ActiveTab" runat="server" />
+    </form>
+    <script src="<%= ResolveUrl("Scripts/tabs.js") %>" type="text/javascript"></script>
+    <script src=" <%= ResolveUrl("Scripts/Mascara.js") %>" type="text/javascript"></script>
+    <script src=" <%= ResolveUrl("Scripts/fixfocus.js") %>" type="text/javascript"></script>
+</body>
+</html>

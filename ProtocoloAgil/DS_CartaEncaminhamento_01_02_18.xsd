@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_CartaEncaminhamento_01_02_18" targetNamespace="http://tempuri.org/DS_CartaEncaminhamento_01_02_18.xsd" xmlns:mstns="http://tempuri.org/DS_CartaEncaminhamento_01_02_18.xsd" xmlns="http://tempuri.org/DS_CartaEncaminhamento_01_02_18.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ProtocoloAgilConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProtocoloAgilConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ProtocoloAgilConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_CartaEncaminhamentoTableAdapter" GeneratorDataComponentClassName="View_CartaEncaminhamentoTableAdapter" Name="View_CartaEncaminhamento" UserDataComponentName="View_CartaEncaminhamentoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="admin_CejaBrasil.dbo.View_CartaEncaminhamento" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Enc_Sequencia, Apr_Nome, Apr_CarteiraDeIdentidade, GreDescricao, Apr_Escola_HInicio, Apr_Escola_HTermino, Apr_Endereço, Apr_NumeroEndereco, Apr_Bairro, Apr_Cidade, Apr_UF, ParUniDescricao, Foto, EnderecoParceiroUnidade, EnderecoParceiroUnidade2, Enc_DataEncaminha, Apr_TurnoEscolar, ReqId, ReqDataSolitação, AreaDescricao, ReqAtividades, ReqQuantidade, ParNomeContato, ReqDataEntrevista, ReqHorarioTrabalho, ReqHorarioEntrevista, ReqContaoEntrevista FROM dbo.View_CartaEncaminhamento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Enc_Sequencia" DataSetColumn="Enc_Sequencia" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="Apr_CarteiraDeIdentidade" DataSetColumn="Apr_CarteiraDeIdentidade" />
+              <Mapping SourceColumn="GreDescricao" DataSetColumn="GreDescricao" />
+              <Mapping SourceColumn="Apr_Escola_HInicio" DataSetColumn="Apr_Escola_HInicio" />
+              <Mapping SourceColumn="Apr_Escola_HTermino" DataSetColumn="Apr_Escola_HTermino" />
+              <Mapping SourceColumn="Apr_Endereço" DataSetColumn="Apr_Endereço" />
+              <Mapping SourceColumn="Apr_NumeroEndereco" DataSetColumn="Apr_NumeroEndereco" />
+              <Mapping SourceColumn="Apr_Bairro" DataSetColumn="Apr_Bairro" />
+              <Mapping SourceColumn="Apr_Cidade" DataSetColumn="Apr_Cidade" />
+              <Mapping SourceColumn="Apr_UF" DataSetColumn="Apr_UF" />
+              <Mapping SourceColumn="ParUniDescricao" DataSetColumn="ParUniDescricao" />
+              <Mapping SourceColumn="Foto" DataSetColumn="Foto" />
+              <Mapping SourceColumn="EnderecoParceiroUnidade" DataSetColumn="EnderecoParceiroUnidade" />
+              <Mapping SourceColumn="EnderecoParceiroUnidade2" DataSetColumn="EnderecoParceiroUnidade2" />
+              <Mapping SourceColumn="Enc_DataEncaminha" DataSetColumn="Enc_DataEncaminha" />
+              <Mapping SourceColumn="Apr_TurnoEscolar" DataSetColumn="Apr_TurnoEscolar" />
+              <Mapping SourceColumn="ReqId" DataSetColumn="ReqId" />
+              <Mapping SourceColumn="ReqDataSolitação" DataSetColumn="ReqDataSolitação" />
+              <Mapping SourceColumn="AreaDescricao" DataSetColumn="AreaDescricao" />
+              <Mapping SourceColumn="ReqAtividades" DataSetColumn="ReqAtividades" />
+              <Mapping SourceColumn="ReqQuantidade" DataSetColumn="ReqQuantidade" />
+              <Mapping SourceColumn="ParNomeContato" DataSetColumn="ParNomeContato" />
+              <Mapping SourceColumn="ReqDataEntrevista" DataSetColumn="ReqDataEntrevista" />
+              <Mapping SourceColumn="ReqHorarioTrabalho" DataSetColumn="ReqHorarioTrabalho" />
+              <Mapping SourceColumn="ReqHorarioEntrevista" DataSetColumn="ReqHorarioEntrevista" />
+              <Mapping SourceColumn="ReqContaoEntrevista" DataSetColumn="ReqContaoEntrevista" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_CartaEncaminhamento_01_02_18" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DS_CartaEncaminhamento_01_02_18" msprop:Generator_UserDSName="DS_CartaEncaminhamento_01_02_18">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_CartaEncaminhamento" msprop:Generator_TableClassName="View_CartaEncaminhamentoDataTable" msprop:Generator_TableVarName="tableView_CartaEncaminhamento" msprop:Generator_TablePropName="View_CartaEncaminhamento" msprop:Generator_RowDeletingName="View_CartaEncaminhamentoRowDeleting" msprop:Generator_RowChangingName="View_CartaEncaminhamentoRowChanging" msprop:Generator_RowEvHandlerName="View_CartaEncaminhamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_CartaEncaminhamentoRowDeleted" msprop:Generator_UserTableName="View_CartaEncaminhamento" msprop:Generator_RowChangedName="View_CartaEncaminhamentoRowChanged" msprop:Generator_RowEvArgName="View_CartaEncaminhamentoRowChangeEvent" msprop:Generator_RowClassName="View_CartaEncaminhamentoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Enc_Sequencia" msprop:Generator_ColumnVarNameInTable="columnEnc_Sequencia" msprop:Generator_ColumnPropNameInRow="Enc_Sequencia" msprop:Generator_ColumnPropNameInTable="Enc_SequenciaColumn" msprop:Generator_UserColumnName="Enc_Sequencia" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_CarteiraDeIdentidade" msprop:Generator_ColumnVarNameInTable="columnApr_CarteiraDeIdentidade" msprop:Generator_ColumnPropNameInRow="Apr_CarteiraDeIdentidade" msprop:Generator_ColumnPropNameInTable="Apr_CarteiraDeIdentidadeColumn" msprop:Generator_UserColumnName="Apr_CarteiraDeIdentidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GreDescricao" msprop:Generator_ColumnVarNameInTable="columnGreDescricao" msprop:Generator_ColumnPropNameInRow="GreDescricao" msprop:Generator_ColumnPropNameInTable="GreDescricaoColumn" msprop:Generator_UserColumnName="GreDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Escola_HInicio" msprop:Generator_ColumnVarNameInTable="columnApr_Escola_HInicio" msprop:Generator_ColumnPropNameInRow="Apr_Escola_HInicio" msprop:Generator_ColumnPropNameInTable="Apr_Escola_HInicioColumn" msprop:Generator_UserColumnName="Apr_Escola_HInicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Apr_Escola_HTermino" msprop:Generator_ColumnVarNameInTable="columnApr_Escola_HTermino" msprop:Generator_ColumnPropNameInRow="Apr_Escola_HTermino" msprop:Generator_ColumnPropNameInTable="Apr_Escola_HTerminoColumn" msprop:Generator_UserColumnName="Apr_Escola_HTermino" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Apr_Endereço" msprop:Generator_ColumnVarNameInTable="columnApr_Endereço" msprop:Generator_ColumnPropNameInRow="Apr_Endereço" msprop:Generator_ColumnPropNameInTable="Apr_EndereçoColumn" msprop:Generator_UserColumnName="Apr_Endereço" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_NumeroEndereco" msprop:Generator_ColumnVarNameInTable="columnApr_NumeroEndereco" msprop:Generator_ColumnPropNameInRow="Apr_NumeroEndereco" msprop:Generator_ColumnPropNameInTable="Apr_NumeroEnderecoColumn" msprop:Generator_UserColumnName="Apr_NumeroEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Bairro" msprop:Generator_ColumnVarNameInTable="columnApr_Bairro" msprop:Generator_ColumnPropNameInRow="Apr_Bairro" msprop:Generator_ColumnPropNameInTable="Apr_BairroColumn" msprop:Generator_UserColumnName="Apr_Bairro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Cidade" msprop:Generator_ColumnVarNameInTable="columnApr_Cidade" msprop:Generator_ColumnPropNameInRow="Apr_Cidade" msprop:Generator_ColumnPropNameInTable="Apr_CidadeColumn" msprop:Generator_UserColumnName="Apr_Cidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_UF" msprop:Generator_ColumnVarNameInTable="columnApr_UF" msprop:Generator_ColumnPropNameInRow="Apr_UF" msprop:Generator_ColumnPropNameInTable="Apr_UFColumn" msprop:Generator_UserColumnName="Apr_UF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Foto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFoto" msprop:Generator_ColumnPropNameInRow="Foto" msprop:Generator_ColumnPropNameInTable="FotoColumn" msprop:Generator_UserColumnName="Foto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="46" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EnderecoParceiroUnidade" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEnderecoParceiroUnidade" msprop:Generator_ColumnPropNameInRow="EnderecoParceiroUnidade" msprop:Generator_ColumnPropNameInTable="EnderecoParceiroUnidadeColumn" msprop:Generator_UserColumnName="EnderecoParceiroUnidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="108" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EnderecoParceiroUnidade2" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEnderecoParceiroUnidade2" msprop:Generator_ColumnPropNameInRow="EnderecoParceiroUnidade2" msprop:Generator_ColumnPropNameInTable="EnderecoParceiroUnidade2Column" msprop:Generator_UserColumnName="EnderecoParceiroUnidade2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="86" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Enc_DataEncaminha" msprop:Generator_ColumnVarNameInTable="columnEnc_DataEncaminha" msprop:Generator_ColumnPropNameInRow="Enc_DataEncaminha" msprop:Generator_ColumnPropNameInTable="Enc_DataEncaminhaColumn" msprop:Generator_UserColumnName="Enc_DataEncaminha" type="xs:dateTime" />
+              <xs:element name="Apr_TurnoEscolar" msprop:Generator_ColumnVarNameInTable="columnApr_TurnoEscolar" msprop:Generator_ColumnPropNameInRow="Apr_TurnoEscolar" msprop:Generator_ColumnPropNameInTable="Apr_TurnoEscolarColumn" msprop:Generator_UserColumnName="Apr_TurnoEscolar" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReqId" msprop:Generator_ColumnVarNameInTable="columnReqId" msprop:Generator_ColumnPropNameInRow="ReqId" msprop:Generator_ColumnPropNameInTable="ReqIdColumn" msprop:Generator_UserColumnName="ReqId" type="xs:int" />
+              <xs:element name="ReqDataSolitação" msprop:Generator_ColumnVarNameInTable="columnReqDataSolitação" msprop:Generator_ColumnPropNameInRow="ReqDataSolitação" msprop:Generator_ColumnPropNameInTable="ReqDataSolitaçãoColumn" msprop:Generator_UserColumnName="ReqDataSolitação" type="xs:dateTime" />
+              <xs:element name="AreaDescricao" msprop:Generator_ColumnVarNameInTable="columnAreaDescricao" msprop:Generator_ColumnPropNameInRow="AreaDescricao" msprop:Generator_ColumnPropNameInTable="AreaDescricaoColumn" msprop:Generator_UserColumnName="AreaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReqAtividades" msprop:Generator_ColumnVarNameInTable="columnReqAtividades" msprop:Generator_ColumnPropNameInRow="ReqAtividades" msprop:Generator_ColumnPropNameInTable="ReqAtividadesColumn" msprop:Generator_UserColumnName="ReqAtividades" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReqQuantidade" msprop:Generator_ColumnVarNameInTable="columnReqQuantidade" msprop:Generator_ColumnPropNameInRow="ReqQuantidade" msprop:Generator_ColumnPropNameInTable="ReqQuantidadeColumn" msprop:Generator_UserColumnName="ReqQuantidade" type="xs:short" />
+              <xs:element name="ParNomeContato" msprop:Generator_ColumnVarNameInTable="columnParNomeContato" msprop:Generator_ColumnPropNameInRow="ParNomeContato" msprop:Generator_ColumnPropNameInTable="ParNomeContatoColumn" msprop:Generator_UserColumnName="ParNomeContato" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReqDataEntrevista" msprop:Generator_ColumnVarNameInTable="columnReqDataEntrevista" msprop:Generator_ColumnPropNameInRow="ReqDataEntrevista" msprop:Generator_ColumnPropNameInTable="ReqDataEntrevistaColumn" msprop:Generator_UserColumnName="ReqDataEntrevista" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReqHorarioTrabalho" msprop:Generator_ColumnVarNameInTable="columnReqHorarioTrabalho" msprop:Generator_ColumnPropNameInRow="ReqHorarioTrabalho" msprop:Generator_ColumnPropNameInTable="ReqHorarioTrabalhoColumn" msprop:Generator_UserColumnName="ReqHorarioTrabalho" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReqHorarioEntrevista" msprop:Generator_ColumnVarNameInTable="columnReqHorarioEntrevista" msprop:Generator_ColumnPropNameInRow="ReqHorarioEntrevista" msprop:Generator_ColumnPropNameInTable="ReqHorarioEntrevistaColumn" msprop:Generator_UserColumnName="ReqHorarioEntrevista" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReqContaoEntrevista" msprop:Generator_ColumnVarNameInTable="columnReqContaoEntrevista" msprop:Generator_ColumnPropNameInRow="ReqContaoEntrevista" msprop:Generator_ColumnPropNameInTable="ReqContaoEntrevistaColumn" msprop:Generator_UserColumnName="ReqContaoEntrevista" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

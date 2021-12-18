@@ -1,0 +1,2070 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="admin_CejaBrasil" Class="DC_ProtocoloAgilDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=177.70.27.152;Initial Catalog=admin_CejaBrasil;Persist Security Info=True;User ID=SA" SettingsObjectName="MenorAprendizWeb.Base.Properties.Settings" SettingsPropertyName="admin_CejaBrasilConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.View_controle_frequencia" Member="View_controle_frequencias">
+    <Type Name="View_controle_frequencia">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ALATurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParDescricao" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="FreqNumFaltas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Parceiro" Type="System.String" DbType="VarChar(121) NOT NULL" CanBeNull="false" />
+      <Column Name="ALAInicioExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALATerminoExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FreqReferencia" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="FreqFaltas" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FreqObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FreqDataPrevEntrega" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FreqDataEntrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Situacao" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="Pagamento" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="FreqOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FreqSituacao" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_AreaAtuacao" Member="CA_AreaAtuacaos">
+    <Type Name="CA_AreaAtuacao">
+      <Column Name="AreaCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AreaDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="AreaNumeroCadastro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AreaCargaHoraria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_AutorizacaoUsuario" Member="CA_AutorizacaoUsuarios">
+    <Type Name="CA_AutorizacaoUsuario">
+      <Column Name="AutFUsuario" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AutFFuncao" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AutFTipoAut" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Bairros" Member="CA_Bairros">
+    <Type Name="CA_Bairro">
+      <Column Name="DescBairro" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RegBairro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Conceitos" Member="CA_Conceitos">
+    <Type Name="CA_Conceito">
+      <Column Name="ConCodigo" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ConNota" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ConPercentual" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ConAprova" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Cursos" Member="CA_Cursos">
+    <Type Name="CA_Curso">
+      <Column Name="CurCodigo" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CurCargaHoraria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CurAbreviatura" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="EnsNumeroPeriodos" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="CA_Curso_CA_Plano" Member="CA_Planos" ThisKey="CurCodigo" OtherKey="PlanCurso" Type="CA_Plano" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_DatasEncontros" Member="CA_DatasEncontros">
+    <Type Name="CA_DatasEncontro">
+      <Column Name="DteData" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DteTipoEncontro" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DteLocalEncontro" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Disciplinas" Member="CA_Disciplinas">
+    <Type Name="CA_Disciplina">
+      <Column Name="DisCodigo" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DisAbreviatura" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DisCor" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Association Name="CA_Disciplina_CA_DisciplinasTurmaProf" Member="CA_DisciplinasTurmaProfs" ThisKey="DisCodigo" OtherKey="DPDisciplina" Type="CA_DisciplinasTurmaProf" />
+      <Association Name="CA_Disciplina_CA_PlanoCurricular" Member="CA_PlanoCurriculars" ThisKey="DisCodigo" OtherKey="PlcDisciplina" Type="CA_PlanoCurricular" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_DisciplinasAprendiz" Member="CA_DisciplinasAprendizs">
+    <Type Name="CA_DisciplinasAprendiz">
+      <Column Name="DiaCodAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DiaDisciplinaProf" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DiaCargaHoraria" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DiaNumeroFaltas" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DiaConceito" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="DiaObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DiaAula1" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula2" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula3" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula4" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula5" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula6" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula7" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula8" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula9" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula10" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula11" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula12" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula13" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula14" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula15" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DieCompreensao" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DieComLing" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DiePostura" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DieParticipacao" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DiaAula16" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula17" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula18" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula19" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula20" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaDestaque" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaParecerFinal" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_DisciplinasTurmaProf" Member="CA_DisciplinasTurmaProfs">
+    <Type Name="CA_DisciplinasTurmaProf">
+      <Column Name="DPTurma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DPProf" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DPDisciplina" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DPDataInicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DPDataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DpSalaFisica" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DpOrdem" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DPProfAux" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DPParecer01" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DPParecer02" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DPParecer03" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="CA_Disciplina_CA_DisciplinasTurmaProf" Member="CA_Disciplina" ThisKey="DPDisciplina" OtherKey="DisCodigo" Type="CA_Disciplina" IsForeignKey="true" />
+      <Association Name="CA_Turma_CA_DisciplinasTurmaProf" Member="CA_Turma" ThisKey="DPTurma" OtherKey="TurCodigo" Type="CA_Turma" IsForeignKey="true" />
+      <Association Name="CA_Educadore_CA_DisciplinasTurmaProf" Member="CA_Educadore" ThisKey="DPProf" OtherKey="EducCodigo" Type="CA_Educadore" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Documentos" Member="CA_Documentos">
+    <Type Name="CA_Documento">
+      <Column Name="DocCodigo" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DocDescricao" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="DocValor" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="DocTipo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DocObrigatorio" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DocDiasEntrega" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DocProtocolo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DocOrientacoes" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="DocExigeAnexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DocOrientacoes02" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_DocumentosAprendiz" Member="CA_DocumentosAprendizs">
+    <Type Name="CA_DocumentosAprendiz">
+      <Column Name="DAprMatricula" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DAprDocumento" Type="System.String" DbType="VarChar(3) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DAprDataSolic" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DAprDataEntrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DAprUsuario" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="DAprObservacao" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="DAprStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DAprSequencia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DAprDocAnexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DAprJustificativa" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="DAprParecer" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="DAprStatusParecer" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DAprUsuParecer" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="DAprDataParecer" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DAprContParacer" Type="System.String" DbType="VarChar(4000)" CanBeNull="true" />
+      <Column Name="AluNomeAnexo" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DAprPrevEntrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Escolas" Member="CA_Escolas">
+    <Type Name="CA_Escola">
+      <Column Name="EscCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EscNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EscEndereco" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EscNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="EscComplemento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EscBairro" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="EscCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="EscCidade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EscEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="EscTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EscDiretor" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EscEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Eventos" Member="CA_Eventos">
+    <Type Name="CA_Evento">
+      <Column Name="EvnCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EvnNome" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="EvnData" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EvnDescricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Association Name="CA_Evento_CA_Participante" Member="CA_Participantes" ThisKey="EvnCodigo" OtherKey="PrtCodigoEvento" Type="CA_Participante" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Fechamento" Member="CA_Fechamentos">
+    <Type Name="CA_Fechamento">
+      <Column Name="FechAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FechUnidade" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FechMesFechamento" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FechAnoFechamento" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FechBolsa" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="FechTaxa" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="FechPagamento" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="FechTurma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FechAreaAtuacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Feriados" Member="CA_Feriados">
+    <Type Name="CA_Feriado">
+      <Column Name="FerUnidade" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FerData" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FerDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FerOrdem" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Frequecia" Member="CA_Frequecias">
+    <Type Name="CA_Frequecia">
+      <Column Name="FreqAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FreqReferencia" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FreqDataPrevEntrega" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FreqDataEntrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="FreqUsuarioEntrega" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="FreqFaltas" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FreqObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="FreqSituacao" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="FreqOrdem" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FreqNumFaltas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_funcoesSistema" Member="CA_funcoesSistemas">
+    <Type Name="CA_funcoesSistema">
+      <Column Name="FunSCodigo" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FunSDescricao" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="FunSNomeForm" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_GrauEscolaridade" Member="CA_GrauEscolaridades">
+    <Type Name="CA_GrauEscolaridade">
+      <Column Name="GreCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GreDescricao" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_GrauParentesco" Member="CA_GrauParentescos">
+    <Type Name="CA_GrauParentesco">
+      <Column Name="GpaCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GpaDescricao" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="CA_GrauParentesco_CA_Membro_Familia" Member="CA_Membro_Familias" ThisKey="GpaCodigo" OtherKey="Fam_GrauParentescoId" Type="CA_Membro_Familia" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_IndicesSociais" Member="CA_IndicesSociais">
+    <Type Name="CA_IndicesSociai">
+      <Column Name="IndCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IndDescricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IndValorMaximo" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IndValorMinimo" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Itinerarios" Member="CA_Itinerarios">
+    <Type Name="CA_Itinerario">
+      <Column Name="ItnCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItnNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_MotivoDesligamento" Member="CA_MotivoDesligamentos">
+    <Type Name="CA_MotivoDesligamento">
+      <Column Name="MotCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MotDescricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_NotasAprendiz" Member="CA_NotasAprendizs">
+    <Type Name="CA_NotasAprendiz">
+      <Column Name="NdiAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NdiDisciplina" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NdiNota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NdiCargaHoraria" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NdiTurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Ocorrencias" Member="CA_Ocorrencias">
+    <Type Name="CA_Ocorrencia">
+      <Column Name="OcoCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OcoDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OcoTipo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="CA_Ocorrencia_CA_OcorrenciasAprendiz" Member="CA_OcorrenciasAprendizs" ThisKey="OcoCodigo" OtherKey="OcaCodOcorrencia" Type="CA_OcorrenciasAprendiz" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_OcorrenciasAprendiz" Member="CA_OcorrenciasAprendizs">
+    <Type Name="CA_OcorrenciasAprendiz">
+      <Column Name="OcaCodAprendiz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OcaCodOcorrencia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OcaDataOcorrencia" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OcaUsuarioocorrencia" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="OcaObservacoes" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="OcaOrdem" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OcaDataEntrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OcaPrevDevolucao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OcaDevolucao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OcaDisciplinaTurmaProf" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OcaEmissorOcorrencia" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Association Name="CA_Ocorrencia_CA_OcorrenciasAprendiz" Member="CA_Ocorrencia" ThisKey="OcaCodOcorrencia" OtherKey="OcoCodigo" Type="CA_Ocorrencia" IsForeignKey="true" />
+      <Association Name="CA_Aprendiz_CA_OcorrenciasAprendiz" Member="CA_Aprendiz" ThisKey="OcaCodAprendiz" OtherKey="Apr_Codigo" Type="CA_Aprendiz" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_OcorrenciasdoAprendiz" Member="CA_OcorrenciasdoAprendizs">
+    <Type Name="CA_OcorrenciasdoAprendiz">
+      <Column Name="OcadCodAprendiz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OcadCodOcorrencia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OcadDataOcorrencia" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="OcadUsuarioocorrencia" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="OcadObservacoes" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="OcadOrdem" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OcadDataEntrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OcadPrevDevolucao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OcadDevolucao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OcadDisciplinaTurmaProf" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OcadEmissorOcorrencia" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Opcoes" Member="CA_Opcoes">
+    <Type Name="CA_Opcoe">
+      <Column Name="OpcCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OpcQuestao" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OpcTexto" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
+      <Column Name="OpcOrdemExibicao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OpcNota" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Orientador" Member="CA_Orientadors">
+    <Type Name="CA_Orientador">
+      <Column Name="OriCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OriUnidadeParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OriNome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OriTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="OriEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Participantes" Member="CA_Participantes">
+    <Type Name="CA_Participante">
+      <Column Name="PrtAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PrtObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PrtCodigoEvento" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PrtPresenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Association Name="CA_Evento_CA_Participante" Member="CA_Evento" ThisKey="PrtCodigoEvento" OtherKey="EvnCodigo" Type="CA_Evento" IsForeignKey="true" />
+      <Association Name="CA_Aprendiz_CA_Participante" Member="CA_Aprendiz" ThisKey="PrtAprendiz" OtherKey="Apr_Codigo" Type="CA_Aprendiz" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Pesquisa" Member="CA_Pesquisas">
+    <Type Name="CA_Pesquisa">
+      <Column Name="PesCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PesNome" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="PesDescricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PesPublicoAlvo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Pesquisa_Parceiro" Member="CA_Pesquisa_Parceiros">
+    <Type Name="CA_Pesquisa_Parceiro">
+      <Column Name="PepCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PepPesquisaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PepParceiroCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PepAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="PepMes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PepRealizada" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="PepAprendiz" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PepDataRealizada" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PepTutor" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="PepObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PepOrientador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_PlanoCurricular" Member="CA_PlanoCurriculars">
+    <Type Name="CA_PlanoCurricular">
+      <Column Name="PlcCodigoPlano" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlcDisciplina" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PlcCargaHoraria" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="PlcTipoAvaliacao" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="PlcNumeroAulas" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="PlcDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PlcOrdemDisciplina" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlcGeraCronograma" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EducCodigo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CA_Disciplina_CA_PlanoCurricular" Member="CA_Disciplina" ThisKey="PlcDisciplina" OtherKey="DisCodigo" Type="CA_Disciplina" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Planos" Member="CA_Planos">
+    <Type Name="CA_Plano">
+      <Column Name="PlanCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlanCurso" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="PlanDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Association Name="CA_Curso_CA_Plano" Member="CA_Curso" ThisKey="PlanCurso" OtherKey="CurCodigo" Type="CA_Curso" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Profissoes" Member="CA_Profissoes">
+    <Type Name="CA_Profissoe">
+      <Column Name="ProfCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProfDescricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="CA_Profissoe_CA_Membro_Familia" Member="CA_Membro_Familias" ThisKey="ProfCodigo" OtherKey="Fam_ProfissaoId" Type="CA_Membro_Familia" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Questao" Member="CA_Questaos">
+    <Type Name="CA_Questao">
+      <Column Name="QueCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuePesquisa" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="QueTexto" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="QueTipoQustao" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="QueOrdemExibicao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_RamosAtividades" Member="CA_RamosAtividades">
+    <Type Name="CA_RamosAtividade">
+      <Column Name="RatCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RatDescricao" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Association Name="CA_RamosAtividade_CA_Parceiro" Member="CA_Parceiros" ThisKey="RatCodigo" OtherKey="ParAtividadeId" Type="CA_Parceiro" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Regioes" Member="CA_Regioes">
+    <Type Name="CA_Regioe">
+      <Column Name="CodRegiao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DescRegiao" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Resposta_Parceiro" Member="CA_Resposta_Parceiros">
+    <Type Name="CA_Resposta_Parceiro">
+      <Column Name="ResCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ResPesquisaParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResQuestao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResOpcaoEscolhida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ResRespostaTexto" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_SessionActive" Member="CA_SessionActives">
+    <Type Name="CA_SessionActive">
+      <Column Name="SeASessionID" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="SeAEscola" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SeAUsuario" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_SituacaoAprendiz" Member="CA_SituacaoAprendizs">
+    <Type Name="CA_SituacaoAprendiz">
+      <Column Name="StaCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StaAbreviatura" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="StaDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_StatusEncaminhamento" Member="CA_StatusEncaminhamentos">
+    <Type Name="CA_StatusEncaminhamento">
+      <Column Name="Ste_Codigo" Type="System.String" DbType="VarChar(2) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ste_Descricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_UnidadesTeste" Member="CA_UnidadesTestes">
+    <Type Name="CA_UnidadesTeste">
+      <Column Name="UniCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UniNome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="UniEndereco" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="UniComplemento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UniBairro" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="UniCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="UniCidade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="UniTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UniCGC" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="UniEnderecoWeb" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="UniEmailPadraoEnvio" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="UniRepresentanteLegal" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="UniRepresentanteCargo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Usuarios" Member="CA_Usuarios">
+    <Type Name="CA_Usuario">
+      <Column Name="UsuCodigo" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UsuNome" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="UsuSenha" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="UsuTipo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="UsuEmail" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_UsuarioUnidade" Member="CA_UsuarioUnidades">
+    <Type Name="CA_UsuarioUnidade">
+      <Column Name="UniCodigoUnidade" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UnicodigoUsuario" Type="System.String" DbType="VarChar(8) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Vale_Transporte" Member="CA_Vale_Transportes">
+    <Type Name="CA_Vale_Transporte">
+      <Column Name="VtpAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VtpItinerario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VtpLinha" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VtpTarifa" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="VtpOrdem" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VtpQuantidade" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Vinculo_Empregaticio" Member="CA_Vinculo_Empregaticios">
+    <Type Name="CA_Vinculo_Empregaticio">
+      <Column Name="Vin_Descricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Vin_Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="CA_Vinculo_Empregaticio_CA_Membro_Familia" Member="CA_Membro_Familias" ThisKey="Vin_Codigo" OtherKey="Fam_TipoEmpregoId" Type="CA_Membro_Familia" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MA_Municipios" Member="MA_Municipios">
+    <Type Name="MA_Municipio">
+      <Column Name="MunICodigo" Type="System.String" DbType="VarChar(7) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MunICodUF" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="MunIDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MunICepInicial" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="MunICepFinal" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="MunIEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="MunIDescricaoPlena" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Advertencias_aprendizes" Member="View_Advertencias_aprendizes">
+    <Type Name="View_Advertencias_aprendize">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="StaDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OcoDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Turma" Type="System.String" DbType="VarChar(53)" CanBeNull="true" />
+      <Column Name="DiaNumeroFaltas" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Datas_FAltas" Type="System.String" DbType="VarChar(640)" CanBeNull="true" />
+      <Column Name="OcaDataEntrega" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OcaPrevDevolucao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OcaDevolucao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="OcaDataOcorrencia" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_AulasDisciplinasAprendiz" Member="View_CA_AulasDisciplinasAprendizs">
+    <Type Name="View_CA_AulasDisciplinasAprendiz">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_DataDeNascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Sexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="AprEstadoCivil" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_Endereço" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Complemento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Bairro" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_Cidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_UF" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_CEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_Telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Celular" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apr_NomeMae" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_NomePai" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Naturalidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_UF_Nat" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_CarteiraDeIdentidade" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_DataEmissão_Ident" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_UF_Ident" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_OrgaoEmissor_Ident" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_CarteiraDeTrabalho" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_Serie_Cartrab" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_DataEmissão_CartTrab" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_UF_CartTrab" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_PIS" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_PNE" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="AprCodEscola" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Escola_HInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Escola_HTermino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_DataCadastro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Situacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Responsavel" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Resp_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_Resp_EstadoCivil" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Resp_GrauInstrucao" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_Resp_Profissao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Telefone_Resp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Celular_Resp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Telefone_Contato" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Tipo_Contato" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Observacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_Resp_Observacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_Nacionalidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_NumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_Escolaridade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha01" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha02" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha03" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_beneficio" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_BolsaFamilia" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_pensao" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_outros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_SituacaoResidencia" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_aluguel" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_CarteiraAssinada" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Empresa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_Cargo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TempoPermanencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_UsaMedicamento" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_NomeMedicamento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TipoMedicamento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_Alergia" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Doenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_NomeDoenca" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TipoAlergia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_senha" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="AprBanco" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AprTipoConta" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AprAgencia" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="AprContaBancaria" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Apr_CertReservista" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_Tutor" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_AreaAtuacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Mensagem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_ValidadeMensagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_UsuarioCadastro" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_UsuarioDataCadastro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_UsuarioAlteracao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_UsuarioDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_ValorTransp01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Apr_ValorTransp02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Apr_ValorTransp03" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Apr_Quantvt01" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_Quantvt02" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_Quantvt03" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_HabilitaPesquisa" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_FimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PrevFimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_Resp_Parentesco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_NumeroMTB" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Turma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TurmaAnterior" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_DataTransferTurma" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AdiCodAprendiz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdiTurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdiDisciplina" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdiEducador" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdiDataAula" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AdiCargaHoraria" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdiPresenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="AdiObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DisCodigo" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DisAbreviatura" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EducCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EducNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EducSexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EducEndereco" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EducNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="EducComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EducBairro" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EducCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EducUF" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="EducCEP" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="EducTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EducTelefoneCelular" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EducEMail" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="EducDataNascimento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EducNaturalidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EducUFNaturalidade" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="EducEstadoCivil" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EducNomedoPai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EducNomedaMae" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EducSituacao" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EducDataEntrada" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EducDataSaida" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EducTipoAdmissao" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="EducIdentidade" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EducExpedIdentidade" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="EducCPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="EducTitulodeEleitor" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EducZonaEleitoral" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="EducSecaoEleitoral" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="EducMunEleitoral" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EducSenha" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="EducCartprofissional" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EducSerieCartProfissional" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EducObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="EducGrauInstrucao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AreaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AreaDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="AreaNumeroCadastro" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AreaCargaHoraria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TurCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TurCurso" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="TurDiaSemana" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="TurInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Termino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TurObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TurUsuario" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="TurStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="TurPlanoCurricular" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="TurUnidade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TurNumeroMeses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DisCor" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_CronogramaAulas" Member="View_CA_CronogramaAulas">
+    <Type Name="View_CA_CronogramaAula">
+      <Column Name="Turma" Type="System.String" DbType="VarChar(53)" CanBeNull="true" />
+      <Column Name="Professor" Type="System.String" DbType="VarChar(83)" CanBeNull="true" />
+      <Column Name="Disciplina" Type="System.String" DbType="VarChar(113)" CanBeNull="true" />
+      <Column Name="ADPDataAula" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ADPStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ADPConteudoLecionado" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ADPRecursosUsados" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ADPObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CurDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CurCodigo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="DPDataInicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DPDataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DPProf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DPDisciplina" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DPTurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DpOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ADPCodigo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PlcCodigoPlano" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="TurPlanoCurricular" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="PlcGeraCronograma" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DPProfAux" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_DiarioAprendizes" Member="View_CA_DiarioAprendizes">
+    <Type Name="View_CA_DiarioAprendize">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Turma" Type="System.String" DbType="VarChar(53)" CanBeNull="true" />
+      <Column Name="DPProfAux" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProfSuplente" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Professor" Type="System.String" DbType="VarChar(83)" CanBeNull="true" />
+      <Column Name="Disciplina" Type="System.String" DbType="VarChar(113)" CanBeNull="true" />
+      <Column Name="DPTurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DPProf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DPDisciplina" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CurDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CurCodigo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="DATA01" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA02" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA03" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA04" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA05" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA06" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA07" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA08" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA09" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA10" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA11" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA12" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA13" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA14" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA15" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA16" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA17" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA18" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA19" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DATA20" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DiaAula1" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula2" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula3" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula4" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula5" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula6" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula7" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula8" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula9" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula10" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula11" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula12" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula13" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula14" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula15" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula16" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula17" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula18" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula19" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaAula20" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaDestaque" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaNumeroFaltas" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DisAbreviatura" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DiaCargaHoraria" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DPDataInicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DiaConceito" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="DpOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TurObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_DisciplinasProfessores" Member="View_CA_DisciplinasProfessores">
+    <Type Name="View_CA_DisciplinasProfessore">
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EducNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DPDataInicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DPDataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DpSalaFisica" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DpOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EducCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TurCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurCodigo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="CurDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="DPDisciplina" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DisAbreviatura" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_Familiares" Member="View_CA_Familiares">
+    <Type Name="View_CA_Familiare">
+      <Column Name="Fam_Nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fam_DataNascimento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Fam_Renda" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ProfDescricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Vin_Descricao" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GpaDescricao" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Fam_AperendizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_Fechamento_Mensal" Member="View_CA_Fechamento_Mensals">
+    <Type Name="View_CA_Fechamento_Mensal">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParNomeFantasia" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="FechTaxa" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="FechBolsa" Type="System.Single" DbType="Real NOT NULL" CanBeNull="false" />
+      <Column Name="FechPagamento" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="AreaDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="FechAnoFechamento" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="FechMesFechamento" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FechUnidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_Notas_do_Aprendiz" Member="View_CA_Notas_do_Aprendizs">
+    <Type Name="View_CA_Notas_do_Aprendiz">
+      <Column Name="NdiAprendiz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="NdiDisciplina" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="NdiNota" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Carometro" Member="View_Carometros">
+    <Type Name="View_Carometro">
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParNomeFantasia" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ALAAprendiz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ALATurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ALAUnidadeParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Situacao" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="ALATutor" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ALADataInicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALADataPrevTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALADataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALAInicioExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALATerminoExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALAValorBolsa" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ALAValorTaxa" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ALAObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ALAOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurCodigo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="StaDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AreaDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apr_Situacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALAStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ALApagto" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="OriNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_FimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PrevFimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CurDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="TurCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Foto" Type="System.String" DbType="VarChar(77)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Contrato_Aprediz" Member="View_Contrato_Apredizs">
+    <Type Name="View_Contrato_Aprediz">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_DataDeNascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Endereço" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_NumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_Complemento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Bairro" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_Cidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_UF" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_CEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_CarteiraDeTrabalho" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_Serie_Cartrab" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_PIS" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_Responsavel" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Resp_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="AreaDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParNomeFantasia" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParCNPJ" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ParEndereco" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ParNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ParComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParNomeContato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParBairro" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ALAValorBolsa" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCNPJ" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ParUniEndereco" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ParUniNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ParUniComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParUniBairro" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParUniCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParUniEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="UniNome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="UniEndereco" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="UniComplemento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UniBairro" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="UniCidade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PrevFimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="GpaDescricao" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ALAInicioExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALATerminoExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ParDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_CarteiraDeIdentidade" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_Telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ParCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParUniCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParUniTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ParTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TurInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Termino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALADataPrevTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALADataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="TurCurso" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ALADataInicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="UniCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="UniTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UniCGC" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="Apr_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="ParRespFundacao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParCargoRepresentanteLegal" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_DataContrato" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="UniRepresentanteLegal" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="UniRepresentanteCargo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DiaDaSemana" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="TurDiaSemana" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ALAValorTaxa" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="ValorCeduc" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="ALAValorEncargos" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_Escolaridade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GreDescricao" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_MesesContrato" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CurDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_UF_CartTrab" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_HorasDiarias" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_Estudante" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_ControlePresenca" Member="View_ControlePresencas">
+    <Type Name="View_ControlePresenca">
+      <Column Name="AdiDataAula" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AdiTurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AreaDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="StaDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="AdiPresenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_FimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PrevFimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ParDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCNPJ" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ParUniEndereco" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ParUniNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ParUniComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParUniBairro" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParUniCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParUniEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ParUniCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParUniEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParUniTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ParUniCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCodigoParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_ControlePresencaAprendiz" Member="View_ControlePresencaAprendizs">
+    <Type Name="View_ControlePresencaAprendiz">
+      <Column Name="AdiDataAula" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AdiTurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AreaDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="StaDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="AdiPresenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_FimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PrevFimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ParDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCNPJ" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ParUniEndereco" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ParUniNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ParUniComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParUniBairro" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParUniCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParUniEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ParUniCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParUniEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParUniTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ParUniCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCodigoParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_DataMace" Member="View_DataMaces">
+    <Type Name="View_DataMace">
+      <Column Name="TurCurso" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_DataDeNascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Sexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="AprEstadoCivil" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_Endereço" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Complemento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Bairro" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_Cidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_UF" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_CEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_Telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Celular" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apr_NomeMae" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_NomePai" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Naturalidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_UF_Nat" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_CarteiraDeIdentidade" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_DataEmissão_Ident" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_UF_Ident" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_OrgaoEmissor_Ident" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_CarteiraDeTrabalho" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_Serie_Cartrab" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_DataEmissão_CartTrab" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_UF_CartTrab" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_PIS" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_PNE" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="AprCodEscola" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Escola_HInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Escola_HTermino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_DataCadastro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Situacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Responsavel" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Resp_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_Resp_EstadoCivil" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Resp_GrauInstrucao" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_Resp_Profissao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Telefone_Resp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Celular_Resp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Telefone_Contato" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Tipo_Contato" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Observacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_Resp_Observacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_Nacionalidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_NumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_Escolaridade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha01" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha02" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha03" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_beneficio" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_BolsaFamilia" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_pensao" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_outros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_SituacaoResidencia" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_aluguel" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_CarteiraAssinada" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Empresa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_Cargo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TempoPermanencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_UsaMedicamento" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_NomeMedicamento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TipoMedicamento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_Alergia" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Doenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_NomeDoenca" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TipoAlergia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_senha" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="AprBanco" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AprTipoConta" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AprAgencia" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="AprContaBancaria" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Apr_CertReservista" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_Tutor" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_AreaAtuacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Mensagem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_ValidadeMensagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_UsuarioCadastro" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_UsuarioDataCadastro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_UsuarioAlteracao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_UsuarioDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_ValorTransp01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Apr_ValorTransp02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Apr_ValorTransp03" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Apr_Quantvt01" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_Quantvt02" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_Quantvt03" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_HabilitaPesquisa" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_FimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PrevFimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_Resp_Parentesco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_NumeroMTB" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Turma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TurmaAnterior" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_DataTransferTurma" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_NumeroFamiliares" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_recebebeneficio" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_DataContrato" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PlanoCurricular" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_TurnoEscolar" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Deficiencia" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_NumSistExterno" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_DataInicioEmpresa" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_CBO" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_Estudante" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Unidade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_MesesContrato" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_HorasDiarias" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_TurmaCCI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TurmaENC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TipoAprendizagem" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_InstParceira" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALAUnidadeParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Ficha_Aprendiz" Member="View_Ficha_Aprendizs">
+    <Type Name="View_Ficha_Aprendiz">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_DataDeNascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Sexo" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="AprEstadoCivil" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Endereço" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Complemento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Bairro" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_Cidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_UF" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_CEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_Telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Celular" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apr_NomeMae" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_NomePai" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Naturalidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_UF_Nat" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_CarteiraDeIdentidade" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_DataEmissão_Ident" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_UF_Ident" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_OrgaoEmissor_Ident" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_CarteiraDeTrabalho" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_Serie_Cartrab" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_DataEmissão_CartTrab" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_UF_CartTrab" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_PIS" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_PNE" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apr_Escola_HInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Escola_HTermino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_DataCadastro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EscNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StaDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_beneficio" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_UsaMedicamento" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Alergia" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Doenca" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_SituacaoResidencia" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Resp_EstadoCivil" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Responsavel" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Resp_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_Resp_GrauInstrucao" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Telefone_Resp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Celular_Resp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Resp_Profissao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_Telefone_Contato" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Tipo_Contato" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Observacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_Resp_Observacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_Nacionalidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_NumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_Escolaridade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha01" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha02" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha03" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_BolsaFamilia" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_pensao" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_outros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_aluguel" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_CarteiraAssinada" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Empresa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_Cargo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TempoPermanencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_NomeMedicamento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TipoMedicamento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_NomeDoenca" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TipoAlergia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_senha" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.String" DbType="VarChar(23)" CanBeNull="true" />
+      <Column Name="Expr2" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="AprAgencia" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="AprContaBancaria" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Apr_NumeroFamiliares" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_NumeroMTB" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Idade_Alocacao" Member="View_Idade_Alocacaos">
+    <Type Name="View_Idade_Alocacao">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Idade" Type="System.String" DbType="VarChar(74)" CanBeNull="true" />
+      <Column Name="ALAStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Situacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALADataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALADataInicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_FimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Notas_Faltas" Member="View_Notas_Faltas">
+    <Type Name="View_Notas_Falta">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Sexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DPDataInicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DpOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCodigoParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ALApagto" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="DieCompreensao" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DieComLing" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DiePostura" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DieParticipacao" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DiaDestaque" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="DiaConceito" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="DiaNumeroFaltas" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DatasFaltas" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_parecer_Tecnico" Member="View_parecer_Tecnicos">
+    <Type Name="View_parecer_Tecnico">
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DpSalaFisica" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EducNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PlcCargaHoraria" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DPDataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DPDataInicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DpOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Inicio" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Termino" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="DPParecer01" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DPParecer02" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DPParecer03" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Pequisa" Member="View_Pequisas">
+    <Type Name="View_Pequisa">
+      <Column Name="PesNome" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="PesDescricao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="OpcQuestao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuePesquisa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QueTexto" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="OpcTexto" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="QueTipoQustao" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="QueOrdemExibicao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OpcOrdemExibicao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QueCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="OpcCodigo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OpcNota" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Pesquisas_Realizadas" Member="View_Pesquisas_Realizadas">
+    <Type Name="View_Pesquisas_Realizada">
+      <Column Name="PepCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ParCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParNomeFantasia" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCodigoParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PepRealizada" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="PepAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="PepMes" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Situacao" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="OriNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OriTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="OriEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="UsuCodigo" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="UsuNome" Type="System.String" DbType="VarChar(90)" CanBeNull="true" />
+      <Column Name="PepDataRealizada" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Notafinal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MediaNotas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PesNome" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="PepTutor" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PrevFimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PepObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Resposta_Pesquisa" Member="View_Resposta_Pesquisas">
+    <Type Name="View_Resposta_Pesquisa">
+      <Column Name="PepCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PepPesquisaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PepAno" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="PepMes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MesExtenso" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="PepRealizada" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="PepAprendiz" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QueCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QueTexto" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="QueTipoQustao" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="QueOrdemExibicao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResOpcaoEscolhida" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OpcTexto" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="OpcNota" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="ResRespostaTexto" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="PepObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Resultado_Final" Member="View_Resultado_Finals">
+    <Type Name="View_Resultado_Final">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Turma" Type="System.String" DbType="VarChar(53)" CanBeNull="true" />
+      <Column Name="Professor" Type="System.String" DbType="VarChar(83)" CanBeNull="true" />
+      <Column Name="Disciplina" Type="System.String" DbType="VarChar(113)" CanBeNull="true" />
+      <Column Name="DPTurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DPProf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DPDisciplina" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CurDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CurCodigo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="ParNomeFantasia" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DieCompreensao" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DieComLing" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DiePostura" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DieParticipacao" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DisAbreviatura" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MediaFinal" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="DiaObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DPDataInicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DPDataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PlcCargaHoraria" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DpOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DiaNumeroFaltas" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DiaParecerFinal" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Destaque" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="DiaConceito" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_Turma_Alunos" Member="View_Turma_Alunos">
+    <Type Name="View_Turma_Aluno">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Sexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="UniNome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="AreaDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="StaAbreviatura" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_Telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="CurDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="PlanDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="StaCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_DataDeNascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DPTurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DPProf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EducNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DisDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="DpOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Situacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALAAprendiz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ALApagto" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_CapacitacaoAprendiz" Member="CA_CapacitacaoAprendizs">
+    <Type Name="CA_CapacitacaoAprendiz">
+      <Column Name="CapSequencia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CapAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CapTurma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CapStatus" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="CapUnidade" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CapDataInicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CapDataPrevTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CapDataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CapObservacoes" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_PerfilUsuario" Member="CA_PerfilUsuarios">
+    <Type Name="CA_PerfilUsuario">
+      <Column Name="PerfCodigo" Type="System.String" DbType="VarChar(1) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PerfDescricao" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Encaminhamentos" Member="CA_Encaminhamentos">
+    <Type Name="CA_Encaminhamento">
+      <Column Name="Enc_CodigoAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Enc_DataEncaminha" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Enc_Horario" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="Enc_UnidParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Enc_Contato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Enc_Status" Type="System.String" DbType="VarChar(2) NOT NULL" CanBeNull="false" />
+      <Column Name="Enc_Observacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Enc_Usuario" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="Enc_Trajeto" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Enc_Sequencia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Enc_Requisicao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CA_Aprendiz_CA_Encaminhamento" Member="CA_Aprendiz" ThisKey="Enc_CodigoAprendiz" OtherKey="Apr_Codigo" Type="CA_Aprendiz" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Membro_Familia" Member="CA_Membro_Familias">
+    <Type Name="CA_Membro_Familia">
+      <Column Name="Fam_AperendizId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fam_Nome" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fam_GrauParentescoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fam_DataNascimento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Fam_ProfissaoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fam_TipoEmpregoId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fam_Renda" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Fam_Ordem" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Fam_Identidade" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Fam_OrgaoIdentidade" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="CA_GrauParentesco_CA_Membro_Familia" Member="CA_GrauParentesco" ThisKey="Fam_GrauParentescoId" OtherKey="GpaCodigo" Type="CA_GrauParentesco" IsForeignKey="true" />
+      <Association Name="CA_Profissoe_CA_Membro_Familia" Member="CA_Profissoe" ThisKey="Fam_ProfissaoId" OtherKey="ProfCodigo" Type="CA_Profissoe" IsForeignKey="true" />
+      <Association Name="CA_Vinculo_Empregaticio_CA_Membro_Familia" Member="CA_Vinculo_Empregaticio" ThisKey="Fam_TipoEmpregoId" OtherKey="Vin_Codigo" Type="CA_Vinculo_Empregaticio" IsForeignKey="true" />
+      <Association Name="CA_Aprendiz_CA_Membro_Familia" Member="CA_Aprendiz" ThisKey="Fam_AperendizId" OtherKey="Apr_Codigo" Type="CA_Aprendiz" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Turmas" Member="CA_Turmas">
+    <Type Name="CA_Turma">
+      <Column Name="TurCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TurCurso" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="TurDiaSemana" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="TurInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Termino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TurObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TurUsuario" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="TurStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="TurPlanoCurricular" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="TurUnidade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TurNumeroMeses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TurEducadorResponsavel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CA_Turma_CA_DisciplinasTurmaProf" Member="CA_DisciplinasTurmaProfs" ThisKey="TurCodigo" OtherKey="DPTurma" Type="CA_DisciplinasTurmaProf" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_FaltasCapacitacao" Member="View_CA_FaltasCapacitacaos">
+    <Type Name="View_CA_FaltasCapacitacao">
+      <Column Name="AcpAprendiz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AcpTurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="AcpDataAula" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="AcpPresenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_Contagem_Faltas_Aprendiz" Member="View_CA_Contagem_Faltas_Aprendizs">
+    <Type Name="View_CA_Contagem_Faltas_Aprendiz">
+      <Column Name="ParDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="AdiDataAula" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Faltou" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParUniCNPJ" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_AulasDisciplinasTurmaProf" Member="CA_AulasDisciplinasTurmaProfs">
+    <Type Name="CA_AulasDisciplinasTurmaProf">
+      <Column Name="ADPTurma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ADPprofessor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ADPDisciplina" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ADPDataAula" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ADPOrdemAula" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ADPStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ADPConteudoLecionado" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ADPRecursosUsados" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ADPObservacoes" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ADPUsuario" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ADPDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_AulasCapacitacaoAprendiz" Member="CA_AulasCapacitacaoAprendizs">
+    <Type Name="CA_AulasCapacitacaoAprendiz">
+      <Column Name="AcpAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AcpTurma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AcpDataAula" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AcpPresenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="AcpUsuario" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="AcpDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_ListaCandidatos" Member="View_CA_ListaCandidatos">
+    <Type Name="View_CA_ListaCandidato">
+      <Column Name="Enc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_DataCadastro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_DataDeNascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Celular" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_Email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apr_Sexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Cidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="StaDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniNome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Estudante" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_TurnoEscolar" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Situacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Idade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TurmaENC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Bairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_RequisicoesVagas" Member="CA_RequisicoesVagas">
+    <Type Name="CA_RequisicoesVaga">
+      <Column Name="ReqId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReqEmpresa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReqDataSolitação" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ReqQuantidade" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="ReqSexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ReqHorarioEntrevista" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ReqSubstituicao" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="ReqCaracteristicasPessoais" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ReqAreaAtuacao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ReqHabilidades" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ReqAtividades" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ReqContaoEntrevista" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ReqObservacoes" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ReqSituacao" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ReqObservacoesInst" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ReqBeneficios" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ReqSalario" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ReqHorarioTrabalho" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ReqUsuarioCadastro" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ReqDataCadastro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ReqUsuarioFechamento" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ReqDataFechamento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ReqDadosFechamento" Type="System.String" DbType="VarChar(1200)" CanBeNull="true" />
+      <Column Name="ReqSubstituir" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_CA_JovensPesquisa" Member="View_CA_JovensPesquisas">
+    <Type Name="View_CA_JovensPesquisa">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="TurCurso" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ALAStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Situacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALADataInicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALAUnidadeParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TurEducadorResponsavel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALATurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Unidades" Member="CA_Unidades">
+    <Type Name="CA_Unidade">
+      <Column Name="UniCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UniNome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="UniEndereco" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="UniComplemento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UniBairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="UniCidade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="UniTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UniCGC" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="UniEnderecoWeb" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="UniEmailPadraoEnvio" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="UniRepresentanteLegal" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="UniRepresentanteCargo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UniFGTSFolha" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniFGTSFerias" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniFGTS13Sala" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniPISFolha" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniPISFerias" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniPIS13Sal" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniFerias" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniUmTerco" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Uniseguro" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniPCMSO" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniValorUniforme" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Uni13Salario" Type="System.Single" DbType="Real" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_AlocacoesAlunos" Member="View_AlocacoesAlunos">
+    <Type Name="View_AlocacoesAluno">
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="TurNome" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ParNomeFantasia" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ALAAprendiz" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ALATurma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ALAUnidadeParceiro" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Situacao" Type="System.String" DbType="VarChar(7) NOT NULL" CanBeNull="false" />
+      <Column Name="ALATutor" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ALADataInicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALADataPrevTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALADataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALAInicioExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALATerminoExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALAValorBolsa" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ALAValorTaxa" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ALAObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ALAOrdem" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurCodigo" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="ParCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StaDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AreaDescricao" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apr_Situacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALAStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ALApagto" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="OriNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_FimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PrevFimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CurDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="TurCodigo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ALAValorEncargos" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="TurCurso" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="TurDiaSemana" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="UniFGTSFolha" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniFGTSFerias" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniFGTS13Sala" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniPISFolha" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniPISFerias" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniPIS13Sal" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniFerias" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniUmTerco" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Uniseguro" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="UniPCMSO" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_ValeTransporte" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_Desconto" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="ParCNPJ" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ParDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCNPJ" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ParUniEndereco" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ParUniNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ParUniComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParUniBairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParUniCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParUniEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ParUniEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParUniCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="UniValorUniforme" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="AlaMesPagto01Uniforme" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AlaAnoPagto01Uniforme" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AlaMesPagto02Uniforme" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AlaAnoPagto02Uniforme" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Uni13Salario" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Expr1" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="TurNumeroMeses" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_AlocacaoAprendiz" Member="CA_AlocacaoAprendizs">
+    <Type Name="CA_AlocacaoAprendiz">
+      <Column Name="ALAAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ALATurma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ALAUnidadeParceiro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ALAStatus" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ALATutor" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ALADataInicio" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALADataPrevTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALADataTermino" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALAInicioExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALATerminoExpediente" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ALAValorBolsa" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ALAValorTaxa" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ALAObservacao" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ALAOrdem" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ALApagto" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ALAOrientador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALAMotivoDesligamento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALAUsuarioCadastro" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ALAUsuarioDataCadastro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALAUsuarioAlteracao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ALAUsuarioDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALAValorEncargos" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ALATurmaAnterior" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ALADataMudaTurma" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ALAUsuarioMudaTurma" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ALAMotivoMudaTurma" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="AlaMesPagto01Uniforme" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AlaAnoPagto01Uniforme" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AlaMesPagto02Uniforme" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="AlaAnoPagto02Uniforme" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CA_Aprendiz_CA_AlocacaoAprendiz" Member="CA_Aprendiz" ThisKey="ALAAprendiz" OtherKey="Apr_Codigo" Type="CA_Aprendiz" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_AulasDisciplinasAprendiz" Member="CA_AulasDisciplinasAprendizs">
+    <Type Name="CA_AulasDisciplinasAprendiz">
+      <Column Name="AdiCodAprendiz" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AdiTurma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AdiDisciplina" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AdiEducador" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AdiDataAula" Type="System.DateTime" DbType="SmallDateTime NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AdiCargaHoraria" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdiPresenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="AdiObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="AdiPresencaTarde" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="AdiUsuario" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="AdiDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="AdiAtraso" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Contatos" Member="CA_Contatos">
+    <Type Name="CA_Contato">
+      <Column Name="CocID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CocCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CocTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CocDataContato" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CocUsuarioContato" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="CocRespContato" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="CocDescricaocontato" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="CocCodigoFechamento" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CocDatafechamento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CocResultadoContato" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_fechamentosContatos" Member="CA_fechamentosContatos">
+    <Type Name="CA_fechamentosContato">
+      <Column Name="FechCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FechDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_TiposContatos" Member="CA_TiposContatos">
+    <Type Name="CA_TiposContato">
+      <Column Name="Tco_Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tco_Descricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_StatusCliente" Member="CA_StatusClientes">
+    <Type Name="CA_StatusCliente">
+      <Column Name="StcCodigo" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StcDescricao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_CadastroClientes" Member="CA_CadastroClientes">
+    <Type Name="CA_CadastroCliente">
+      <Column Name="CacCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CacNome" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="CacTipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CacIdentificacao" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="CacEndereco" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CacNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="CacComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CacBairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CacCidade" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CacEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CacCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="CacTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CacCelular" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="CacEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="CacDataCadastro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CacDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CacUsuarioAlteracao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="CacUsuarioCadastro" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="CacAtendente" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="CacDataNascimento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CacConcorrente" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CacquantidadeAprendiz" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CacValorTaxa" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CacStatus" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="CacVencimentoContratoAtual" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CacValorEcomonia" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CacResponsavelRH" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Aprendiz" Member="CA_Aprendizs">
+    <Type Name="CA_Aprendiz">
+      <Column Name="Apr_Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Apr_Nome" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_DataDeNascimento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Sexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="AprEstadoCivil" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_Endereço" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Complemento" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Bairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_Cidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_UF" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_CEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_Telefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Celular" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_Email" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Apr_NomeMae" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_NomePai" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Naturalidade" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Apr_UF_Nat" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_CarteiraDeIdentidade" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_DataEmissão_Ident" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_UF_Ident" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_OrgaoEmissor_Ident" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_CPF" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Apr_CarteiraDeTrabalho" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_Serie_Cartrab" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_DataEmissão_CartTrab" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_UF_CartTrab" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_PIS" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_PNE" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="AprCodEscola" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Escola_HInicio" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Escola_HTermino" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_DataCadastro" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_Situacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Responsavel" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="Apr_Resp_CPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_Resp_EstadoCivil" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Resp_GrauInstrucao" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Apr_Resp_Profissao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Telefone_Resp" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Celular_Resp" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="Apr_Telefone_Contato" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Tipo_Contato" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_Observacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_Resp_Observacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_Nacionalidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Apr_NumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_Escolaridade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha01" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha02" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_TranspLinha03" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="Apr_beneficio" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_BolsaFamilia" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_pensao" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_outros" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_SituacaoResidencia" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_aluguel" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_CarteiraAssinada" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Empresa" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_Cargo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TempoPermanencia" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_UsaMedicamento" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_NomeMedicamento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TipoMedicamento" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_Alergia" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Doenca" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_NomeDoenca" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_TipoAlergia" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_senha" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="AprBanco" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AprTipoConta" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="AprAgencia" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="AprContaBancaria" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="Apr_CertReservista" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Apr_Tutor" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_AreaAtuacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_Mensagem" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Apr_ValidadeMensagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_UsuarioCadastro" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_UsuarioDataCadastro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_UsuarioAlteracao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="Apr_UsuarioDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_ValorTransp01" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Apr_ValorTransp02" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Apr_ValorTransp03" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Apr_Quantvt01" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_Quantvt02" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_Quantvt03" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_HabilitaPesquisa" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_InicioAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_FimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PrevFimAprendizagem" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_Resp_Parentesco" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_NumeroMTB" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Apr_Turma" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TurmaAnterior" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_DataTransferTurma" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_NumeroFamiliares" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_recebebeneficio" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_DataContrato" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_PlanoCurricular" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_TurnoEscolar" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Deficiencia" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_NumSistExterno" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Apr_DataInicioEmpresa" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Apr_CBO" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_Estudante" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_Unidade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_MesesContrato" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_HorasDiarias" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_TurmaCCI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TurmaENC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_TipoAprendizagem" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_InstParceira" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Apr_CBOEmprego" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="Apr_ConhecInstituicao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Apr_ValeTransporte" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_Desconto" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="Apr_PlanoIntensivo" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_DataPrevInicFerias" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_DataPrevTermFerias" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Apr_ConhecimentoWindows" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_ConhecimentoWord" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_ConhecimentoExcel" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_TemFilhos" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="Apr_QuantidadeFilhos" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Apr_Filhosquemfica" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="CA_Aprendiz_CA_OcorrenciasAprendiz" Member="CA_OcorrenciasAprendizs" ThisKey="Apr_Codigo" OtherKey="OcaCodAprendiz" Type="CA_OcorrenciasAprendiz" />
+      <Association Name="CA_Aprendiz_CA_Participante" Member="CA_Participantes" ThisKey="Apr_Codigo" OtherKey="PrtAprendiz" Type="CA_Participante" />
+      <Association Name="CA_Aprendiz_CA_Encaminhamento" Member="CA_Encaminhamentos" ThisKey="Apr_Codigo" OtherKey="Enc_CodigoAprendiz" Type="CA_Encaminhamento" />
+      <Association Name="CA_Aprendiz_CA_Membro_Familia" Member="CA_Membro_Familias" ThisKey="Apr_Codigo" OtherKey="Fam_AperendizId" Type="CA_Membro_Familia" />
+      <Association Name="CA_Aprendiz_CA_AlocacaoAprendiz" Member="CA_AlocacaoAprendizs" ThisKey="Apr_Codigo" OtherKey="ALAAprendiz" Type="CA_AlocacaoAprendiz" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_InstituicoesParceiras" Member="CA_InstituicoesParceiras">
+    <Type Name="CA_InstituicoesParceira">
+      <Column Name="IpaCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IpaDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="IpaEndereco" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IpaNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="IpaComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IpaBairro" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="IpaCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="IpaEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="IpaCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="IpaEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="IpaTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IpaCelular" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="IpaNomeContato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IpaDataCadastro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="IpaDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="IpaUsuarioAlteracao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="IpaUsuarioCadastro" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="IpaSenha" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Parceiros" Member="CA_Parceiros">
+    <Type Name="CA_Parceiro">
+      <Column Name="ParCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParNomeFantasia" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParAtividadeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParCNPJ" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ParEndereco" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ParNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ParComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParBairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ParEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParSiteEmpresa" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParNomeContato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParTaxa20Horas" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParBolsa20Horas" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParTaxa30Horas" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParBolsa30Horas" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParDataCadastro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ParDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ParUsuarioAlteracao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParUsuarioCadastro" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ParCelular" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="ParCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParSenha" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParRespFundacao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParInscricao" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParInscricaoMunicipal" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParGestorPrograma" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParEmailGestorPrograma" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParGestorFinanceiro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParEmailGestorFinanceiro" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParGestorRH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParEmailGestorRH" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParCargoRepresentanteLegal" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="ParEmailRespresentanteLegal" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParSituacao" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ParValeRefeicao" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParValeAlimentacao" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParValeTransporte" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="ParBeneficios" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="ParObservacoes" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ParConhecInstituicao" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParConvenio" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParCotaAprendiz" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="CA_Parceiro_CA_ParceirosUnidade" Member="CA_ParceirosUnidades" ThisKey="ParCodigo" OtherKey="ParUniCodigoParceiro" Type="CA_ParceirosUnidade" />
+      <Association Name="CA_RamosAtividade_CA_Parceiro" Member="CA_RamosAtividade" ThisKey="ParAtividadeId" OtherKey="RatCodigo" Type="CA_RamosAtividade" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_ParceirosUnidade" Member="CA_ParceirosUnidades">
+    <Type Name="CA_ParceirosUnidade">
+      <Column Name="ParUniCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParUniCodigoParceiro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ParUniDescricao" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ParUniCNPJ" Type="System.String" DbType="VarChar(14)" CanBeNull="true" />
+      <Column Name="ParUniEndereco" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ParUniNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="ParUniComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ParUniBairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParUniCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ParUniEstado" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ParUniEmail" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParUniNomeContato" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ParUniTaxa20Horas" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParUniBolsa20Horas" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParUniTaxa30Horas" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParUniBolsa30Horas" Type="System.Single" DbType="Real" CanBeNull="true" />
+      <Column Name="ParUniDataCadastro" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ParUniUsuarioCadastro" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParUniDataAlteracao" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ParUniUsuarioAlteracao" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParUniTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="ParUniCelular" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="ParUniCEP" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="ParUniResponsavelLegal" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ParUniObservacoes" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="CA_Parceiro_CA_ParceirosUnidade" Member="CA_Parceiro" ThisKey="ParUniCodigoParceiro" OtherKey="ParCodigo" Type="CA_Parceiro" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CA_Educadores" Member="CA_Educadores">
+    <Type Name="CA_Educadore">
+      <Column Name="EducCodigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EducNome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EducSexo" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EducEndereco" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EducNumeroEndereco" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="EducComplemento" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EducBairro" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EducCidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EducUF" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="EducCEP" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="EducTelefone" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EducTelefoneCelular" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="EducEMail" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="EducDataNascimento" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EducNaturalidade" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EducUFNaturalidade" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="EducEstadoCivil" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EducNomedoPai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EducNomedaMae" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EducSituacao" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EducDataEntrada" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EducDataSaida" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EducTipoAdmissao" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="EducIdentidade" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EducExpedIdentidade" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="EducCPF" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="EducTitulodeEleitor" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EducZonaEleitoral" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="EducSecaoEleitoral" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="EducMunEleitoral" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EducSenha" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="EducCartprofissional" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EducSerieCartProfissional" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EducObservacoes" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="EducGrauInstrucao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="CA_Educadore_CA_DisciplinasTurmaProf" Member="CA_DisciplinasTurmaProfs" ThisKey="EducCodigo" OtherKey="DPProf" Type="CA_DisciplinasTurmaProf" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EnsinoAprendizagem" targetNamespace="http://tempuri.org/EnsinoAprendizagem.xsd" xmlns:mstns="http://tempuri.org/EnsinoAprendizagem.xsd" xmlns="http://tempuri.org/EnsinoAprendizagem.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EnsinoAprendizagem" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EnsinoAprendizagem" msprop:Generator_UserDSName="EnsinoAprendizagem">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="EnsinoAprendizagem" msprop:Generator_TableClassName="EnsinoAprendizagemDataTable" msprop:Generator_TableVarName="tableEnsinoAprendizagem" msprop:Generator_RowChangedName="EnsinoAprendizagemRowChanged" msprop:Generator_TablePropName="_EnsinoAprendizagem" msprop:Generator_RowDeletingName="EnsinoAprendizagemRowDeleting" msprop:Generator_RowChangingName="EnsinoAprendizagemRowChanging" msprop:Generator_RowEvHandlerName="EnsinoAprendizagemRowChangeEventHandler" msprop:Generator_RowDeletedName="EnsinoAprendizagemRowDeleted" msprop:Generator_RowClassName="EnsinoAprendizagemRow" msprop:Generator_UserTableName="EnsinoAprendizagem" msprop:Generator_RowEvArgName="EnsinoAprendizagemRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PepCodigo" msprop:Generator_ColumnVarNameInTable="columnPepCodigo" msprop:Generator_ColumnPropNameInRow="PepCodigo" msprop:Generator_ColumnPropNameInTable="PepCodigoColumn" msprop:Generator_UserColumnName="PepCodigo" type="xs:string" minOccurs="0" />
+              <xs:element name="PesNome" msprop:Generator_ColumnVarNameInTable="columnPesNome" msprop:Generator_ColumnPropNameInRow="PesNome" msprop:Generator_ColumnPropNameInTable="PesNomeColumn" msprop:Generator_UserColumnName="PesNome" type="xs:string" minOccurs="0" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="TurCurso" msprop:Generator_ColumnVarNameInTable="columnTurCurso" msprop:Generator_ColumnPropNameInRow="TurCurso" msprop:Generator_ColumnPropNameInTable="TurCursoColumn" msprop:Generator_UserColumnName="TurCurso" type="xs:string" minOccurs="0" />
+              <xs:element name="PepDataRealizada" msprop:Generator_ColumnVarNameInTable="columnPepDataRealizada" msprop:Generator_ColumnPropNameInRow="PepDataRealizada" msprop:Generator_ColumnPropNameInTable="PepDataRealizadaColumn" msprop:Generator_UserColumnName="PepDataRealizada" type="xs:string" minOccurs="0" />
+              <xs:element name="PepTutor" msprop:Generator_ColumnVarNameInTable="columnPepTutor" msprop:Generator_ColumnPropNameInRow="PepTutor" msprop:Generator_ColumnPropNameInTable="PepTutorColumn" msprop:Generator_UserColumnName="PepTutor" type="xs:string" minOccurs="0" />
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" type="xs:string" minOccurs="0" />
+              <xs:element name="ParNomeFantasia" msprop:Generator_ColumnVarNameInTable="columnParNomeFantasia" msprop:Generator_ColumnPropNameInRow="ParNomeFantasia" msprop:Generator_ColumnPropNameInTable="ParNomeFantasiaColumn" msprop:Generator_UserColumnName="ParNomeFantasia" type="xs:string" minOccurs="0" />
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao" type="xs:string" minOccurs="0" />
+              <xs:element name="Apr_InicioAprendizagem" msprop:Generator_ColumnVarNameInTable="columnApr_InicioAprendizagem" msprop:Generator_ColumnPropNameInRow="Apr_InicioAprendizagem" msprop:Generator_ColumnPropNameInTable="Apr_InicioAprendizagemColumn" msprop:Generator_UserColumnName="Apr_InicioAprendizagem" type="xs:string" minOccurs="0" />
+              <xs:element name="Apr_PrevFimAprendizagem" msprop:Generator_ColumnVarNameInTable="columnApr_PrevFimAprendizagem" msprop:Generator_ColumnPropNameInRow="Apr_PrevFimAprendizagem" msprop:Generator_ColumnPropNameInTable="Apr_PrevFimAprendizagemColumn" msprop:Generator_UserColumnName="Apr_PrevFimAprendizagem" type="xs:string" minOccurs="0" />
+              <xs:element name="MesExtenso" msprop:Generator_ColumnVarNameInTable="columnMesExtenso" msprop:Generator_ColumnPropNameInRow="MesExtenso" msprop:Generator_ColumnPropNameInTable="MesExtensoColumn" msprop:Generator_UserColumnName="MesExtenso" type="xs:string" minOccurs="0" />
+              <xs:element name="PepAno" msprop:Generator_ColumnVarNameInTable="columnPepAno" msprop:Generator_ColumnPropNameInRow="PepAno" msprop:Generator_ColumnPropNameInTable="PepAnoColumn" msprop:Generator_UserColumnName="PepAno" type="xs:string" minOccurs="0" />
+              <xs:element name="QueTexto" msprop:Generator_ColumnVarNameInTable="columnQueTexto" msprop:Generator_ColumnPropNameInRow="QueTexto" msprop:Generator_ColumnPropNameInTable="QueTextoColumn" msprop:Generator_UserColumnName="QueTexto" type="xs:string" minOccurs="0" />
+              <xs:element name="OpcTexto" msprop:Generator_ColumnVarNameInTable="columnOpcTexto" msprop:Generator_ColumnPropNameInRow="OpcTexto" msprop:Generator_ColumnPropNameInTable="OpcTextoColumn" msprop:Generator_UserColumnName="OpcTexto" type="xs:string" minOccurs="0" />
+              <xs:element name="OpcNota" msprop:Generator_ColumnVarNameInTable="columnOpcNota" msprop:Generator_ColumnPropNameInRow="OpcNota" msprop:Generator_ColumnPropNameInTable="OpcNotaColumn" msprop:Generator_UserColumnName="OpcNota" type="xs:int" minOccurs="0" />
+              <xs:element name="pepObservacao" msprop:Generator_ColumnVarNameInTable="columnpepObservacao" msprop:Generator_ColumnPropNameInRow="pepObservacao" msprop:Generator_ColumnPropNameInTable="pepObservacaoColumn" msprop:Generator_UserColumnName="pepObservacao" type="xs:string" minOccurs="0" />
+              <xs:element name="NotaFinal" msprop:Generator_ColumnVarNameInTable="columnNotaFinal" msprop:Generator_ColumnPropNameInRow="NotaFinal" msprop:Generator_ColumnPropNameInTable="NotaFinalColumn" msprop:Generator_UserColumnName="NotaFinal" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

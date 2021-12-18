@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="View_CA_Contagem_Faltas_Aprendiz_3010" targetNamespace="http://tempuri.org/View_CA_Contagem_Faltas_Aprendiz_3010.xsd" xmlns:mstns="http://tempuri.org/View_CA_Contagem_Faltas_Aprendiz_3010.xsd" xmlns="http://tempuri.org/View_CA_Contagem_Faltas_Aprendiz_3010.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ProtocoloAgilConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProtocoloAgilConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ProtocoloAgilConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_CA_Contagem_Faltas_AprendizTableAdapter" GeneratorDataComponentClassName="View_CA_Contagem_Faltas_AprendizTableAdapter" Name="View_CA_Contagem_Faltas_Aprendiz" UserDataComponentName="View_CA_Contagem_Faltas_AprendizTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="admin_projov.dbo.View_CA_Contagem_Faltas_Aprendiz" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ParDescricao, ParUniDescricao, Apr_Codigo, Apr_Nome, AdiDataAula, Faltou FROM View_CA_Contagem_Faltas_Aprendiz</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ParDescricao" DataSetColumn="ParDescricao" />
+              <Mapping SourceColumn="ParUniDescricao" DataSetColumn="ParUniDescricao" />
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="AdiDataAula" DataSetColumn="AdiDataAula" />
+              <Mapping SourceColumn="Faltou" DataSetColumn="Faltou" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="View_CA_Contagem_Faltas_Aprendiz_3010" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="View_CA_Contagem_Faltas_Aprendiz_3010" msprop:Generator_UserDSName="View_CA_Contagem_Faltas_Aprendiz_3010">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_CA_Contagem_Faltas_Aprendiz" msprop:Generator_TableClassName="View_CA_Contagem_Faltas_AprendizDataTable" msprop:Generator_TableVarName="tableView_CA_Contagem_Faltas_Aprendiz" msprop:Generator_TablePropName="View_CA_Contagem_Faltas_Aprendiz" msprop:Generator_RowDeletingName="View_CA_Contagem_Faltas_AprendizRowDeleting" msprop:Generator_RowChangingName="View_CA_Contagem_Faltas_AprendizRowChanging" msprop:Generator_RowEvHandlerName="View_CA_Contagem_Faltas_AprendizRowChangeEventHandler" msprop:Generator_RowDeletedName="View_CA_Contagem_Faltas_AprendizRowDeleted" msprop:Generator_UserTableName="View_CA_Contagem_Faltas_Aprendiz" msprop:Generator_RowChangedName="View_CA_Contagem_Faltas_AprendizRowChanged" msprop:Generator_RowEvArgName="View_CA_Contagem_Faltas_AprendizRowChangeEvent" msprop:Generator_RowClassName="View_CA_Contagem_Faltas_AprendizRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ParDescricao" msprop:Generator_ColumnVarNameInTable="columnParDescricao" msprop:Generator_ColumnPropNameInRow="ParDescricao" msprop:Generator_ColumnPropNameInTable="ParDescricaoColumn" msprop:Generator_UserColumnName="ParDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Codigo" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AdiDataAula" msprop:Generator_ColumnVarNameInTable="columnAdiDataAula" msprop:Generator_ColumnPropNameInRow="AdiDataAula" msprop:Generator_ColumnPropNameInTable="AdiDataAulaColumn" msprop:Generator_UserColumnName="AdiDataAula" type="xs:dateTime" />
+              <xs:element name="Faltou" msprop:Generator_ColumnVarNameInTable="columnFaltou" msprop:Generator_ColumnPropNameInRow="Faltou" msprop:Generator_ColumnPropNameInTable="FaltouColumn" msprop:Generator_UserColumnName="Faltou" type="xs:int" minOccurs="0" />
+              <xs:element name="FaltaDias" msprop:Generator_ColumnVarNameInTable="columnFaltaDias" msprop:Generator_ColumnPropNameInRow="FaltaDias" msprop:Generator_ColumnPropNameInTable="FaltaDiasColumn" msprop:Generator_UserColumnName="FaltaDias" type="xs:int" minOccurs="0" />
+              <xs:element name="FaltaHoras" msprop:Generator_ColumnVarNameInTable="columnFaltaHoras" msprop:Generator_ColumnPropNameInRow="FaltaHoras" msprop:Generator_ColumnPropNameInTable="FaltaHorasColumn" msprop:Generator_UserColumnName="FaltaHoras" type="xs:int" minOccurs="0" />
+              <xs:element name="ParUniCNPJ" msprop:Generator_ColumnVarNameInTable="columnParUniCNPJ" msprop:Generator_ColumnPropNameInRow="ParUniCNPJ" msprop:Generator_ColumnPropNameInTable="ParUniCNPJColumn" msprop:Generator_UserColumnName="ParUniCNPJ" type="xs:string" minOccurs="0" />
+              <xs:element name="Apr_NumSistExterno" msprop:Generator_ColumnVarNameInTable="columnApr_NumSistExterno" msprop:Generator_ColumnPropNameInRow="Apr_NumSistExterno" msprop:Generator_ColumnPropNameInTable="Apr_NumSistExternoColumn" msprop:Generator_UserColumnName="Apr_NumSistExterno" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_CA_Contagem_Faltas_Aprendiz" />
+      <xs:field xpath="mstns:Apr_Codigo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

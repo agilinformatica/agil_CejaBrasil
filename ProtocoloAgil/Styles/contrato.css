@@ -1,0 +1,167 @@
+﻿#Contrato
+{
+    width: 100%;
+    min-height: 450px;
+}
+
+#Contrato .texto_bloco
+{
+    font: 10pt Arial, sans-serif;
+    color: #3D3E40;
+}
+
+#Contrato .texto_bloco h1
+{
+    font: 10pt Arial, sans-serif;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 7px 20px 0 20px;
+    color: #042740;
+}
+
+#Contrato .texto_bloco p
+{
+    text-align: justify;
+    margin: 7px 30px 0 40px;
+}
+
+#Contrato .rubrica
+{
+    width: 60px;
+    height: 60px;
+    float: right;
+}
+
+#Contrato  .blocoAssinatura
+{
+    width: 100%;
+    clear: both;
+    text-align: right;
+    height: 60px;
+}
+
+#Contrato .assinatura
+{
+    width: 100px;
+    height: 60px;
+    z-index: -999;
+    float: left;
+    margin-top: 10px;
+    position: relative;
+}
+
+
+/* colocar v nas listas */
+.list
+{
+    list-style-image: url('../Images/check.png');
+}
+
+.list li
+{
+    margin: 8px 30px 0 70px;
+    text-align: justify;
+}
+
+
+.typelist
+{
+    text-align: justify;
+    counter-reset: list;
+}
+
+.typelist li
+{
+    margin: 8px 30px 0 70px;
+    display: block;
+    list-style: none;
+}
+
+.typelist li:before
+{
+    content: counter(list, lower-alpha) ") ";
+    counter-increment: list;
+}
+
+
+#Contrato .assinaturas
+{
+    font: 10pt Arial, sans-serif;
+    color: #3D3E40;
+    text-align: center;
+}
+
+#Contrato .assinaturas h2
+{
+    font: 10pt Arial, sans-serif;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 10px 30px 0 30px;
+    color: #042740;
+}
+
+#Contrato h5
+{
+    font: 14pt Arial, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 30px 10px 30px;
+    color: #042740;
+    text-align: center;
+}
+
+#Contrato h6
+{
+    font: 24pt Haettenschweiler;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 30px 10px 30px;
+    color: #042740;
+    text-align: center;
+}
+
+
+#Contrato .assinaturas h4
+{
+    font: 10pt Arial, sans-serif;
+    color: #3D3E40;
+    margin: 0 30px 0 30px;
+    padding-top: 20px;
+}
+
+#Contrato .assinaturas h3
+{
+    font: 10pt Arial, sans-serif;
+    color: #3D3E40;
+    margin: 2px 30px 0 30px;
+}
+
+.table
+{
+    width: 70%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table th
+{
+    border: none;
+}
+
+.table td
+{
+    border: solid 1px #5E5E5E;
+    padding: 1px;
+    border-spacing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fonteTab
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    font-weight: bold;
+    color: #5E5E5E;
+    margin-left: 0px;
+}

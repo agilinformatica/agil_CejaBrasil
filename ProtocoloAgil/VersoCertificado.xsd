@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="VersoCertificado" targetNamespace="http://tempuri.org/VersoCertificado.xsd" xmlns:mstns="http://tempuri.org/VersoCertificado.xsd" xmlns="http://tempuri.org/VersoCertificado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="VersoCertificado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="VersoCertificado" msprop:Generator_UserDSName="VersoCertificado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VersoCertificado" msprop:Generator_TableClassName="VersoCertificadoDataTable" msprop:Generator_TableVarName="tableVersoCertificado" msprop:Generator_TablePropName="_VersoCertificado" msprop:Generator_RowDeletingName="VersoCertificadoRowDeleting" msprop:Generator_RowChangingName="VersoCertificadoRowChanging" msprop:Generator_RowEvHandlerName="VersoCertificadoRowChangeEventHandler" msprop:Generator_RowDeletedName="VersoCertificadoRowDeleted" msprop:Generator_UserTableName="VersoCertificado" msprop:Generator_RowChangedName="VersoCertificadoRowChanged" msprop:Generator_RowEvArgName="VersoCertificadoRowChangeEvent" msprop:Generator_RowClassName="VersoCertificadoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" type="xs:string" minOccurs="0" />
+              <xs:element name="situacao" msprop:Generator_ColumnVarNameInTable="columnsituacao" msprop:Generator_ColumnPropNameInRow="situacao" msprop:Generator_ColumnPropNameInTable="situacaoColumn" msprop:Generator_UserColumnName="situacao" type="xs:string" minOccurs="0" />
+              <xs:element name="turmaCurso" msprop:Generator_ColumnVarNameInTable="columnturmaCurso" msprop:Generator_ColumnPropNameInRow="turmaCurso" msprop:Generator_ColumnPropNameInTable="turmaCursoColumn" msprop:Generator_UserColumnName="turmaCurso" type="xs:string" minOccurs="0" />
+              <xs:element name="nomeFantasia" msprop:Generator_ColumnVarNameInTable="columnnomeFantasia" msprop:Generator_ColumnPropNameInRow="nomeFantasia" msprop:Generator_ColumnPropNameInTable="nomeFantasiaColumn" msprop:Generator_UserColumnName="nomeFantasia" type="xs:string" minOccurs="0" />
+              <xs:element name="SomaDeNota" msprop:Generator_ColumnVarNameInTable="columnSomaDeNota" msprop:Generator_ColumnPropNameInRow="SomaDeNota" msprop:Generator_ColumnPropNameInTable="SomaDeNotaColumn" msprop:Generator_UserColumnName="SomaDeNota" type="xs:int" minOccurs="0" />
+              <xs:element name="ContaDisciplina" msprop:Generator_ColumnVarNameInTable="columnContaDisciplina" msprop:Generator_ColumnPropNameInRow="ContaDisciplina" msprop:Generator_ColumnPropNameInTable="ContaDisciplinaColumn" msprop:Generator_UserColumnName="ContaDisciplina" type="xs:int" minOccurs="0" />
+              <xs:element name="areaAtuacao" msprop:Generator_ColumnVarNameInTable="columnareaAtuacao" msprop:Generator_ColumnPropNameInRow="areaAtuacao" msprop:Generator_ColumnPropNameInTable="areaAtuacaoColumn" msprop:Generator_UserColumnName="areaAtuacao" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

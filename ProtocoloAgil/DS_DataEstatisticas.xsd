@@ -1,0 +1,1559 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_DataEstatisticas" targetNamespace="http://tempuri.org/DS_DataEstatisticas.xsd" xmlns:mstns="http://tempuri.org/DS_DataEstatisticas.xsd" xmlns="http://tempuri.org/DS_DataEstatisticas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ProtocoloAgilConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProtocoloAgilConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ProtocoloAgilConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="mestreagilweb1ConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="mestreagilweb1ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.mestreagilweb1ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_aprendizes_por_turmaTableAdapter" GeneratorDataComponentClassName="View_aprendizes_por_turmaTableAdapter" Name="View_aprendizes_por_turma" UserDataComponentName="View_aprendizes_por_turmaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.CA_Turmas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select TurNome, count(ALAAprendiz) as QTD from dbo.CA_AlocacaoAprendiz INNER JOIN dbo.CA_Turmas 
+ON ALATurma = TurCodigo WHERE ALAStatus = 'A' 
+GROUP BY TurNome order by count(ALAAprendiz) desc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TurNome" DataSetColumn="TurNome" />
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_aprendizes_areaTableAdapter" GeneratorDataComponentClassName="View_aprendizes_areaTableAdapter" Name="View_aprendizes_area" UserDataComponentName="View_aprendizes_areaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.CA_AreaAtuacao" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select AreaDescricao, count(ALAAprendiz) as QTD from dbo.CA_AlocacaoAprendiz 
+INNER JOIN dbo.CA_Aprendiz ON ALAAprendiz = Apr_Codigo 
+INNER JOIN dbo.CA_AreaAtuacao ON Apr_AreaAtuacao = AreaCodigo 
+WHERE ALAStatus = 'A' GROUP BY AreaDescricao order by count(ALAAprendiz)desc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AreaDescricao" DataSetColumn="AreaDescricao" />
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_aprendizes_desligados_situacaoTableAdapter" GeneratorDataComponentClassName="View_aprendizes_desligados_situacaoTableAdapter" Name="View_aprendizes_desligados_situacao" UserDataComponentName="View_aprendizes_desligados_situacaoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.CA_SituacaoAprendiz" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select StaDescricao, count(ALAAprendiz) as QTD from dbo.CA_AlocacaoAprendiz 
+INNER JOIN dbo.CA_Aprendiz ON Apr_Codigo = ALAAprendiz 
+INNER JOIN dbo.CA_SituacaoAprendiz ON Apr_Situacao = StaCodigo 
+WHERE ALAStatus = 'I'  AND Apr_Situacao &lt;&gt; 6  AND ALADataTermino BETWEEN @data01  AND @data02 
+GROUP BY StaDescricao order by count(ALAAprendiz)desc</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="data01" ColumnName="ALADataTermino" DataSourceName="mestreagilweb1.dbo.CA_AlocacaoAprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data01" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataTermino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data02" ColumnName="ALADataTermino" DataSourceName="mestreagilweb1.dbo.CA_AlocacaoAprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data02" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataTermino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StaDescricao" DataSetColumn="StaDescricao" />
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_desligados_analiticoTableAdapter" GeneratorDataComponentClassName="View_desligados_analiticoTableAdapter" Name="View_desligados_analitico" UserDataComponentName="View_desligados_analiticoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+
+SELECT CA_Aprendiz.Apr_Codigo, CA_Aprendiz.Apr_Nome, CA_Aprendiz.Apr_FimAprendizagem,   CA_Aprendiz.Apr_InicioAprendizagem,max(alocacao.ALAUnidadeParceiro) AS PrimeiroDeALAUnidadeParceiro, CA_Parceiros.ParDescricao, CA_ParceirosUnidade.ParUniDescricao, alocacao.ALAValorBolsa, alocacao.ALAValorTaxa,
+(select TurNome from  CA_Turmas where TurCodigo = max(alocacao.ALATurma))  AS TurNome,  ALApagto = case when alocacao.ALApagto = 'E' then 'Empresa' when alocacao.ALApagto = 'F' then 'Fundação' end , CA_Aprendiz.Apr_Situacao,CA_SituacaoAprendiz.StaDescricao FROM CA_Aprendiz INNER JOIN CA_AlocacaoAprendiz alocacao ON CA_Aprendiz.Apr_Codigo = alocacao.ALAAprendiz
+INNER JOIN CA_ParceirosUnidade ON alocacao.ALAUnidadeParceiro = CA_ParceirosUnidade.ParUniCodigo INNER JOIN CA_Parceiros ON CA_ParceirosUnidade.ParUniCodigoParceiro = CA_Parceiros.ParCodigo
+INNER JOIN CA_SituacaoAprendiz ON CA_Aprendiz.Apr_Situacao = CA_SituacaoAprendiz.StaCodigo GROUP BY CA_Aprendiz.Apr_Codigo, CA_Aprendiz.Apr_Nome, CA_Aprendiz.Apr_FimAprendizagem, CA_Parceiros.ParDescricao, 
+CA_ParceirosUnidade.ParUniDescricao, alocacao.ALAValorBolsa, alocacao.ALAValorTaxa, alocacao.ALApagto, CA_Aprendiz.Apr_Situacao, CA_SituacaoAprendiz.StaDescricao, CA_Aprendiz.Apr_InicioAprendizagem
+HAVING CA_Aprendiz.Apr_FimAprendizagem Between @dataInicio And @datatermino ORDER BY CA_Aprendiz.Apr_Nome</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="dataInicio" ColumnName="Apr_FimAprendizagem" DataSourceName="mestreagilweb1.dbo.CA_Aprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@dataInicio" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="Apr_FimAprendizagem" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="datatermino" ColumnName="Apr_FimAprendizagem" DataSourceName="mestreagilweb1.dbo.CA_Aprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@datatermino" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="Apr_FimAprendizagem" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="TurNome" DataSetColumn="TurNome" />
+              <Mapping SourceColumn="ParUniDescricao" DataSetColumn="ParUniDescricao" />
+              <Mapping SourceColumn="ALAValorBolsa" DataSetColumn="ALAValorBolsa" />
+              <Mapping SourceColumn="ALAValorTaxa" DataSetColumn="ALAValorTaxa" />
+              <Mapping SourceColumn="StaDescricao" DataSetColumn="StaDescricao" />
+              <Mapping SourceColumn="ALApagto" DataSetColumn="ALApagto" />
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_FimAprendizagem" DataSetColumn="Apr_FimAprendizagem" />
+              <Mapping SourceColumn="Apr_InicioAprendizagem" DataSetColumn="Apr_InicioAprendizagem" />
+              <Mapping SourceColumn="PrimeiroDeALAUnidadeParceiro" DataSetColumn="PrimeiroDeALAUnidadeParceiro" />
+              <Mapping SourceColumn="ParDescricao" DataSetColumn="ParDescricao" />
+              <Mapping SourceColumn="Apr_Situacao" DataSetColumn="Apr_Situacao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_desligados_generoTableAdapter" GeneratorDataComponentClassName="View_desligados_generoTableAdapter" Name="View_desligados_genero" UserDataComponentName="View_desligados_generoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select (Case when Apr_sexo = 'M' then 'Masculino' when Apr_sexo = 'F' then 'Feminino' else 'ND' end) as sexo , 
+count(Apr_sexo) as QTD from dbo.CA_AlocacaoAprendiz INNER JOIN dbo.CA_Aprendiz ON ALAAprendiz = Apr_Codigo 
+INNER JOIN dbo.CA_SituacaoAprendiz ON Apr_Situacao = StaCodigo
+WHERE ALAStatus = 'I' And  Apr_Situacao &lt;&gt;6 AND ALADataTermino BETWEEN @data01  AND @data02
+group by Apr_sexo</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="data01" ColumnName="ALADataTermino" DataSourceName="mestreagilweb1.dbo.CA_AlocacaoAprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data01" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataTermino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data02" ColumnName="ALADataTermino" DataSourceName="mestreagilweb1.dbo.CA_AlocacaoAprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data02" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataTermino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="sexo" DataSetColumn="sexo" />
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_desligados_idadeTableAdapter" GeneratorDataComponentClassName="View_desligados_idadeTableAdapter" Name="View_desligados_idade" UserDataComponentName="View_desligados_idadeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.View_Idade_Alocacao" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Idade, COUNT(Idade) as QTD from  View_Idade_Alocacao WHERE ALAStatus = 'I' And  Apr_Situacao &lt;&gt; 6 
+ AND ALADataTermino BETWEEN @data01  AND @data02 group by Idade order by COUNT(Idade)desc</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="data01" ColumnName="ALADataTermino" DataSourceName="mestreagilweb1.dbo.View_Idade_Alocacao" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data01" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataTermino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data02" ColumnName="ALADataTermino" DataSourceName="mestreagilweb1.dbo.View_Idade_Alocacao" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data02" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataTermino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Idade" DataSetColumn="Idade" />
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Alocados_Parceiro_PeriodoTableAdapter" GeneratorDataComponentClassName="View_Alocados_Parceiro_PeriodoTableAdapter" Name="View_Alocados_Parceiro_Periodo" UserDataComponentName="View_Alocados_Parceiro_PeriodoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.CA_Parceiros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select ParNomeFantasia, count(ALAAprendiz) as QTD from dbo.CA_AlocacaoAprendiz 
+INNER JOIN CA_ParceirosUnidade ON ALAUnidadeParceiro = ParUniCodigo
+INNER JOIN CA_Parceiros ON  ParUniCodigoParceiro = ParCodigo WHERE ALAStatus = 'A' 
+AND ALADataInicio BETWEEN @data01 AND @data02 GROUP BY ParNomeFantasia order by count(ALAAprendiz) desc</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="data01" ColumnName="ALADataInicio" DataSourceName="mestreagilweb1.dbo.CA_AlocacaoAprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data01" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataInicio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data02" ColumnName="ALADataInicio" DataSourceName="mestreagilweb1.dbo.CA_AlocacaoAprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data02" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataInicio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ParNomeFantasia" DataSetColumn="ParNomeFantasia" />
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Alocados_Periodo_AnaliticoTableAdapter" GeneratorDataComponentClassName="View_Alocados_Periodo_AnaliticoTableAdapter" Name="View_Alocados_Periodo_Analitico" UserDataComponentName="View_Alocados_Periodo_AnaliticoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.View_AlocacoesAlunos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select Apr_Nome,TurNome,ParNomeFantasia,ParUniDescricao, ALADataInicio,ALADataPrevTermino,ALADataTermino, ALAValorBolsa, 
+ALAValorTaxa,  Expr1 as Situacao,StaDescricao, ALApagto from  dbo.View_AlocacoesAlunos 
+WHERE ALAStatus ='A' And  Apr_Situacao = 6 AND ALADataInicio 
+BETWEEN @data01  AND @data02 </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="data01" ColumnName="ALADataInicio" DataSourceName="mestreagilweb1.dbo.View_AlocacoesAlunos" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data01" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataInicio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data02" ColumnName="ALADataInicio" DataSourceName="mestreagilweb1.dbo.View_AlocacoesAlunos" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data02" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataInicio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="TurNome" DataSetColumn="TurNome" />
+              <Mapping SourceColumn="ParNomeFantasia" DataSetColumn="ParNomeFantasia" />
+              <Mapping SourceColumn="ParUniDescricao" DataSetColumn="ParUniDescricao" />
+              <Mapping SourceColumn="ALADataInicio" DataSetColumn="ALADataInicio" />
+              <Mapping SourceColumn="ALADataPrevTermino" DataSetColumn="ALADataPrevTermino" />
+              <Mapping SourceColumn="ALADataTermino" DataSetColumn="ALADataTermino" />
+              <Mapping SourceColumn="ALAValorBolsa" DataSetColumn="ALAValorBolsa" />
+              <Mapping SourceColumn="ALAValorTaxa" DataSetColumn="ALAValorTaxa" />
+              <Mapping SourceColumn="Situacao" DataSetColumn="Situacao" />
+              <Mapping SourceColumn="StaDescricao" DataSetColumn="StaDescricao" />
+              <Mapping SourceColumn="ALApagto" DataSetColumn="ALApagto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_motivos_desligamentoTableAdapter" GeneratorDataComponentClassName="View_motivos_desligamentoTableAdapter" Name="View_motivos_desligamento" UserDataComponentName="View_motivos_desligamentoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select StaDescricao, MotDescricao, Count(MotCodigo) As QTD  from dbo.CA_AlocacaoAprendiz 
+INNER JOIN dbo.CA_SituacaoAprendiz ON ALAStatus = StaCodigo
+INNER JOIN dbo.CA_Aprendiz ON ALAAprendiz = Apr_Codigo
+INNER JOIN dbo.CA_MotivoDesligamento on MotCodigo = ALAMotivoDesligamento 
+WHERE ALAStatus ='I' And  Apr_Situacao &lt;&gt; 6 
+AND ALADataTermino BETWEEN @data01  AND @data02  GROUP BY StaDescricao,MotDescricao  order by count(MotCodigo) desc</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="data01" ColumnName="ALADataTermino" DataSourceName="mestreagilweb1.dbo.CA_AlocacaoAprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data01" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataTermino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="data02" ColumnName="ALADataTermino" DataSourceName="mestreagilweb1.dbo.CA_AlocacaoAprendiz" DataTypeServer="smalldatetime" DbType="DateTime" Direction="Input" ParameterName="@data02" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="4" SourceColumn="ALADataTermino" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="StaDescricao" DataSetColumn="StaDescricao" />
+              <Mapping SourceColumn="MotDescricao" DataSetColumn="MotDescricao" />
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_CA_Fechamento_MensalTableAdapter" GeneratorDataComponentClassName="View_CA_Fechamento_MensalTableAdapter" Name="View_CA_Fechamento_Mensal" UserDataComponentName="View_CA_Fechamento_MensalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.View_CA_Fechamento_Mensal" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Apr_Codigo, Apr_Nome, ParUniDescricao, ParNomeFantasia, FechTaxa, FechBolsa, FechPagamento, TurNome, AreaDescricao, FechAnoFechamento, FechMesFechamento, FechUnidade, ParCodigo FROM dbo.View_CA_Fechamento_Mensal</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="ParUniDescricao" DataSetColumn="ParUniDescricao" />
+              <Mapping SourceColumn="ParNomeFantasia" DataSetColumn="ParNomeFantasia" />
+              <Mapping SourceColumn="FechTaxa" DataSetColumn="FechTaxa" />
+              <Mapping SourceColumn="FechBolsa" DataSetColumn="FechBolsa" />
+              <Mapping SourceColumn="FechPagamento" DataSetColumn="FechPagamento" />
+              <Mapping SourceColumn="TurNome" DataSetColumn="TurNome" />
+              <Mapping SourceColumn="AreaDescricao" DataSetColumn="AreaDescricao" />
+              <Mapping SourceColumn="FechAnoFechamento" DataSetColumn="FechAnoFechamento" />
+              <Mapping SourceColumn="FechMesFechamento" DataSetColumn="FechMesFechamento" />
+              <Mapping SourceColumn="FechUnidade" DataSetColumn="FechUnidade" />
+              <Mapping SourceColumn="ParCodigo" DataSetColumn="ParCodigo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Fechamento_SinteticoTableAdapter" GeneratorDataComponentClassName="View_Fechamento_SinteticoTableAdapter" Name="View_Fechamento_Sintetico" UserDataComponentName="View_Fechamento_SinteticoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.CA_Parceiros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select ParNomeFantasia, FechPagamento = case when FechPagamento = 'F' then 'Fundação' when FechPagamento = 'E' then 'Empresa'   
+else 'Não Definido' end, count(FechPagamento) as QTD, sum(FechTaxa) as TotalTaxa, sum(FechBolsa) as TotalBolsa 
+from  CA_Fechamento inner join CA_ParceirosUnidade on ParUniCodigo = FechUnidade 
+inner join CA_Parceiros on ParUniCodigoParceiro = ParCodigo 
+ group by FechPagamento,ParNomeFantasia</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="FechPagamento" DataSetColumn="FechPagamento" />
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+              <Mapping SourceColumn="TotalTaxa" DataSetColumn="TotalTaxa" />
+              <Mapping SourceColumn="TotalBolsa" DataSetColumn="TotalBolsa" />
+              <Mapping SourceColumn="ParNomeFantasia" DataSetColumn="ParNomeFantasia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Declaracao_MatriculaTableAdapter" GeneratorDataComponentClassName="View_Declaracao_MatriculaTableAdapter" Name="View_Declaracao_Matricula" UserDataComponentName="View_Declaracao_MatriculaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select Apr_Codigo, Apr_Nome, AreaNumeroCadastro ,Apr_InicioAprendizagem,
+AreaDescricao, AreaCargaHoraria,
+ALAInicioExpediente, ALATerminoExpediente, ParNomeFantasia, ParUniCNPJ,
+ParUniEndereco, ParUniNumeroEndereco, ParUniComplemento, ParUniBairro,
+ParUniCidade,ParUniEstado,ParUniCEP, OriNome,OriTelefone, ParUniTelefone
+
+from dbo.CA_Aprendiz inner join dbo.CA_AlocacaoAprendiz on ALAAprendiz = Apr_Codigo
+inner join dbo.CA_AreaAtuacao on  Apr_AreaAtuacao = AreaCodigo
+inner join dbo.CA_ParceirosUnidade on ALAUnidadeParceiro = ParUniCodigo
+inner join dbo.CA_Parceiros on  ParCodigo = ParUniCodigoParceiro
+left join dbo.CA_Orientador on  OriCodigo = ALAOrientador</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="AreaNumeroCadastro" DataSetColumn="AreaNumeroCadastro" />
+              <Mapping SourceColumn="ALAInicioExpediente" DataSetColumn="ALAInicioExpediente" />
+              <Mapping SourceColumn="ALATerminoExpediente" DataSetColumn="ALATerminoExpediente" />
+              <Mapping SourceColumn="ParNomeFantasia" DataSetColumn="ParNomeFantasia" />
+              <Mapping SourceColumn="ParUniCNPJ" DataSetColumn="ParUniCNPJ" />
+              <Mapping SourceColumn="ParUniEndereco" DataSetColumn="ParUniEndereco" />
+              <Mapping SourceColumn="ParUniNumeroEndereco" DataSetColumn="ParUniNumeroEndereco" />
+              <Mapping SourceColumn="ParUniComplemento" DataSetColumn="ParUniComplemento" />
+              <Mapping SourceColumn="ParUniBairro" DataSetColumn="ParUniBairro" />
+              <Mapping SourceColumn="ParUniCidade" DataSetColumn="ParUniCidade" />
+              <Mapping SourceColumn="ParUniEstado" DataSetColumn="ParUniEstado" />
+              <Mapping SourceColumn="ParUniCEP" DataSetColumn="ParUniCEP" />
+              <Mapping SourceColumn="OriNome" DataSetColumn="OriNome" />
+              <Mapping SourceColumn="OriTelefone" DataSetColumn="OriTelefone" />
+              <Mapping SourceColumn="ParUniTelefone" DataSetColumn="ParUniTelefone" />
+              <Mapping SourceColumn="Apr_InicioAprendizagem" DataSetColumn="Apr_InicioAprendizagem" />
+              <Mapping SourceColumn="AreaDescricao" DataSetColumn="AreaDescricao" />
+              <Mapping SourceColumn="AreaCargaHoraria" DataSetColumn="AreaCargaHoraria" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_CA_Acompanhamento_PesquisasTableAdapter" GeneratorDataComponentClassName="View_CA_Acompanhamento_PesquisasTableAdapter" Name="View_CA_Acompanhamento_Pesquisas" UserDataComponentName="View_CA_Acompanhamento_PesquisasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>   SELECT  PepCodigo, Apr_Codigo,Apr_Nome,PesNome, ParCodigo,ParNomeFantasia, ParUniDescricao, ParUniCodigoParceiro, PepRealizada, PepAno, PepMes, 
+(CASE WHEN PepRealizada = 'N' THEN 'Pendente' ELSE 'Realizada' END) AS Situacao, OriNome, OriTelefone, OriEmail 
+FROM  dbo.CA_Pesquisa_Parceiro inner join dbo.CA_ParceirosUnidade ON ParUniCodigo = PepParceiroCodigo 
+inner join CA_Parceiros ON ParCodigo = ParUniCodigoParceiro inner join CA_Aprendiz ON Apr_Codigo = PepAprendiz 
+INNER JOIN CA_AlocacaoAprendiz ON  Apr_Codigo = ALAAprendiz left join CA_Orientador ON OriUnidadeParceiro =  ParUniCodigoParceiro 
+AND ALAOrientador = OriCodigo  inner join CA_Pesquisa on PepPesquisaCodigo = PesCodigo  WHERE  PepAno = @PepAno AND  PepMes = @PepMes</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="PepAno" ColumnName="PepAno" DataSourceName="mestreagilweb1.dbo.CA_Pesquisa_Parceiro" DataTypeServer="varchar(4)" DbType="AnsiString" Direction="Input" ParameterName="@PepAno" Precision="0" ProviderType="VarChar" Scale="0" Size="4" SourceColumn="PepAno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="PepMes" ColumnName="PepMes" DataSourceName="mestreagilweb1.dbo.CA_Pesquisa_Parceiro" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@PepMes" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="PepMes" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PepCodigo" DataSetColumn="PepCodigo" />
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="ParCodigo" DataSetColumn="ParCodigo" />
+              <Mapping SourceColumn="ParNomeFantasia" DataSetColumn="ParNomeFantasia" />
+              <Mapping SourceColumn="ParUniDescricao" DataSetColumn="ParUniDescricao" />
+              <Mapping SourceColumn="ParUniCodigoParceiro" DataSetColumn="ParUniCodigoParceiro" />
+              <Mapping SourceColumn="PepRealizada" DataSetColumn="PepRealizada" />
+              <Mapping SourceColumn="PepAno" DataSetColumn="PepAno" />
+              <Mapping SourceColumn="PepMes" DataSetColumn="PepMes" />
+              <Mapping SourceColumn="Situacao" DataSetColumn="Situacao" />
+              <Mapping SourceColumn="OriNome" DataSetColumn="OriNome" />
+              <Mapping SourceColumn="OriTelefone" DataSetColumn="OriTelefone" />
+              <Mapping SourceColumn="OriEmail" DataSetColumn="OriEmail" />
+              <Mapping SourceColumn="PesNome" DataSetColumn="PesNome" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_controle_frequenciaTableAdapter" GeneratorDataComponentClassName="View_controle_frequenciaTableAdapter" Name="View_controle_frequencia" UserDataComponentName="View_controle_frequenciaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     dbo.CA_Aprendiz.Apr_Codigo, dbo.CA_AlocacaoAprendiz.ALATurma, dbo.CA_Parceiros.ParDescricao, dbo.CA_Aprendiz.Apr_Nome, 
+                      dbo.CA_Parceiros.ParDescricao + '/' + dbo.CA_ParceirosUnidade.ParUniDescricao AS Parceiro, dbo.CA_AlocacaoAprendiz.ALAInicioExpediente, 
+                      dbo.CA_AlocacaoAprendiz.ALATerminoExpediente, dbo.CA_Frequecia.FreqReferencia, dbo.CA_Frequecia.FreqFaltas, dbo.CA_Frequecia.FreqObservacao, 
+                      dbo.CA_Frequecia.FreqDataPrevEntrega, dbo.CA_Frequecia.FreqDataEntrega, (CASE WHEN FreqSituacao = 'E' THEN 'Entregue' ELSE 'Não Entregue' END) 
+                      AS Situacao, (CASE WHEN ALApagto = 'E' THEN 'Empresa' WHEN ALApagto = 'F' THEN 'Fundação' ELSE 'ND' END) AS Pagamento, dbo.CA_Frequecia.FreqOrdem, 
+                      dbo.CA_Turmas.TurNome
+FROM         dbo.CA_Frequecia INNER JOIN
+                      dbo.CA_Aprendiz ON dbo.CA_Aprendiz.Apr_Codigo = dbo.CA_Frequecia.FreqAprendiz INNER JOIN
+                      dbo.CA_AlocacaoAprendiz ON dbo.CA_Frequecia.FreqAprendiz = dbo.CA_AlocacaoAprendiz.ALAAprendiz INNER JOIN
+                      dbo.CA_ParceirosUnidade ON dbo.CA_AlocacaoAprendiz.ALAUnidadeParceiro = dbo.CA_ParceirosUnidade.ParUniCodigo INNER JOIN
+                      dbo.CA_Parceiros ON dbo.CA_Parceiros.ParCodigo = dbo.CA_ParceirosUnidade.ParUniCodigoParceiro INNER JOIN
+                      dbo.CA_Turmas ON dbo.CA_AlocacaoAprendiz.ALATurma = dbo.CA_Turmas.TurCodigo
+WHERE     (dbo.CA_AlocacaoAprendiz.ALAStatus = 'A') AND (dbo.CA_Aprendiz.Apr_Situacao = 6)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="ParDescricao" DataSetColumn="ParDescricao" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="ALAInicioExpediente" DataSetColumn="ALAInicioExpediente" />
+              <Mapping SourceColumn="ALATerminoExpediente" DataSetColumn="ALATerminoExpediente" />
+              <Mapping SourceColumn="FreqReferencia" DataSetColumn="FreqReferencia" />
+              <Mapping SourceColumn="FreqFaltas" DataSetColumn="FreqFaltas" />
+              <Mapping SourceColumn="FreqObservacao" DataSetColumn="FreqObservacao" />
+              <Mapping SourceColumn="FreqDataPrevEntrega" DataSetColumn="FreqDataPrevEntrega" />
+              <Mapping SourceColumn="FreqDataEntrega" DataSetColumn="FreqDataEntrega" />
+              <Mapping SourceColumn="ALATurma" DataSetColumn="ALATurma" />
+              <Mapping SourceColumn="Parceiro" DataSetColumn="Parceiro" />
+              <Mapping SourceColumn="Situacao" DataSetColumn="Situacao" />
+              <Mapping SourceColumn="Pagamento" DataSetColumn="Pagamento" />
+              <Mapping SourceColumn="FreqOrdem" DataSetColumn="FreqOrdem" />
+              <Mapping SourceColumn="TurNome" DataSetColumn="TurNome" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Pesquisas_por_tutorTableAdapter" GeneratorDataComponentClassName="View_Pesquisas_por_tutorTableAdapter" Name="View_Pesquisas_por_tutor" UserDataComponentName="View_Pesquisas_por_tutorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>Select count(PepTutor) as QTD,UsuNome,PesNome  from CA_Pesquisa_Parceiro
+inner join CA_Pesquisa on PesCodigo =  PepPesquisaCodigo
+left join CA_Usuarios on UsuCodigo = PepTutor  WHERE PepRealizada = 'S' group by UsuNome,PesNome</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="QTD" DataSetColumn="QTD" />
+              <Mapping SourceColumn="UsuNome" DataSetColumn="UsuNome" />
+              <Mapping SourceColumn="PesNome" DataSetColumn="PesNome" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Pesquisas_RealizadasTableAdapter" GeneratorDataComponentClassName="View_Pesquisas_RealizadasTableAdapter" Name="View_Pesquisas_Realizadas" UserDataComponentName="View_Pesquisas_RealizadasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.View_Pesquisas_Realizadas" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PepCodigo, Apr_Codigo, Apr_Nome, ParCodigo, ParNomeFantasia, ParUniDescricao, ParUniCodigoParceiro, PepRealizada, PepAno, PepMes, Situacao, OriNome, OriTelefone, OriEmail, UsuCodigo, UsuNome, PepDataRealizada, Notafinal, MediaNotas, PesNome FROM dbo.View_Pesquisas_Realizadas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PepCodigo" DataSetColumn="PepCodigo" />
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="ParCodigo" DataSetColumn="ParCodigo" />
+              <Mapping SourceColumn="ParNomeFantasia" DataSetColumn="ParNomeFantasia" />
+              <Mapping SourceColumn="ParUniDescricao" DataSetColumn="ParUniDescricao" />
+              <Mapping SourceColumn="ParUniCodigoParceiro" DataSetColumn="ParUniCodigoParceiro" />
+              <Mapping SourceColumn="PepRealizada" DataSetColumn="PepRealizada" />
+              <Mapping SourceColumn="PepAno" DataSetColumn="PepAno" />
+              <Mapping SourceColumn="PepMes" DataSetColumn="PepMes" />
+              <Mapping SourceColumn="Situacao" DataSetColumn="Situacao" />
+              <Mapping SourceColumn="OriNome" DataSetColumn="OriNome" />
+              <Mapping SourceColumn="OriTelefone" DataSetColumn="OriTelefone" />
+              <Mapping SourceColumn="OriEmail" DataSetColumn="OriEmail" />
+              <Mapping SourceColumn="UsuCodigo" DataSetColumn="UsuCodigo" />
+              <Mapping SourceColumn="UsuNome" DataSetColumn="UsuNome" />
+              <Mapping SourceColumn="PepDataRealizada" DataSetColumn="PepDataRealizada" />
+              <Mapping SourceColumn="Notafinal" DataSetColumn="Notafinal" />
+              <Mapping SourceColumn="MediaNotas" DataSetColumn="MediaNotas" />
+              <Mapping SourceColumn="PesNome" DataSetColumn="PesNome" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CA_BairrosTableAdapter" GeneratorDataComponentClassName="CA_BairrosTableAdapter" Name="CA_Bairros" UserDataComponentName="CA_BairrosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.CA_Bairros" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[CA_Bairros] WHERE (([DescBairro] = @Original_DescBairro))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DescBairro" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DescBairro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[CA_Bairros] ([DescBairro], [RegBairro]) VALUES (@DescBairro, @RegBairro)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DescBairro" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DescBairro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@RegBairro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RegBairro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DescBairro, RegBairro FROM dbo.CA_Bairros</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[CA_Bairros] SET [DescBairro] = @DescBairro, [RegBairro] = @RegBairro WHERE (([DescBairro] = @Original_DescBairro))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DescBairro" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DescBairro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@RegBairro" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RegBairro" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DescBairro" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DescBairro" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DescBairro" DataSetColumn="DescBairro" />
+              <Mapping SourceColumn="RegBairro" DataSetColumn="RegBairro" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CA_RegioesTableAdapter" GeneratorDataComponentClassName="CA_RegioesTableAdapter" Name="CA_Regioes" UserDataComponentName="CA_RegioesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.CA_Regioes" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[CA_Regioes] WHERE (([CodRegiao] = @Original_CodRegiao))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CodRegiao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CodRegiao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[CA_Regioes] ([DescRegiao]) VALUES (@DescRegiao)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DescRegiao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DescRegiao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CodRegiao, DescRegiao FROM dbo.CA_Regioes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[CA_Regioes] SET [DescRegiao] = @DescRegiao WHERE (([CodRegiao] = @Original_CodRegiao))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DescRegiao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DescRegiao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_CodRegiao" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CodRegiao" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CodRegiao" DataSetColumn="CodRegiao" />
+              <Mapping SourceColumn="DescRegiao" DataSetColumn="DescRegiao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_BairrosTableAdapter" GeneratorDataComponentClassName="View_BairrosTableAdapter" Name="View_Bairros" UserDataComponentName="View_BairrosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DescBairro,DescRegiao FROM dbo.CA_Bairros INNER JOIN dbo.CA_Regioes on RegBairro = CodRegiao</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DescBairro" DataSetColumn="DescBairro" />
+              <Mapping SourceColumn="DescRegiao" DataSetColumn="DescRegiao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Advertencias_aprendizesTableAdapter" GeneratorDataComponentClassName="View_Advertencias_aprendizesTableAdapter" Name="View_Advertencias_aprendizes" UserDataComponentName="View_Advertencias_aprendizesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.View_Advertencias_aprendizes" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Apr_Codigo, Apr_Nome, StaDescricao, OcoDescricao, Turma, DiaNumeroFaltas, Datas_FAltas, OcaDataEntrega, OcaPrevDevolucao, OcaDevolucao, OcaDataOcorrencia FROM dbo.View_Advertencias_aprendizes</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="StaDescricao" DataSetColumn="StaDescricao" />
+              <Mapping SourceColumn="OcoDescricao" DataSetColumn="OcoDescricao" />
+              <Mapping SourceColumn="Turma" DataSetColumn="Turma" />
+              <Mapping SourceColumn="DiaNumeroFaltas" DataSetColumn="DiaNumeroFaltas" />
+              <Mapping SourceColumn="Datas_FAltas" DataSetColumn="Datas_FAltas" />
+              <Mapping SourceColumn="OcaDataEntrega" DataSetColumn="OcaDataEntrega" />
+              <Mapping SourceColumn="OcaPrevDevolucao" DataSetColumn="OcaPrevDevolucao" />
+              <Mapping SourceColumn="OcaDevolucao" DataSetColumn="OcaDevolucao" />
+              <Mapping SourceColumn="OcaDataOcorrencia" DataSetColumn="OcaDataOcorrencia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CA_EventosTableAdapter" GeneratorDataComponentClassName="CA_EventosTableAdapter" Name="CA_Eventos" UserDataComponentName="CA_EventosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mestreagilweb1ConnectionString (Web.config)" DbObjectName="mestreagilweb1.dbo.CA_Eventos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[CA_Eventos] WHERE (([EvnCodigo] = @Original_EvnCodigo))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_EvnCodigo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EvnCodigo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[CA_Eventos] ([EvnNome], [EvnData], [EvnDescricao]) VALUES (@EvnNome, @EvnData, @EvnDescricao)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EvnNome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EvnNome" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EvnData" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="EvnData" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EvnDescricao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EvnDescricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT EvnCodigo, EvnNome, EvnData, EvnDescricao FROM dbo.CA_Eventos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[CA_Eventos] SET [EvnNome] = @EvnNome, [EvnData] = @EvnData, [EvnDescricao] = @EvnDescricao WHERE (([EvnCodigo] = @Original_EvnCodigo))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EvnNome" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EvnNome" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@EvnData" Precision="0" ProviderType="SmallDateTime" Scale="0" Size="0" SourceColumn="EvnData" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@EvnDescricao" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="EvnDescricao" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_EvnCodigo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="EvnCodigo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EvnCodigo" DataSetColumn="EvnCodigo" />
+              <Mapping SourceColumn="EvnNome" DataSetColumn="EvnNome" />
+              <Mapping SourceColumn="EvnData" DataSetColumn="EvnData" />
+              <Mapping SourceColumn="EvnDescricao" DataSetColumn="EvnDescricao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Aprendizes_EventoTableAdapter" GeneratorDataComponentClassName="View_Aprendizes_EventoTableAdapter" Name="View_Aprendizes_Evento" UserDataComponentName="View_Aprendizes_EventoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select EvnNome, EvnData, Apr_Codigo, Apr_Nome,  PrtPresenca  from  CA_Aprendiz
+          inner join CA_Participantes on Apr_Codigo = PrtAprendiz
+           inner join CA_Eventos on PrtCodigoEvento = EvnCodigo
+           where PrtCodigoEvento = @PrtCodigoEvento </CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="PrtCodigoEvento" ColumnName="PrtCodigoEvento" DataSourceName="mestreagilweb1.dbo.CA_Participantes" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@PrtCodigoEvento" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="PrtCodigoEvento" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EvnNome" DataSetColumn="EvnNome" />
+              <Mapping SourceColumn="EvnData" DataSetColumn="EvnData" />
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="PrtPresenca" DataSetColumn="PrtPresenca" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_DataEstatisticas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_DataEstatisticas" msprop:Generator_UserDSName="DS_DataEstatisticas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_aprendizes_por_turma" msprop:Generator_TableClassName="View_aprendizes_por_turmaDataTable" msprop:Generator_TableVarName="tableView_aprendizes_por_turma" msprop:Generator_TablePropName="View_aprendizes_por_turma" msprop:Generator_RowDeletingName="View_aprendizes_por_turmaRowDeleting" msprop:Generator_RowChangingName="View_aprendizes_por_turmaRowChanging" msprop:Generator_RowEvHandlerName="View_aprendizes_por_turmaRowChangeEventHandler" msprop:Generator_RowDeletedName="View_aprendizes_por_turmaRowDeleted" msprop:Generator_UserTableName="View_aprendizes_por_turma" msprop:Generator_RowChangedName="View_aprendizes_por_turmaRowChanged" msprop:Generator_RowEvArgName="View_aprendizes_por_turmaRowChangeEvent" msprop:Generator_RowClassName="View_aprendizes_por_turmaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" msprop:Generator_UserColumnName="QTD" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_aprendizes_area" msprop:Generator_TableClassName="View_aprendizes_areaDataTable" msprop:Generator_TableVarName="tableView_aprendizes_area" msprop:Generator_RowChangedName="View_aprendizes_areaRowChanged" msprop:Generator_TablePropName="View_aprendizes_area" msprop:Generator_RowDeletingName="View_aprendizes_areaRowDeleting" msprop:Generator_RowChangingName="View_aprendizes_areaRowChanging" msprop:Generator_RowEvHandlerName="View_aprendizes_areaRowChangeEventHandler" msprop:Generator_RowDeletedName="View_aprendizes_areaRowDeleted" msprop:Generator_RowClassName="View_aprendizes_areaRow" msprop:Generator_UserTableName="View_aprendizes_area" msprop:Generator_RowEvArgName="View_aprendizes_areaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AreaDescricao" msprop:Generator_ColumnVarNameInTable="columnAreaDescricao" msprop:Generator_ColumnPropNameInRow="AreaDescricao" msprop:Generator_ColumnPropNameInTable="AreaDescricaoColumn" msprop:Generator_UserColumnName="AreaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" msprop:Generator_UserColumnName="QTD" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_aprendizes_desligados_situacao" msprop:Generator_TableClassName="View_aprendizes_desligados_situacaoDataTable" msprop:Generator_TableVarName="tableView_aprendizes_desligados_situacao" msprop:Generator_TablePropName="View_aprendizes_desligados_situacao" msprop:Generator_RowDeletingName="View_aprendizes_desligados_situacaoRowDeleting" msprop:Generator_RowChangingName="View_aprendizes_desligados_situacaoRowChanging" msprop:Generator_RowEvHandlerName="View_aprendizes_desligados_situacaoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_aprendizes_desligados_situacaoRowDeleted" msprop:Generator_UserTableName="View_aprendizes_desligados_situacao" msprop:Generator_RowChangedName="View_aprendizes_desligados_situacaoRowChanged" msprop:Generator_RowEvArgName="View_aprendizes_desligados_situacaoRowChangeEvent" msprop:Generator_RowClassName="View_aprendizes_desligados_situacaoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StaDescricao" msprop:Generator_ColumnVarNameInTable="columnStaDescricao" msprop:Generator_ColumnPropNameInRow="StaDescricao" msprop:Generator_ColumnPropNameInTable="StaDescricaoColumn" msprop:Generator_UserColumnName="StaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" msprop:Generator_UserColumnName="QTD" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_desligados_analitico" msprop:Generator_TableClassName="View_desligados_analiticoDataTable" msprop:Generator_TableVarName="tableView_desligados_analitico" msprop:Generator_RowChangedName="View_desligados_analiticoRowChanged" msprop:Generator_TablePropName="View_desligados_analitico" msprop:Generator_RowDeletingName="View_desligados_analiticoRowDeleting" msprop:Generator_RowChangingName="View_desligados_analiticoRowChanging" msprop:Generator_RowEvHandlerName="View_desligados_analiticoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_desligados_analiticoRowDeleted" msprop:Generator_RowClassName="View_desligados_analiticoRow" msprop:Generator_UserTableName="View_desligados_analitico" msprop:Generator_RowEvArgName="View_desligados_analiticoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALAValorBolsa" msprop:Generator_ColumnVarNameInTable="columnALAValorBolsa" msprop:Generator_ColumnPropNameInRow="ALAValorBolsa" msprop:Generator_ColumnPropNameInTable="ALAValorBolsaColumn" msprop:Generator_UserColumnName="ALAValorBolsa" type="xs:float" minOccurs="0" />
+              <xs:element name="ALAValorTaxa" msprop:Generator_ColumnVarNameInTable="columnALAValorTaxa" msprop:Generator_ColumnPropNameInRow="ALAValorTaxa" msprop:Generator_ColumnPropNameInTable="ALAValorTaxaColumn" msprop:Generator_UserColumnName="ALAValorTaxa" type="xs:float" minOccurs="0" />
+              <xs:element name="StaDescricao" msprop:Generator_ColumnVarNameInTable="columnStaDescricao" msprop:Generator_ColumnPropNameInRow="StaDescricao" msprop:Generator_ColumnPropNameInTable="StaDescricaoColumn" msprop:Generator_UserColumnName="StaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALApagto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnALApagto" msprop:Generator_ColumnPropNameInRow="ALApagto" msprop:Generator_ColumnPropNameInTable="ALApagtoColumn" msprop:Generator_UserColumnName="ALApagto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_FimAprendizagem" msprop:Generator_ColumnVarNameInTable="columnApr_FimAprendizagem" msprop:Generator_ColumnPropNameInRow="Apr_FimAprendizagem" msprop:Generator_ColumnPropNameInTable="Apr_FimAprendizagemColumn" msprop:Generator_UserColumnName="Apr_FimAprendizagem" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Apr_InicioAprendizagem" msprop:Generator_ColumnVarNameInTable="columnApr_InicioAprendizagem" msprop:Generator_ColumnPropNameInRow="Apr_InicioAprendizagem" msprop:Generator_ColumnPropNameInTable="Apr_InicioAprendizagemColumn" msprop:Generator_UserColumnName="Apr_InicioAprendizagem" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PrimeiroDeALAUnidadeParceiro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrimeiroDeALAUnidadeParceiro" msprop:Generator_ColumnPropNameInRow="PrimeiroDeALAUnidadeParceiro" msprop:Generator_ColumnPropNameInTable="PrimeiroDeALAUnidadeParceiroColumn" msprop:Generator_UserColumnName="PrimeiroDeALAUnidadeParceiro" type="xs:int" minOccurs="0" />
+              <xs:element name="ParDescricao" msprop:Generator_ColumnVarNameInTable="columnParDescricao" msprop:Generator_ColumnPropNameInRow="ParDescricao" msprop:Generator_ColumnPropNameInTable="ParDescricaoColumn" msprop:Generator_UserColumnName="ParDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Situacao" msprop:Generator_ColumnVarNameInTable="columnApr_Situacao" msprop:Generator_ColumnPropNameInRow="Apr_Situacao" msprop:Generator_ColumnPropNameInTable="Apr_SituacaoColumn" msprop:Generator_UserColumnName="Apr_Situacao" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_desligados_genero" msprop:Generator_TableClassName="View_desligados_generoDataTable" msprop:Generator_TableVarName="tableView_desligados_genero" msprop:Generator_TablePropName="View_desligados_genero" msprop:Generator_RowDeletingName="View_desligados_generoRowDeleting" msprop:Generator_RowChangingName="View_desligados_generoRowChanging" msprop:Generator_RowEvHandlerName="View_desligados_generoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_desligados_generoRowDeleted" msprop:Generator_UserTableName="View_desligados_genero" msprop:Generator_RowChangedName="View_desligados_generoRowChanged" msprop:Generator_RowEvArgName="View_desligados_generoRowChangeEvent" msprop:Generator_RowClassName="View_desligados_generoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sexo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsexo" msprop:Generator_ColumnPropNameInRow="sexo" msprop:Generator_ColumnPropNameInTable="sexoColumn" msprop:Generator_UserColumnName="sexo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" msprop:Generator_UserColumnName="QTD" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_desligados_idade" msprop:Generator_TableClassName="View_desligados_idadeDataTable" msprop:Generator_TableVarName="tableView_desligados_idade" msprop:Generator_RowChangedName="View_desligados_idadeRowChanged" msprop:Generator_TablePropName="View_desligados_idade" msprop:Generator_RowDeletingName="View_desligados_idadeRowDeleting" msprop:Generator_RowChangingName="View_desligados_idadeRowChanging" msprop:Generator_RowEvHandlerName="View_desligados_idadeRowChangeEventHandler" msprop:Generator_RowDeletedName="View_desligados_idadeRowDeleted" msprop:Generator_RowClassName="View_desligados_idadeRow" msprop:Generator_UserTableName="View_desligados_idade" msprop:Generator_RowEvArgName="View_desligados_idadeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Idade" msprop:Generator_ColumnVarNameInTable="columnIdade" msprop:Generator_ColumnPropNameInRow="Idade" msprop:Generator_ColumnPropNameInTable="IdadeColumn" msprop:Generator_UserColumnName="Idade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="74" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" msprop:Generator_UserColumnName="QTD" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Alocados_Parceiro_Periodo" msprop:Generator_TableClassName="View_Alocados_Parceiro_PeriodoDataTable" msprop:Generator_TableVarName="tableView_Alocados_Parceiro_Periodo" msprop:Generator_RowChangedName="View_Alocados_Parceiro_PeriodoRowChanged" msprop:Generator_TablePropName="View_Alocados_Parceiro_Periodo" msprop:Generator_RowDeletingName="View_Alocados_Parceiro_PeriodoRowDeleting" msprop:Generator_RowChangingName="View_Alocados_Parceiro_PeriodoRowChanging" msprop:Generator_RowEvHandlerName="View_Alocados_Parceiro_PeriodoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Alocados_Parceiro_PeriodoRowDeleted" msprop:Generator_RowClassName="View_Alocados_Parceiro_PeriodoRow" msprop:Generator_UserTableName="View_Alocados_Parceiro_Periodo" msprop:Generator_RowEvArgName="View_Alocados_Parceiro_PeriodoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ParNomeFantasia" msprop:Generator_ColumnVarNameInTable="columnParNomeFantasia" msprop:Generator_ColumnPropNameInRow="ParNomeFantasia" msprop:Generator_ColumnPropNameInTable="ParNomeFantasiaColumn" msprop:Generator_UserColumnName="ParNomeFantasia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" msprop:Generator_UserColumnName="QTD" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Alocados_Periodo_Analitico" msprop:Generator_TableClassName="View_Alocados_Periodo_AnaliticoDataTable" msprop:Generator_TableVarName="tableView_Alocados_Periodo_Analitico" msprop:Generator_RowChangedName="View_Alocados_Periodo_AnaliticoRowChanged" msprop:Generator_TablePropName="View_Alocados_Periodo_Analitico" msprop:Generator_RowDeletingName="View_Alocados_Periodo_AnaliticoRowDeleting" msprop:Generator_RowChangingName="View_Alocados_Periodo_AnaliticoRowChanging" msprop:Generator_RowEvHandlerName="View_Alocados_Periodo_AnaliticoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Alocados_Periodo_AnaliticoRowDeleted" msprop:Generator_RowClassName="View_Alocados_Periodo_AnaliticoRow" msprop:Generator_UserTableName="View_Alocados_Periodo_Analitico" msprop:Generator_RowEvArgName="View_Alocados_Periodo_AnaliticoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParNomeFantasia" msprop:Generator_ColumnVarNameInTable="columnParNomeFantasia" msprop:Generator_ColumnPropNameInRow="ParNomeFantasia" msprop:Generator_ColumnPropNameInTable="ParNomeFantasiaColumn" msprop:Generator_UserColumnName="ParNomeFantasia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALADataInicio" msprop:Generator_ColumnVarNameInTable="columnALADataInicio" msprop:Generator_ColumnPropNameInRow="ALADataInicio" msprop:Generator_ColumnPropNameInTable="ALADataInicioColumn" msprop:Generator_UserColumnName="ALADataInicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ALADataPrevTermino" msprop:Generator_ColumnVarNameInTable="columnALADataPrevTermino" msprop:Generator_ColumnPropNameInRow="ALADataPrevTermino" msprop:Generator_ColumnPropNameInTable="ALADataPrevTerminoColumn" msprop:Generator_UserColumnName="ALADataPrevTermino" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ALADataTermino" msprop:Generator_ColumnVarNameInTable="columnALADataTermino" msprop:Generator_ColumnPropNameInRow="ALADataTermino" msprop:Generator_ColumnPropNameInTable="ALADataTerminoColumn" msprop:Generator_UserColumnName="ALADataTermino" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ALAValorBolsa" msprop:Generator_ColumnVarNameInTable="columnALAValorBolsa" msprop:Generator_ColumnPropNameInRow="ALAValorBolsa" msprop:Generator_ColumnPropNameInTable="ALAValorBolsaColumn" msprop:Generator_UserColumnName="ALAValorBolsa" type="xs:float" minOccurs="0" />
+              <xs:element name="ALAValorTaxa" msprop:Generator_ColumnVarNameInTable="columnALAValorTaxa" msprop:Generator_ColumnPropNameInRow="ALAValorTaxa" msprop:Generator_ColumnPropNameInTable="ALAValorTaxaColumn" msprop:Generator_UserColumnName="ALAValorTaxa" type="xs:float" minOccurs="0" />
+              <xs:element name="Situacao" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSituacao" msprop:Generator_ColumnPropNameInRow="Situacao" msprop:Generator_ColumnPropNameInTable="SituacaoColumn" msprop:Generator_UserColumnName="Situacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaDescricao" msprop:Generator_ColumnVarNameInTable="columnStaDescricao" msprop:Generator_ColumnPropNameInRow="StaDescricao" msprop:Generator_ColumnPropNameInTable="StaDescricaoColumn" msprop:Generator_UserColumnName="StaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALApagto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnALApagto" msprop:Generator_ColumnPropNameInRow="ALApagto" msprop:Generator_ColumnPropNameInTable="ALApagtoColumn" msprop:Generator_UserColumnName="ALApagto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_motivos_desligamento" msprop:Generator_TableClassName="View_motivos_desligamentoDataTable" msprop:Generator_TableVarName="tableView_motivos_desligamento" msprop:Generator_TablePropName="View_motivos_desligamento" msprop:Generator_RowDeletingName="View_motivos_desligamentoRowDeleting" msprop:Generator_RowChangingName="View_motivos_desligamentoRowChanging" msprop:Generator_RowEvHandlerName="View_motivos_desligamentoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_motivos_desligamentoRowDeleted" msprop:Generator_UserTableName="View_motivos_desligamento" msprop:Generator_RowChangedName="View_motivos_desligamentoRowChanged" msprop:Generator_RowEvArgName="View_motivos_desligamentoRowChangeEvent" msprop:Generator_RowClassName="View_motivos_desligamentoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="StaDescricao" msprop:Generator_ColumnVarNameInTable="columnStaDescricao" msprop:Generator_ColumnPropNameInRow="StaDescricao" msprop:Generator_ColumnPropNameInTable="StaDescricaoColumn" msprop:Generator_UserColumnName="StaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MotDescricao" msprop:Generator_ColumnVarNameInTable="columnMotDescricao" msprop:Generator_ColumnPropNameInRow="MotDescricao" msprop:Generator_ColumnPropNameInTable="MotDescricaoColumn" msprop:Generator_UserColumnName="MotDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" msprop:Generator_UserColumnName="QTD" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_CA_Fechamento_Mensal" msprop:Generator_TableClassName="View_CA_Fechamento_MensalDataTable" msprop:Generator_TableVarName="tableView_CA_Fechamento_Mensal" msprop:Generator_RowChangedName="View_CA_Fechamento_MensalRowChanged" msprop:Generator_TablePropName="View_CA_Fechamento_Mensal" msprop:Generator_RowDeletingName="View_CA_Fechamento_MensalRowDeleting" msprop:Generator_RowChangingName="View_CA_Fechamento_MensalRowChanging" msprop:Generator_RowEvHandlerName="View_CA_Fechamento_MensalRowChangeEventHandler" msprop:Generator_RowDeletedName="View_CA_Fechamento_MensalRowDeleted" msprop:Generator_RowClassName="View_CA_Fechamento_MensalRow" msprop:Generator_UserTableName="View_CA_Fechamento_Mensal" msprop:Generator_RowEvArgName="View_CA_Fechamento_MensalRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apr_Codigo" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParNomeFantasia" msprop:Generator_ColumnVarNameInTable="columnParNomeFantasia" msprop:Generator_ColumnPropNameInRow="ParNomeFantasia" msprop:Generator_ColumnPropNameInTable="ParNomeFantasiaColumn" msprop:Generator_UserColumnName="ParNomeFantasia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechTaxa" msprop:Generator_ColumnVarNameInTable="columnFechTaxa" msprop:Generator_ColumnPropNameInRow="FechTaxa" msprop:Generator_ColumnPropNameInTable="FechTaxaColumn" msprop:Generator_UserColumnName="FechTaxa" type="xs:float" />
+              <xs:element name="FechBolsa" msprop:Generator_ColumnVarNameInTable="columnFechBolsa" msprop:Generator_ColumnPropNameInRow="FechBolsa" msprop:Generator_ColumnPropNameInTable="FechBolsaColumn" msprop:Generator_UserColumnName="FechBolsa" type="xs:float" />
+              <xs:element name="FechPagamento" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFechPagamento" msprop:Generator_ColumnPropNameInRow="FechPagamento" msprop:Generator_ColumnPropNameInTable="FechPagamentoColumn" msprop:Generator_UserColumnName="FechPagamento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AreaDescricao" msprop:Generator_ColumnVarNameInTable="columnAreaDescricao" msprop:Generator_ColumnPropNameInRow="AreaDescricao" msprop:Generator_ColumnPropNameInTable="AreaDescricaoColumn" msprop:Generator_UserColumnName="AreaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechAnoFechamento" msprop:Generator_ColumnVarNameInTable="columnFechAnoFechamento" msprop:Generator_ColumnPropNameInRow="FechAnoFechamento" msprop:Generator_ColumnPropNameInTable="FechAnoFechamentoColumn" msprop:Generator_UserColumnName="FechAnoFechamento">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechMesFechamento" msprop:Generator_ColumnVarNameInTable="columnFechMesFechamento" msprop:Generator_ColumnPropNameInRow="FechMesFechamento" msprop:Generator_ColumnPropNameInTable="FechMesFechamentoColumn" msprop:Generator_UserColumnName="FechMesFechamento" type="xs:int" />
+              <xs:element name="FechUnidade" msprop:Generator_ColumnVarNameInTable="columnFechUnidade" msprop:Generator_ColumnPropNameInRow="FechUnidade" msprop:Generator_ColumnPropNameInTable="FechUnidadeColumn" msprop:Generator_UserColumnName="FechUnidade" type="xs:int" />
+              <xs:element name="ParCodigo" msprop:Generator_ColumnVarNameInTable="columnParCodigo" msprop:Generator_ColumnPropNameInRow="ParCodigo" msprop:Generator_ColumnPropNameInTable="ParCodigoColumn" msprop:Generator_UserColumnName="ParCodigo" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Fechamento_Sintetico" msprop:Generator_TableClassName="View_Fechamento_SinteticoDataTable" msprop:Generator_TableVarName="tableView_Fechamento_Sintetico" msprop:Generator_TablePropName="View_Fechamento_Sintetico" msprop:Generator_RowDeletingName="View_Fechamento_SinteticoRowDeleting" msprop:Generator_RowChangingName="View_Fechamento_SinteticoRowChanging" msprop:Generator_RowEvHandlerName="View_Fechamento_SinteticoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Fechamento_SinteticoRowDeleted" msprop:Generator_UserTableName="View_Fechamento_Sintetico" msprop:Generator_RowChangedName="View_Fechamento_SinteticoRowChanged" msprop:Generator_RowEvArgName="View_Fechamento_SinteticoRowChangeEvent" msprop:Generator_RowClassName="View_Fechamento_SinteticoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FechPagamento" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFechPagamento" msprop:Generator_ColumnPropNameInRow="FechPagamento" msprop:Generator_ColumnPropNameInTable="FechPagamentoColumn" msprop:Generator_UserColumnName="FechPagamento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" msprop:Generator_UserColumnName="QTD" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalTaxa" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalTaxa" msprop:Generator_ColumnPropNameInRow="TotalTaxa" msprop:Generator_ColumnPropNameInTable="TotalTaxaColumn" msprop:Generator_UserColumnName="TotalTaxa" type="xs:double" minOccurs="0" />
+              <xs:element name="TotalBolsa" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalBolsa" msprop:Generator_ColumnPropNameInRow="TotalBolsa" msprop:Generator_ColumnPropNameInTable="TotalBolsaColumn" msprop:Generator_UserColumnName="TotalBolsa" type="xs:double" minOccurs="0" />
+              <xs:element name="ParNomeFantasia" msprop:Generator_ColumnVarNameInTable="columnParNomeFantasia" msprop:Generator_ColumnPropNameInRow="ParNomeFantasia" msprop:Generator_ColumnPropNameInTable="ParNomeFantasiaColumn" msprop:Generator_UserColumnName="ParNomeFantasia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Declaracao_Matricula" msprop:Generator_TableClassName="View_Declaracao_MatriculaDataTable" msprop:Generator_TableVarName="tableView_Declaracao_Matricula" msprop:Generator_RowChangedName="View_Declaracao_MatriculaRowChanged" msprop:Generator_TablePropName="View_Declaracao_Matricula" msprop:Generator_RowDeletingName="View_Declaracao_MatriculaRowDeleting" msprop:Generator_RowChangingName="View_Declaracao_MatriculaRowChanging" msprop:Generator_RowEvHandlerName="View_Declaracao_MatriculaRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Declaracao_MatriculaRowDeleted" msprop:Generator_RowClassName="View_Declaracao_MatriculaRow" msprop:Generator_UserTableName="View_Declaracao_Matricula" msprop:Generator_RowEvArgName="View_Declaracao_MatriculaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apr_Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AreaNumeroCadastro" msprop:Generator_ColumnVarNameInTable="columnAreaNumeroCadastro" msprop:Generator_ColumnPropNameInRow="AreaNumeroCadastro" msprop:Generator_ColumnPropNameInTable="AreaNumeroCadastroColumn" msprop:Generator_UserColumnName="AreaNumeroCadastro" type="xs:int" minOccurs="0" />
+              <xs:element name="ALAInicioExpediente" msprop:Generator_ColumnVarNameInTable="columnALAInicioExpediente" msprop:Generator_ColumnPropNameInRow="ALAInicioExpediente" msprop:Generator_ColumnPropNameInTable="ALAInicioExpedienteColumn" msprop:Generator_UserColumnName="ALAInicioExpediente" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ALATerminoExpediente" msprop:Generator_ColumnVarNameInTable="columnALATerminoExpediente" msprop:Generator_ColumnPropNameInRow="ALATerminoExpediente" msprop:Generator_ColumnPropNameInTable="ALATerminoExpedienteColumn" msprop:Generator_UserColumnName="ALATerminoExpediente" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ParNomeFantasia" msprop:Generator_ColumnVarNameInTable="columnParNomeFantasia" msprop:Generator_ColumnPropNameInRow="ParNomeFantasia" msprop:Generator_ColumnPropNameInTable="ParNomeFantasiaColumn" msprop:Generator_UserColumnName="ParNomeFantasia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniCNPJ" msprop:Generator_ColumnVarNameInTable="columnParUniCNPJ" msprop:Generator_ColumnPropNameInRow="ParUniCNPJ" msprop:Generator_ColumnPropNameInTable="ParUniCNPJColumn" msprop:Generator_UserColumnName="ParUniCNPJ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniEndereco" msprop:Generator_ColumnVarNameInTable="columnParUniEndereco" msprop:Generator_ColumnPropNameInRow="ParUniEndereco" msprop:Generator_ColumnPropNameInTable="ParUniEnderecoColumn" msprop:Generator_UserColumnName="ParUniEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniNumeroEndereco" msprop:Generator_ColumnVarNameInTable="columnParUniNumeroEndereco" msprop:Generator_ColumnPropNameInRow="ParUniNumeroEndereco" msprop:Generator_ColumnPropNameInTable="ParUniNumeroEnderecoColumn" msprop:Generator_UserColumnName="ParUniNumeroEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniComplemento" msprop:Generator_ColumnVarNameInTable="columnParUniComplemento" msprop:Generator_ColumnPropNameInRow="ParUniComplemento" msprop:Generator_ColumnPropNameInTable="ParUniComplementoColumn" msprop:Generator_UserColumnName="ParUniComplemento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniBairro" msprop:Generator_ColumnVarNameInTable="columnParUniBairro" msprop:Generator_ColumnPropNameInRow="ParUniBairro" msprop:Generator_ColumnPropNameInTable="ParUniBairroColumn" msprop:Generator_UserColumnName="ParUniBairro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniCidade" msprop:Generator_ColumnVarNameInTable="columnParUniCidade" msprop:Generator_ColumnPropNameInRow="ParUniCidade" msprop:Generator_ColumnPropNameInTable="ParUniCidadeColumn" msprop:Generator_UserColumnName="ParUniCidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniEstado" msprop:Generator_ColumnVarNameInTable="columnParUniEstado" msprop:Generator_ColumnPropNameInRow="ParUniEstado" msprop:Generator_ColumnPropNameInTable="ParUniEstadoColumn" msprop:Generator_UserColumnName="ParUniEstado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniCEP" msprop:Generator_ColumnVarNameInTable="columnParUniCEP" msprop:Generator_ColumnPropNameInRow="ParUniCEP" msprop:Generator_ColumnPropNameInTable="ParUniCEPColumn" msprop:Generator_UserColumnName="ParUniCEP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OriNome" msprop:Generator_ColumnVarNameInTable="columnOriNome" msprop:Generator_ColumnPropNameInRow="OriNome" msprop:Generator_ColumnPropNameInTable="OriNomeColumn" msprop:Generator_UserColumnName="OriNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OriTelefone" msprop:Generator_ColumnVarNameInTable="columnOriTelefone" msprop:Generator_ColumnPropNameInRow="OriTelefone" msprop:Generator_ColumnPropNameInTable="OriTelefoneColumn" msprop:Generator_UserColumnName="OriTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniTelefone" msprop:Generator_ColumnVarNameInTable="columnParUniTelefone" msprop:Generator_ColumnPropNameInRow="ParUniTelefone" msprop:Generator_ColumnPropNameInTable="ParUniTelefoneColumn" msprop:Generator_UserColumnName="ParUniTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_InicioAprendizagem" msprop:Generator_ColumnVarNameInTable="columnApr_InicioAprendizagem" msprop:Generator_ColumnPropNameInRow="Apr_InicioAprendizagem" msprop:Generator_ColumnPropNameInTable="Apr_InicioAprendizagemColumn" msprop:Generator_UserColumnName="Apr_InicioAprendizagem" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AreaDescricao" msprop:Generator_ColumnVarNameInTable="columnAreaDescricao" msprop:Generator_ColumnPropNameInRow="AreaDescricao" msprop:Generator_ColumnPropNameInTable="AreaDescricaoColumn" msprop:Generator_UserColumnName="AreaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AreaCargaHoraria" msprop:Generator_ColumnVarNameInTable="columnAreaCargaHoraria" msprop:Generator_ColumnPropNameInRow="AreaCargaHoraria" msprop:Generator_ColumnPropNameInTable="AreaCargaHorariaColumn" msprop:Generator_UserColumnName="AreaCargaHoraria" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_CA_Acompanhamento_Pesquisas" msprop:Generator_TableClassName="View_CA_Acompanhamento_PesquisasDataTable" msprop:Generator_TableVarName="tableView_CA_Acompanhamento_Pesquisas" msprop:Generator_TablePropName="View_CA_Acompanhamento_Pesquisas" msprop:Generator_RowDeletingName="View_CA_Acompanhamento_PesquisasRowDeleting" msprop:Generator_RowChangingName="View_CA_Acompanhamento_PesquisasRowChanging" msprop:Generator_RowEvHandlerName="View_CA_Acompanhamento_PesquisasRowChangeEventHandler" msprop:Generator_RowDeletedName="View_CA_Acompanhamento_PesquisasRowDeleted" msprop:Generator_UserTableName="View_CA_Acompanhamento_Pesquisas" msprop:Generator_RowChangedName="View_CA_Acompanhamento_PesquisasRowChanged" msprop:Generator_RowEvArgName="View_CA_Acompanhamento_PesquisasRowChangeEvent" msprop:Generator_RowClassName="View_CA_Acompanhamento_PesquisasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PepCodigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnPepCodigo" msprop:Generator_ColumnPropNameInRow="PepCodigo" msprop:Generator_ColumnPropNameInTable="PepCodigoColumn" msprop:Generator_UserColumnName="PepCodigo" type="xs:int" />
+              <xs:element name="Apr_Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParCodigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnParCodigo" msprop:Generator_ColumnPropNameInRow="ParCodigo" msprop:Generator_ColumnPropNameInTable="ParCodigoColumn" msprop:Generator_UserColumnName="ParCodigo" type="xs:int" />
+              <xs:element name="ParNomeFantasia" msprop:Generator_ColumnVarNameInTable="columnParNomeFantasia" msprop:Generator_ColumnPropNameInRow="ParNomeFantasia" msprop:Generator_ColumnPropNameInTable="ParNomeFantasiaColumn" msprop:Generator_UserColumnName="ParNomeFantasia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniCodigoParceiro" msprop:Generator_ColumnVarNameInTable="columnParUniCodigoParceiro" msprop:Generator_ColumnPropNameInRow="ParUniCodigoParceiro" msprop:Generator_ColumnPropNameInTable="ParUniCodigoParceiroColumn" msprop:Generator_UserColumnName="ParUniCodigoParceiro" type="xs:int" />
+              <xs:element name="PepRealizada" msprop:Generator_ColumnVarNameInTable="columnPepRealizada" msprop:Generator_ColumnPropNameInRow="PepRealizada" msprop:Generator_ColumnPropNameInTable="PepRealizadaColumn" msprop:Generator_UserColumnName="PepRealizada" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PepAno" msprop:Generator_ColumnVarNameInTable="columnPepAno" msprop:Generator_ColumnPropNameInRow="PepAno" msprop:Generator_ColumnPropNameInTable="PepAnoColumn" msprop:Generator_UserColumnName="PepAno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PepMes" msprop:Generator_ColumnVarNameInTable="columnPepMes" msprop:Generator_ColumnPropNameInRow="PepMes" msprop:Generator_ColumnPropNameInTable="PepMesColumn" msprop:Generator_UserColumnName="PepMes" type="xs:int" />
+              <xs:element name="Situacao" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSituacao" msprop:Generator_ColumnPropNameInRow="Situacao" msprop:Generator_ColumnPropNameInTable="SituacaoColumn" msprop:Generator_UserColumnName="Situacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OriNome" msprop:Generator_ColumnVarNameInTable="columnOriNome" msprop:Generator_ColumnPropNameInRow="OriNome" msprop:Generator_ColumnPropNameInTable="OriNomeColumn" msprop:Generator_UserColumnName="OriNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OriTelefone" msprop:Generator_ColumnVarNameInTable="columnOriTelefone" msprop:Generator_ColumnPropNameInRow="OriTelefone" msprop:Generator_ColumnPropNameInTable="OriTelefoneColumn" msprop:Generator_UserColumnName="OriTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OriEmail" msprop:Generator_ColumnVarNameInTable="columnOriEmail" msprop:Generator_ColumnPropNameInRow="OriEmail" msprop:Generator_ColumnPropNameInTable="OriEmailColumn" msprop:Generator_UserColumnName="OriEmail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PesNome" msprop:Generator_ColumnVarNameInTable="columnPesNome" msprop:Generator_ColumnPropNameInRow="PesNome" msprop:Generator_ColumnPropNameInTable="PesNomeColumn" msprop:Generator_UserColumnName="PesNome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_controle_frequencia" msprop:Generator_TableClassName="View_controle_frequenciaDataTable" msprop:Generator_TableVarName="tableView_controle_frequencia" msprop:Generator_RowChangedName="View_controle_frequenciaRowChanged" msprop:Generator_TablePropName="View_controle_frequencia" msprop:Generator_RowDeletingName="View_controle_frequenciaRowDeleting" msprop:Generator_RowChangingName="View_controle_frequenciaRowChanging" msprop:Generator_RowEvHandlerName="View_controle_frequenciaRowChangeEventHandler" msprop:Generator_RowDeletedName="View_controle_frequenciaRowDeleted" msprop:Generator_RowClassName="View_controle_frequenciaRow" msprop:Generator_UserTableName="View_controle_frequencia" msprop:Generator_RowEvArgName="View_controle_frequenciaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apr_Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="ParDescricao" msprop:Generator_ColumnVarNameInTable="columnParDescricao" msprop:Generator_ColumnPropNameInRow="ParDescricao" msprop:Generator_ColumnPropNameInTable="ParDescricaoColumn" msprop:Generator_UserColumnName="ParDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALAInicioExpediente" msprop:Generator_ColumnVarNameInTable="columnALAInicioExpediente" msprop:Generator_ColumnPropNameInRow="ALAInicioExpediente" msprop:Generator_ColumnPropNameInTable="ALAInicioExpedienteColumn" msprop:Generator_UserColumnName="ALAInicioExpediente" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ALATerminoExpediente" msprop:Generator_ColumnVarNameInTable="columnALATerminoExpediente" msprop:Generator_ColumnPropNameInRow="ALATerminoExpediente" msprop:Generator_ColumnPropNameInTable="ALATerminoExpedienteColumn" msprop:Generator_UserColumnName="ALATerminoExpediente" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FreqReferencia" msprop:Generator_ColumnVarNameInTable="columnFreqReferencia" msprop:Generator_ColumnPropNameInRow="FreqReferencia" msprop:Generator_ColumnPropNameInTable="FreqReferenciaColumn" msprop:Generator_UserColumnName="FreqReferencia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreqFaltas" msprop:Generator_ColumnVarNameInTable="columnFreqFaltas" msprop:Generator_ColumnPropNameInRow="FreqFaltas" msprop:Generator_ColumnPropNameInTable="FreqFaltasColumn" msprop:Generator_UserColumnName="FreqFaltas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreqObservacao" msprop:Generator_ColumnVarNameInTable="columnFreqObservacao" msprop:Generator_ColumnPropNameInRow="FreqObservacao" msprop:Generator_ColumnPropNameInTable="FreqObservacaoColumn" msprop:Generator_UserColumnName="FreqObservacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreqDataPrevEntrega" msprop:Generator_ColumnVarNameInTable="columnFreqDataPrevEntrega" msprop:Generator_ColumnPropNameInRow="FreqDataPrevEntrega" msprop:Generator_ColumnPropNameInTable="FreqDataPrevEntregaColumn" msprop:Generator_UserColumnName="FreqDataPrevEntrega" type="xs:dateTime" />
+              <xs:element name="FreqDataEntrega" msprop:Generator_ColumnVarNameInTable="columnFreqDataEntrega" msprop:Generator_ColumnPropNameInRow="FreqDataEntrega" msprop:Generator_ColumnPropNameInTable="FreqDataEntregaColumn" msprop:Generator_UserColumnName="FreqDataEntrega" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ALATurma" msprop:Generator_ColumnVarNameInTable="columnALATurma" msprop:Generator_ColumnPropNameInRow="ALATurma" msprop:Generator_ColumnPropNameInTable="ALATurmaColumn" msprop:Generator_UserColumnName="ALATurma" type="xs:int" />
+              <xs:element name="Parceiro" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnParceiro" msprop:Generator_ColumnPropNameInRow="Parceiro" msprop:Generator_ColumnPropNameInTable="ParceiroColumn" msprop:Generator_UserColumnName="Parceiro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="121" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Situacao" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSituacao" msprop:Generator_ColumnPropNameInRow="Situacao" msprop:Generator_ColumnPropNameInTable="SituacaoColumn" msprop:Generator_UserColumnName="Situacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Pagamento" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPagamento" msprop:Generator_ColumnPropNameInRow="Pagamento" msprop:Generator_ColumnPropNameInTable="PagamentoColumn" msprop:Generator_UserColumnName="Pagamento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FreqOrdem" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnFreqOrdem" msprop:Generator_ColumnPropNameInRow="FreqOrdem" msprop:Generator_ColumnPropNameInTable="FreqOrdemColumn" msprop:Generator_UserColumnName="FreqOrdem" type="xs:int" />
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Pesquisas_por_tutor" msprop:Generator_TableClassName="View_Pesquisas_por_tutorDataTable" msprop:Generator_TableVarName="tableView_Pesquisas_por_tutor" msprop:Generator_RowChangedName="View_Pesquisas_por_tutorRowChanged" msprop:Generator_TablePropName="View_Pesquisas_por_tutor" msprop:Generator_RowDeletingName="View_Pesquisas_por_tutorRowDeleting" msprop:Generator_RowChangingName="View_Pesquisas_por_tutorRowChanging" msprop:Generator_RowEvHandlerName="View_Pesquisas_por_tutorRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Pesquisas_por_tutorRowDeleted" msprop:Generator_RowClassName="View_Pesquisas_por_tutorRow" msprop:Generator_UserTableName="View_Pesquisas_por_tutor" msprop:Generator_RowEvArgName="View_Pesquisas_por_tutorRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QTD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnQTD" msprop:Generator_ColumnPropNameInRow="QTD" msprop:Generator_ColumnPropNameInTable="QTDColumn" msprop:Generator_UserColumnName="QTD" type="xs:int" minOccurs="0" />
+              <xs:element name="UsuNome" msprop:Generator_ColumnVarNameInTable="columnUsuNome" msprop:Generator_ColumnPropNameInRow="UsuNome" msprop:Generator_ColumnPropNameInTable="UsuNomeColumn" msprop:Generator_UserColumnName="UsuNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PesNome" msprop:Generator_ColumnVarNameInTable="columnPesNome" msprop:Generator_ColumnPropNameInRow="PesNome" msprop:Generator_ColumnPropNameInTable="PesNomeColumn" msprop:Generator_UserColumnName="PesNome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Pesquisas_Realizadas" msprop:Generator_TableClassName="View_Pesquisas_RealizadasDataTable" msprop:Generator_TableVarName="tableView_Pesquisas_Realizadas" msprop:Generator_RowChangedName="View_Pesquisas_RealizadasRowChanged" msprop:Generator_TablePropName="View_Pesquisas_Realizadas" msprop:Generator_RowDeletingName="View_Pesquisas_RealizadasRowDeleting" msprop:Generator_RowChangingName="View_Pesquisas_RealizadasRowChanging" msprop:Generator_RowEvHandlerName="View_Pesquisas_RealizadasRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Pesquisas_RealizadasRowDeleted" msprop:Generator_RowClassName="View_Pesquisas_RealizadasRow" msprop:Generator_UserTableName="View_Pesquisas_Realizadas" msprop:Generator_RowEvArgName="View_Pesquisas_RealizadasRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PepCodigo" msprop:Generator_ColumnVarNameInTable="columnPepCodigo" msprop:Generator_ColumnPropNameInRow="PepCodigo" msprop:Generator_ColumnPropNameInTable="PepCodigoColumn" msprop:Generator_UserColumnName="PepCodigo" type="xs:int" />
+              <xs:element name="Apr_Codigo" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParCodigo" msprop:Generator_ColumnVarNameInTable="columnParCodigo" msprop:Generator_ColumnPropNameInRow="ParCodigo" msprop:Generator_ColumnPropNameInTable="ParCodigoColumn" msprop:Generator_UserColumnName="ParCodigo" type="xs:int" />
+              <xs:element name="ParNomeFantasia" msprop:Generator_ColumnVarNameInTable="columnParNomeFantasia" msprop:Generator_ColumnPropNameInRow="ParNomeFantasia" msprop:Generator_ColumnPropNameInTable="ParNomeFantasiaColumn" msprop:Generator_UserColumnName="ParNomeFantasia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniCodigoParceiro" msprop:Generator_ColumnVarNameInTable="columnParUniCodigoParceiro" msprop:Generator_ColumnPropNameInRow="ParUniCodigoParceiro" msprop:Generator_ColumnPropNameInTable="ParUniCodigoParceiroColumn" msprop:Generator_UserColumnName="ParUniCodigoParceiro" type="xs:int" />
+              <xs:element name="PepRealizada" msprop:Generator_ColumnVarNameInTable="columnPepRealizada" msprop:Generator_ColumnPropNameInRow="PepRealizada" msprop:Generator_ColumnPropNameInTable="PepRealizadaColumn" msprop:Generator_UserColumnName="PepRealizada" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PepAno" msprop:Generator_ColumnVarNameInTable="columnPepAno" msprop:Generator_ColumnPropNameInRow="PepAno" msprop:Generator_ColumnPropNameInTable="PepAnoColumn" msprop:Generator_UserColumnName="PepAno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PepMes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPepMes" msprop:Generator_ColumnPropNameInRow="PepMes" msprop:Generator_ColumnPropNameInTable="PepMesColumn" msprop:Generator_UserColumnName="PepMes" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Situacao" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSituacao" msprop:Generator_ColumnPropNameInRow="Situacao" msprop:Generator_ColumnPropNameInTable="SituacaoColumn" msprop:Generator_UserColumnName="Situacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OriNome" msprop:Generator_ColumnVarNameInTable="columnOriNome" msprop:Generator_ColumnPropNameInRow="OriNome" msprop:Generator_ColumnPropNameInTable="OriNomeColumn" msprop:Generator_UserColumnName="OriNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OriTelefone" msprop:Generator_ColumnVarNameInTable="columnOriTelefone" msprop:Generator_ColumnPropNameInRow="OriTelefone" msprop:Generator_ColumnPropNameInTable="OriTelefoneColumn" msprop:Generator_UserColumnName="OriTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OriEmail" msprop:Generator_ColumnVarNameInTable="columnOriEmail" msprop:Generator_ColumnPropNameInRow="OriEmail" msprop:Generator_ColumnPropNameInTable="OriEmailColumn" msprop:Generator_UserColumnName="OriEmail" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UsuCodigo" msprop:Generator_ColumnVarNameInTable="columnUsuCodigo" msprop:Generator_ColumnPropNameInRow="UsuCodigo" msprop:Generator_ColumnPropNameInTable="UsuCodigoColumn" msprop:Generator_UserColumnName="UsuCodigo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UsuNome" msprop:Generator_ColumnVarNameInTable="columnUsuNome" msprop:Generator_ColumnPropNameInRow="UsuNome" msprop:Generator_ColumnPropNameInTable="UsuNomeColumn" msprop:Generator_UserColumnName="UsuNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="90" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PepDataRealizada" msprop:Generator_ColumnVarNameInTable="columnPepDataRealizada" msprop:Generator_ColumnPropNameInRow="PepDataRealizada" msprop:Generator_ColumnPropNameInTable="PepDataRealizadaColumn" msprop:Generator_UserColumnName="PepDataRealizada" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Notafinal" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNotafinal" msprop:Generator_ColumnPropNameInRow="Notafinal" msprop:Generator_ColumnPropNameInTable="NotafinalColumn" msprop:Generator_UserColumnName="Notafinal" type="xs:int" minOccurs="0" />
+              <xs:element name="MediaNotas" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMediaNotas" msprop:Generator_ColumnPropNameInRow="MediaNotas" msprop:Generator_ColumnPropNameInTable="MediaNotasColumn" msprop:Generator_UserColumnName="MediaNotas" type="xs:int" minOccurs="0" />
+              <xs:element name="PesNome" msprop:Generator_ColumnVarNameInTable="columnPesNome" msprop:Generator_ColumnPropNameInRow="PesNome" msprop:Generator_ColumnPropNameInTable="PesNomeColumn" msprop:Generator_UserColumnName="PesNome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CA_Bairros" msprop:Generator_TableClassName="CA_BairrosDataTable" msprop:Generator_TableVarName="tableCA_Bairros" msprop:Generator_RowChangedName="CA_BairrosRowChanged" msprop:Generator_TablePropName="CA_Bairros" msprop:Generator_RowDeletingName="CA_BairrosRowDeleting" msprop:Generator_RowChangingName="CA_BairrosRowChanging" msprop:Generator_RowEvHandlerName="CA_BairrosRowChangeEventHandler" msprop:Generator_RowDeletedName="CA_BairrosRowDeleted" msprop:Generator_RowClassName="CA_BairrosRow" msprop:Generator_UserTableName="CA_Bairros" msprop:Generator_RowEvArgName="CA_BairrosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DescBairro" msprop:Generator_ColumnVarNameInTable="columnDescBairro" msprop:Generator_ColumnPropNameInRow="DescBairro" msprop:Generator_ColumnPropNameInTable="DescBairroColumn" msprop:Generator_UserColumnName="DescBairro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegBairro" msprop:Generator_ColumnVarNameInTable="columnRegBairro" msprop:Generator_ColumnPropNameInRow="RegBairro" msprop:Generator_ColumnPropNameInTable="RegBairroColumn" msprop:Generator_UserColumnName="RegBairro" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CA_Regioes" msprop:Generator_TableClassName="CA_RegioesDataTable" msprop:Generator_TableVarName="tableCA_Regioes" msprop:Generator_RowChangedName="CA_RegioesRowChanged" msprop:Generator_TablePropName="CA_Regioes" msprop:Generator_RowDeletingName="CA_RegioesRowDeleting" msprop:Generator_RowChangingName="CA_RegioesRowChanging" msprop:Generator_RowEvHandlerName="CA_RegioesRowChangeEventHandler" msprop:Generator_RowDeletedName="CA_RegioesRowDeleted" msprop:Generator_RowClassName="CA_RegioesRow" msprop:Generator_UserTableName="CA_Regioes" msprop:Generator_RowEvArgName="CA_RegioesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodRegiao" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodRegiao" msprop:Generator_ColumnPropNameInRow="CodRegiao" msprop:Generator_ColumnPropNameInTable="CodRegiaoColumn" msprop:Generator_UserColumnName="CodRegiao" type="xs:int" />
+              <xs:element name="DescRegiao" msprop:Generator_ColumnVarNameInTable="columnDescRegiao" msprop:Generator_ColumnPropNameInRow="DescRegiao" msprop:Generator_ColumnPropNameInTable="DescRegiaoColumn" msprop:Generator_UserColumnName="DescRegiao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Bairros" msprop:Generator_TableClassName="View_BairrosDataTable" msprop:Generator_TableVarName="tableView_Bairros" msprop:Generator_TablePropName="View_Bairros" msprop:Generator_RowDeletingName="View_BairrosRowDeleting" msprop:Generator_RowChangingName="View_BairrosRowChanging" msprop:Generator_RowEvHandlerName="View_BairrosRowChangeEventHandler" msprop:Generator_RowDeletedName="View_BairrosRowDeleted" msprop:Generator_UserTableName="View_Bairros" msprop:Generator_RowChangedName="View_BairrosRowChanged" msprop:Generator_RowEvArgName="View_BairrosRowChangeEvent" msprop:Generator_RowClassName="View_BairrosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DescBairro" msprop:Generator_ColumnVarNameInTable="columnDescBairro" msprop:Generator_ColumnPropNameInRow="DescBairro" msprop:Generator_ColumnPropNameInTable="DescBairroColumn" msprop:Generator_UserColumnName="DescBairro">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DescRegiao" msprop:Generator_ColumnVarNameInTable="columnDescRegiao" msprop:Generator_ColumnPropNameInRow="DescRegiao" msprop:Generator_ColumnPropNameInTable="DescRegiaoColumn" msprop:Generator_UserColumnName="DescRegiao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Advertencias_aprendizes" msprop:Generator_TableClassName="View_Advertencias_aprendizesDataTable" msprop:Generator_TableVarName="tableView_Advertencias_aprendizes" msprop:Generator_TablePropName="View_Advertencias_aprendizes" msprop:Generator_RowDeletingName="View_Advertencias_aprendizesRowDeleting" msprop:Generator_RowChangingName="View_Advertencias_aprendizesRowChanging" msprop:Generator_RowEvHandlerName="View_Advertencias_aprendizesRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Advertencias_aprendizesRowDeleted" msprop:Generator_UserTableName="View_Advertencias_aprendizes" msprop:Generator_RowChangedName="View_Advertencias_aprendizesRowChanged" msprop:Generator_RowEvArgName="View_Advertencias_aprendizesRowChangeEvent" msprop:Generator_RowClassName="View_Advertencias_aprendizesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apr_Codigo" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaDescricao" msprop:Generator_ColumnVarNameInTable="columnStaDescricao" msprop:Generator_ColumnPropNameInRow="StaDescricao" msprop:Generator_ColumnPropNameInTable="StaDescricaoColumn" msprop:Generator_UserColumnName="StaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OcoDescricao" msprop:Generator_ColumnVarNameInTable="columnOcoDescricao" msprop:Generator_ColumnPropNameInRow="OcoDescricao" msprop:Generator_ColumnPropNameInTable="OcoDescricaoColumn" msprop:Generator_UserColumnName="OcoDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Turma" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTurma" msprop:Generator_ColumnPropNameInRow="Turma" msprop:Generator_ColumnPropNameInTable="TurmaColumn" msprop:Generator_UserColumnName="Turma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="53" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiaNumeroFaltas" msprop:Generator_ColumnVarNameInTable="columnDiaNumeroFaltas" msprop:Generator_ColumnPropNameInRow="DiaNumeroFaltas" msprop:Generator_ColumnPropNameInTable="DiaNumeroFaltasColumn" msprop:Generator_UserColumnName="DiaNumeroFaltas" type="xs:short" minOccurs="0" />
+              <xs:element name="Datas_FAltas" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDatas_FAltas" msprop:Generator_ColumnPropNameInRow="Datas_FAltas" msprop:Generator_ColumnPropNameInTable="Datas_FAltasColumn" msprop:Generator_UserColumnName="Datas_FAltas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="640" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OcaDataEntrega" msprop:Generator_ColumnVarNameInTable="columnOcaDataEntrega" msprop:Generator_ColumnPropNameInRow="OcaDataEntrega" msprop:Generator_ColumnPropNameInTable="OcaDataEntregaColumn" msprop:Generator_UserColumnName="OcaDataEntrega" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OcaPrevDevolucao" msprop:Generator_ColumnVarNameInTable="columnOcaPrevDevolucao" msprop:Generator_ColumnPropNameInRow="OcaPrevDevolucao" msprop:Generator_ColumnPropNameInTable="OcaPrevDevolucaoColumn" msprop:Generator_UserColumnName="OcaPrevDevolucao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OcaDevolucao" msprop:Generator_ColumnVarNameInTable="columnOcaDevolucao" msprop:Generator_ColumnPropNameInRow="OcaDevolucao" msprop:Generator_ColumnPropNameInTable="OcaDevolucaoColumn" msprop:Generator_UserColumnName="OcaDevolucao" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OcaDataOcorrencia" msprop:Generator_ColumnVarNameInTable="columnOcaDataOcorrencia" msprop:Generator_ColumnPropNameInRow="OcaDataOcorrencia" msprop:Generator_ColumnPropNameInTable="OcaDataOcorrenciaColumn" msprop:Generator_UserColumnName="OcaDataOcorrencia" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CA_Eventos" msprop:Generator_TableClassName="CA_EventosDataTable" msprop:Generator_TableVarName="tableCA_Eventos" msprop:Generator_RowChangedName="CA_EventosRowChanged" msprop:Generator_TablePropName="CA_Eventos" msprop:Generator_RowDeletingName="CA_EventosRowDeleting" msprop:Generator_RowChangingName="CA_EventosRowChanging" msprop:Generator_RowEvHandlerName="CA_EventosRowChangeEventHandler" msprop:Generator_RowDeletedName="CA_EventosRowDeleted" msprop:Generator_RowClassName="CA_EventosRow" msprop:Generator_UserTableName="CA_Eventos" msprop:Generator_RowEvArgName="CA_EventosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EvnCodigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnEvnCodigo" msprop:Generator_ColumnPropNameInRow="EvnCodigo" msprop:Generator_ColumnPropNameInTable="EvnCodigoColumn" msprop:Generator_UserColumnName="EvnCodigo" type="xs:int" />
+              <xs:element name="EvnNome" msprop:Generator_ColumnVarNameInTable="columnEvnNome" msprop:Generator_ColumnPropNameInRow="EvnNome" msprop:Generator_ColumnPropNameInTable="EvnNomeColumn" msprop:Generator_UserColumnName="EvnNome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EvnData" msprop:Generator_ColumnVarNameInTable="columnEvnData" msprop:Generator_ColumnPropNameInRow="EvnData" msprop:Generator_ColumnPropNameInTable="EvnDataColumn" msprop:Generator_UserColumnName="EvnData" type="xs:dateTime" />
+              <xs:element name="EvnDescricao" msprop:Generator_ColumnVarNameInTable="columnEvnDescricao" msprop:Generator_ColumnPropNameInRow="EvnDescricao" msprop:Generator_ColumnPropNameInTable="EvnDescricaoColumn" msprop:Generator_UserColumnName="EvnDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Aprendizes_Evento" msprop:Generator_TableClassName="View_Aprendizes_EventoDataTable" msprop:Generator_TableVarName="tableView_Aprendizes_Evento" msprop:Generator_TablePropName="View_Aprendizes_Evento" msprop:Generator_RowDeletingName="View_Aprendizes_EventoRowDeleting" msprop:Generator_RowChangingName="View_Aprendizes_EventoRowChanging" msprop:Generator_RowEvHandlerName="View_Aprendizes_EventoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Aprendizes_EventoRowDeleted" msprop:Generator_UserTableName="View_Aprendizes_Evento" msprop:Generator_RowChangedName="View_Aprendizes_EventoRowChanged" msprop:Generator_RowEvArgName="View_Aprendizes_EventoRowChangeEvent" msprop:Generator_RowClassName="View_Aprendizes_EventoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EvnNome" msprop:Generator_ColumnVarNameInTable="columnEvnNome" msprop:Generator_ColumnPropNameInRow="EvnNome" msprop:Generator_ColumnPropNameInTable="EvnNomeColumn" msprop:Generator_UserColumnName="EvnNome">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EvnData" msprop:Generator_ColumnVarNameInTable="columnEvnData" msprop:Generator_ColumnPropNameInRow="EvnData" msprop:Generator_ColumnPropNameInTable="EvnDataColumn" msprop:Generator_UserColumnName="EvnData" type="xs:dateTime" />
+              <xs:element name="Apr_Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrtPresenca" msprop:Generator_ColumnVarNameInTable="columnPrtPresenca" msprop:Generator_ColumnPropNameInRow="PrtPresenca" msprop:Generator_ColumnPropNameInTable="PrtPresencaColumn" msprop:Generator_UserColumnName="PrtPresenca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_desligados_analitico" />
+      <xs:field xpath="mstns:Apr_Codigo" />
+    </xs:unique>
+    <xs:unique name="View_Declaracao_Matricula_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Declaracao_Matricula" />
+      <xs:field xpath="mstns:Apr_Codigo" />
+    </xs:unique>
+    <xs:unique name="CA_Bairros_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CA_Bairros" />
+      <xs:field xpath="mstns:DescBairro" />
+    </xs:unique>
+    <xs:unique name="CA_Regioes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CA_Regioes" />
+      <xs:field xpath="mstns:CodRegiao" />
+    </xs:unique>
+    <xs:unique name="View_Bairros_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Bairros" />
+      <xs:field xpath="mstns:DescBairro" />
+    </xs:unique>
+    <xs:unique name="View_Advertencias_aprendizes_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Advertencias_aprendizes" />
+      <xs:field xpath="mstns:Apr_Codigo" />
+    </xs:unique>
+    <xs:unique name="CA_Eventos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CA_Eventos" />
+      <xs:field xpath="mstns:EvnCodigo" />
+    </xs:unique>
+    <xs:unique name="View_Aprendizes_Evento_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Aprendizes_Evento" />
+      <xs:field xpath="mstns:Apr_Codigo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

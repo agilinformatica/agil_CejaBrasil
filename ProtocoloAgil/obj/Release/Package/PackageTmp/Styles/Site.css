@@ -1,0 +1,722 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    font-size: .80em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+#wrap
+{
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 1000px;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2
+{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3
+{
+    font-size: 1.2em;
+}
+
+h4
+{
+    font-size: 1.1em;
+}
+
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+    width: 100%;
+    background-color: #fff;
+    margin: 20px auto 0px auto;
+    border: 1px solid #496077;
+}
+
+.header
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    width: 100%;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color: #f9f9f9;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+.main
+{
+    padding: 0px 12px;
+    margin: 12px 8px 8px 8px;
+    min-height: 420px;
+}
+
+.leftCol
+{
+    padding: 6px 0px;
+    margin: 12px 8px 8px 8px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.Footer
+{
+    color: #4e5766;
+    padding: 8px 0px 0px 0px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: normal;
+    height: 146px;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+    background-color: #3a4f63;
+    width: 100%;
+}
+
+div.menu
+{
+    padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+    background-color: #465c71;
+    border: 1px #4e667d solid;
+    color: #dde4ec;
+    display: block;
+    line-height: 1.35em;
+    padding: 4px 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+    background-color: #bfcbd6;
+    color: #465c71;
+    text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+    background-color: #465c71;
+    color: #cfdbe6;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    margin: 1em 0px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+fieldset p
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline
+{
+    display: inline;
+}
+
+legend
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+}
+
+input.textEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+    width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: auto;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: 1.2em;
+    color: Red;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+/******* layout *********/
+
+.corfundo
+{
+    background-color: #006699;
+}
+.corfonte
+{
+    font-family: Calibri;
+    font-size: small;
+    color: #FFFFFF;
+}
+
+.fonteLog
+{
+    font-family: Calibri;
+    font-size: Large;
+    color: #FFFFFF;
+}
+
+.UsuarioLog
+{
+    border-style: none;
+    border-width: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 20%;
+    vertical-align: text-top;
+}
+
+.Menu
+{
+    position: relative;
+    height: 466px;
+    top: 0px;
+    left: 0px;
+    width: 20%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.frame
+{
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    text-align: left;
+}
+
+.frame1
+{
+    position: relative;
+    height: 55%;
+    top: auto;
+    left: auto;
+    width: 100%;
+    border: 0;
+}
+
+.Footer
+{
+    height: 5%;
+    top: auto;
+    width: 100%;
+    background-color: #CCCCCC;
+    text-align: right;
+}
+
+.titulo
+{
+    text-align: center;
+    margin-right: 0px;
+}
+
+.cortitulo
+{
+    background-color: #00599c;
+}
+
+.titulo1
+{
+    height: 10%;
+    text-align: center;
+}
+.Menutitulo
+{
+    width: 100%;
+    height: 10%;
+    text-align: right;
+}
+
+.Calendario
+{
+    position: absolute;
+}
+
+.Painel
+{
+    position: relative;
+    z-index: inherit;
+}
+
+
+.Table
+{
+    width: 100%;
+}
+
+.Table1
+{
+    width: 98%;
+    margin: 0 auto;
+}
+
+.Tam50
+{
+    width: 50%;
+    height: 2%;
+}
+
+.Tam40
+{
+    width: 40%;
+    height: 2%;
+}
+
+.Tam33
+{
+    width: 33%;
+    height: 2%;
+}
+
+.Tam20
+{
+    width: 20%;
+    height: 2%;
+}
+
+
+.Tam45
+{
+    width: 45%;
+    height: 2%;
+}
+
+.Tam25
+{
+    width: 25%;
+    height: 2%;
+}
+
+.Tam30
+{
+    width: 30%;
+    height: 2%;
+}
+
+
+
+.PainelTopo
+{
+    z-index: 1;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.Tam50-esq
+{
+    width: 50%;
+    height: 2%;
+    text-align: left;
+}
+
+
+.Panels
+{
+    z-index: 1;
+    margin-left: 60px;
+}
+.Panels2
+{
+    z-index: 1;
+    margin-left: 25px;
+    margin-top: 0px;
+}
+
+.Panels3
+{
+    z-index: 1;
+    margin: 0 auto;
+}
+
+
+
+.fonteTexto
+{
+    color: #787878;
+    font-size: 9pt;
+    margin-bottom: 0px;
+}
+
+.fonteTab
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    font-weight: bold;
+    color: #5E5E5E;
+    margin-left: 0px;
+}
+
+.fonteDataList
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    font-weight: bold;
+    color: #5E5E5E;
+    margin-left: 0px; 
+}
+
+.fonteTab2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: right;
+    font-weight: bold;
+    color: #5E5E5E;
+    margin-left: 0px;
+}
+.fonteTexto1
+{
+    font-family: Verdana,Tahoma,Arial;
+    font-size: 11px;
+    color: #00008b;
+    text-align: right;
+}
+.fonteTitulo
+{
+    font-family: Calibri;
+    font-size: 22px;
+    color: #00008B;
+}
+
+.PainelDBgrid
+{
+    top: auto;
+    margin-left: 1%;
+    text-align: center;
+}
+
+/* CSS dos paramentros escolares */
+
+
+.FundoPainel
+{
+    background-color: #f5f5f5;
+}
+
+
+
+.espaco
+{
+    line-height: 8px;
+}
+
+
+
+.tabela
+{
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+
+.border
+{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    padding: 0;
+}
+
+
+
+.alinharEsq
+{
+    text-align: right;
+}
+
+.alinharTitulo
+{
+    text-align: center;
+    font-family: Calibri;
+    font-size: x-large;
+    color: #000099;
+}
+
+.LinhaMenu
+{
+    border: 0;
+    padding: 0;
+    border-spacing: 0;
+    top: auto;
+    left: 0px;
+    width: 100%;
+}
+
+.LinhaMenu1
+{
+    border: 1px;
+    padding: 0;
+    border-spacing: 1px;
+    top: auto;
+    left: 0px;
+    width: 100%;
+}
+
+ul.menu
+{
+    list-style: none;
+    height: 21px;
+    background: url(fundoLinha.gif) repeat-x left bottom;
+}
+
+ul.menu li
+{
+    float: left;
+    width: 104px;
+    height: 21px;
+    line-height: 21px;
+    text-align: center;
+    vertical-align: middle;
+    background: url(/images/fundo.jpg) no-repeat;
+}
+
+ul.menu li:active
+{
+    background: url(/images/aba_ativa.jpg) no-repeat;
+    width: 104px;
+}
+
+ul.menu li a
+{
+    text-decoration: none;
+}
+
+.ErrorLogo
+{
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.centralizar
+{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.central
+{
+    z-index: 1000;
+    font-family: calibri;
+    font-size: medium;
+    color: black;
+}
+
+.Lista
+{
+    overflow: auto;
+    height: 60px;
+}
+
+
+
+#divinputfile
+{
+    background: url(../images/btProcurar.jpg) no-repeat 100% 1px;
+    height: 28px;
+    width: 340px;
+    margin: 0px;
+}
+#divinputfile #filepc
+{
+    opacity: 0.0;
+    -moz-opacity: 0.0;
+    filter: alpha(opacity=00);
+    font-size: 18px;
+}
+
+#fakeinputfile
+{
+    margin-top: -23px;
+}
+
+#fakeinputfile #fakefilepc
+{
+    width: 237px;
+    height: 22px;
+    color: #787878;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    font-size: 10pt;
+}
+.btn_novo{
+	height:30px;
+	font-size:11px;
+	font-weight:bold;
+	background:#4b8efb;
+	color:#fff;
+	border: solid 1px #dfdfdf;
+	padding:8px 8px 8px 8px;
+	}
+		
+		.btn_consulta{
+	height:20px;
+	font-size:9px;
+	font-weight:bold;
+	background:#4b8efb;
+	color:#fff;
+	border: solid 1px #dfdfdf;
+	padding:3px 3px 3px 3px;
+	}
+
+        .fontecal01
+{
+   font-family: Tahoma,Calibri;
+    font-size: 14px;
+    color: #00008B;
+    margin-left: 20px;
+}

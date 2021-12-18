@@ -1,0 +1,195 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MaEducador.Master.cs"
+    Inherits="ProtocoloAgil.MaEducador" %>
+
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit, Version=4.1.50731.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+    <title>Gestão de Jovem Aprendiz  Web </title>
+ <%--   <link href="Styles/Site.css" rel="stylesheet" type="text/css" />--%>
+     <link href="Styles/cdl_bh.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        function inicia() {
+            $("#geralprofessores").removeClass("active");
+            $("#notasprofessores").removeClass("active");
+            $("#arquivosprofessores").removeClass("active");
+            //display selected division, hide others
+            $("div.geralprofessores").css("display", "none");
+            $("div.notasprofessores").css("display", "none");
+            $("div.arquivosprofessores").css("display", "none");
+
+            $('<%# "#" + Session["CurrentPage"] %>').addClass("active");
+            $('<%# "div." + Session["CurrentPage"] %>').fadeIn();
+        }
+    </script>
+
+      <style type="text/css">
+        .style2
+        {
+            text-align: center;
+            margin: 0 auto;
+        }
+        .style4
+        {
+            font-family: "Century Gothic";
+            font-size: x-large;
+            color: #0066FF;
+        }
+        .style3
+        {
+            font-family: "Century Gothic";
+        }
+        
+        .style5
+        {
+            font-family: "Century Gothic";
+            color: #0033CC;
+        }
+        .clearboth
+        {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="inicia();">
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true"
+        EnableScriptLocalization="true" ScriptMode="Release">
+    </asp:ToolkitScriptManager>
+    <div id="header">
+    <div id="cabecalho">
+        <div class="logo02">
+        </div>
+        <div class="Nome" style="width: 300px;">
+            Gestão do Programa PET Jovem Aprendiz</div>
+              <div id="sair" >
+               <div class="userlinks">
+                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="quit" NavigateUrl="~/Default.aspx">Sair</asp:HyperLink>
+            </div>
+             </div>
+               </div>
+    </div>
+    <div id="content">
+        <div class="content_home">
+            <div class="header">
+             <div class="text_school" style="width: 30%; margin-left: 60px;">
+                    <asp:Label ID="LBnomeEscola" CssClass="NomeEscola" runat="server" EnableTheming="True" Font-Strikeout="False"></asp:Label>
+                   <br />
+                 <a runat="server" ID="LNKendWeb"><asp:Label ID="LBEndWeb" runat="server" Text=""></asp:Label></a>
+                    <p> <asp:Label ID="LBenderecoEscola" CssClass="NomeEscola02" runat="server"></asp:Label></p>
+                </div>
+                <div class="topmenu">
+                    <ul id="menu" class="menu">
+                        <li id="geralprofessores">Geral</li>
+                        <li id="notasprofessores">Faltas e Avaliações</li>
+                        <li id="arquivosprofessores">Arquivos</li>
+                    </ul>
+                </div>
+                <div class="submenu geralprofessores">
+                    <table class="itens_submenu">
+                        <tr>
+                            <td> <asp:LinkButton ID="LK_Cadastro_Categoria" runat="server" OnClick="LinkButton1_Click"> Meus Dados </asp:LinkButton> </td>
+                            <td> <asp:LinkButton ID="LK_Aniversariantes" runat="server" OnClick="LinkButton1_Click">Aniversariantes</asp:LinkButton></td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="submenu notasprofessores">
+                    <table class="itens_submenu">
+                        <tr>
+                            
+                            <td> <asp:LinkButton ID="LK_Lanca_notas" runat="server" OnClick="LinkButton1_Click"> Lançamento de Faltas </asp:LinkButton>  </td>
+                            <td> <asp:LinkButton ID="LK_controle_alunos" runat="server" OnClick="LinkButton1_Click"> Consulta de Aprendizes </asp:LinkButton> </td>
+                            <td> <asp:LinkButton ID="LK_AvaliacoesDisponiveisProfessor" runat="server" OnClick="LinkButton1_Click"> Avaliações Disponíveis </asp:LinkButton> </td>
+                            <td> <asp:LinkButton ID="LK_Lanca_diario" Visible="false" runat="server" OnClick="LinkButton1_Click"> Lançamento de Diário</asp:LinkButton> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="submenu arquivosprofessores">
+                    <table class="itens_submenu">
+                        <tr>
+                            <td> <asp:LinkButton ID="LK_Gestao_arquivos" runat="server" Visible="false" OnClick="LinkButton1_Click"> Gestão de Arquivos</asp:LinkButton>  </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+                    <div id="ContentFake" style="display: none">
+                        <asp:Panel ID="Panel1" runat="server" CssClass="style2" Height="400px" Width="505px">
+                            <strong>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <asp:Label ID="Label1" runat="server" CssClass="style4" Font-Size="20px"></asp:Label>
+                            </strong>
+                            <br class="style3" />
+                            <span class="style5">Gestão do Programa PET Jovem Aprendiz</span>
+                            <div class="system_logo">
+                                <a href="http://www.agilsist.com.br" target="_blank">Mestre Ágil</a>
+                            </div>
+                        </asp:Panel>
+                    </div>
+                    <div id="ContentHolder">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </div>
+        <asp:HiddenField ID="ActiveTab" runat="server" />
+        
+        <div id="content">
+  <div class="footer">
+                <div class="content_footer">
+                    <div class="copyright">
+                        <p>
+                            CEFORT - Gestão do Programa PET Jovem Aprendiz
+                        </p>
+                        <p>
+                            Desenvolvido por Agil Sistemas | <a href="http://www.agilsist.com.br">http://www.agilsist.com.br</a>&nbsp;&nbsp;&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="<%= ResolveUrl("Scripts/tabs_prof.js") %>" type="text/javascript"></script>
+        <script src=" <%= ResolveUrl("Scripts/Mascara.js") %>" type="text/javascript"></script>
+        <script src=" <%= ResolveUrl("Scripts/fixfocus.js") %>" type="text/javascript"></script>
+    </div>
+    </form>
+</body>
+</html>

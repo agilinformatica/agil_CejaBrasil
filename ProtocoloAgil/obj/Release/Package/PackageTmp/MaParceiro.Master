@@ -1,0 +1,212 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MaParceiro.Master.cs"
+    Inherits="ProtocoloAgil.MaParceiro" %>
+
+<%@ Register TagPrefix="asp" Namespace="AjaxControlToolkit" Assembly="AjaxControlToolkit, Version=4.1.50731.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+    <title>Gestão de Jovem Aprendiz  Web </title>
+    <link href="Styles/cdl_bh.css" rel="stylesheet" type="text/css" />
+    <script src="../../Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style2 {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .style4 {
+            font-family: "Century Gothic";
+            font-size: x-large;
+            color: #0066FF;
+        }
+
+        .style3 {
+            font-family: "Century Gothic";
+        }
+
+        .style5 {
+            font-family: "Century Gothic";
+            color: #0033CC;
+        }
+
+        .clearboth {
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript">
+        function inicia() {
+            $("#aprendiz").removeClass("active");
+            $("#configuracoes").removeClass("active");
+            $("#arquivosprofessores").removeClass("active");
+            //display selected division, hide others
+            $("div.aprendiz").css("display", "none");
+            $("div.configuracoes").css("display", "none");
+            $("div.arquivosprofessores").css("display", "none");
+
+            $('<%# "#" + Session["CurrentPage"] %>').addClass("active");
+            $('<%# "div." + Session["CurrentPage"] %>').fadeIn();
+        }
+    </script>
+</head>
+<body onload="inicia();">
+    <form id="form1" runat="server">
+        <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true"
+            EnableScriptLocalization="true" ScriptMode="Release">
+        </asp:ToolkitScriptManager>
+        <div id="header">
+            <div id="cabecalho">
+                <div class="logo02">
+                </div>
+                <div class="Nome" style="width: 300px;">
+                    Gestão do Programa PET Jovem Aprendiz
+                </div>
+                <div id="sair">
+                    <div class="userlinks">
+                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="quit" NavigateUrl="~/Default.aspx">Sair</asp:HyperLink>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="content_home">
+                <div class="header">
+                    <div class="text_school" style="width: 30%; margin-left: 60px;">
+                        <asp:Label ID="LBnomeEscola" CssClass="NomeEscola" runat="server" EnableTheming="True"
+                            Font-Strikeout="False"></asp:Label>
+                        <a runat="server" id="LNKendWeb">
+                            <asp:Label ID="LBEndWeb" runat="server" Text=""></asp:Label></a>
+                        <p>
+                            <asp:Label ID="LBenderecoEscola" runat="server"></asp:Label>
+                        </p>
+                    </div>
+                    <div class="topmenu">
+                        <ul id="menu" class="menu">
+                            <%--   <li id="configuracoes">Configurações</li>--%>
+                            <li id="aprendiz">Aprendiz</li>
+                           <%-- <li id="arquivosprofessores">Arquivos</li>--%>
+                        </ul>
+                    </div>
+                    <%--                <div class="submenu configuracoes">
+                    <table class="itens_submenu">
+                        <tr>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                            <td> </td>
+                        </tr>
+                    </table>
+                </div>--%>
+                    <div class="submenu aprendiz">
+                        <table class="itens_submenu">
+                            <tr>
+                                <td>
+                                    <asp:LinkButton ID="LK_Aprendizes_Alocados" runat="server" OnClick="LinkButton1_Click">Aprendizes Alocados</asp:LinkButton>
+                                </td>
+                                <td>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Controle de Presença</a>
+                                            <ul>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Controle_Por_Parceiro" runat="server" OnClick="LinkButton1_Click">Por Periodo</asp:LinkButton> 
+                                                </li>
+                                                <li>
+                                                    <asp:LinkButton ID="LK_Total_Por_Parceiro" runat="server" OnClick="LinkButton1_Click">Total Periodo</asp:LinkButton>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <asp:LinkButton ID="LK_Contato_parceiro" runat="server" OnClick="LinkButton1_Click">Contato Secretaria</asp:LinkButton>
+                                </td>
+
+                                <td> <asp:LinkButton ID="LK_CadastroVagaEmpresa" runat="server" OnClick="LinkButton1_Click">Cadastrado de vagas</asp:LinkButton> </td>
+
+                                
+                                <td> <asp:LinkButton ID="LK_AvaliacaoDesempenho" runat="server" OnClick="LinkButton1_Click">Avaliação Desempenho</asp:LinkButton> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="submenu arquivosprofessores">
+                        <table class="itens_submenu">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <div id="ContentFake" style="display: none">
+                            <asp:Panel ID="Panel1" runat="server" CssClass="style2" Height="400px" Width="505px">
+                                <strong>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <asp:Label ID="Label1" runat="server" CssClass="style4" Font-Size="20px"></asp:Label>
+                                </strong>
+                                <br class="style3" />
+                                <span class="style5">Gestão do Programa PET Jovem Aprendiz
+                                <br />
+                                </span>
+                                <div class="system_logo">
+                                    <a href="http://www.agilsist.com.br" target="_blank">Mestre Ágil</a>
+                                </div>
+                            </asp:Panel>
+                        </div>
+                        <div id="ContentHolder">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <div class="footer">
+                <div class="content_footer">
+                    <div class="copyright">
+                        <p>
+                           CEFORT - Gestão do Programa PET Jovem Aprendiz
+                        </p>
+                        <p>
+                            Desenvolvido por Agil Sistemas | <a href="http://www.agilsist.com.br">http://www.agilsist.com.br</a>&nbsp;&nbsp;&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <asp:HiddenField ID="ActiveTab" runat="server" />
+    </form>
+    <script src="<%= ResolveUrl("Scripts/tabs_Parceiros.js") %>" type="text/javascript"></script>
+    <script src=" <%= ResolveUrl("Scripts/Mascara.js") %>" type="text/javascript"></script>
+    <script src=" <%= ResolveUrl("Scripts/fixfocus.js") %>" type="text/javascript"></script>
+</body>
+</html>

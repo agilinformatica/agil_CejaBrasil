@@ -1,0 +1,5 @@
+F:\Projetos\Fundação CDL BH\PET Menor Aprendiz - CDL BH\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll.config
+F:\Projetos\Fundação CDL BH\PET Menor Aprendiz - CDL BH\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\Fundação CDL BH\PET Menor Aprendiz - CDL BH\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\Fundação CDL BH\PET Menor Aprendiz - CDL BH\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\Fundação CDL BH\PET Menor Aprendiz - CDL BH\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.pdb

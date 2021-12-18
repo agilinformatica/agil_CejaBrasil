@@ -1,0 +1,34 @@
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll.config
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\RequerimentosWebl.Base.csprojResolveAssemblyReference.cache
+C:\Users\Glaydson\Documents\Visual Studio 2010\Projects\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll.config
+C:\Users\Glaydson\Documents\Visual Studio 2010\Projects\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll
+C:\Users\Glaydson\Documents\Visual Studio 2010\Projects\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.pdb
+C:\Users\Glaydson\Documents\Visual Studio 2010\Projects\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.dll
+C:\Users\Glaydson\Documents\Visual Studio 2010\Projects\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll.config
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\RequerimentosWebl.Base.csprojResolveAssemblyReference.cache
+C:\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll.config
+C:\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll
+C:\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.pdb
+C:\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ResolveAssemblyReference.cache
+C:\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.dll
+C:\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\Protocolo agil  - Eli\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll.config
+F:\Projetos\ProtocoloAgil\Protocolo agil  - Eli\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\Protocolo agil  - Eli\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\Protocolo agil  - Eli\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\Protocolo agil  - Eli\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll.config
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil - Senac\ProtocoloAgil - Senac\ProtocoloAgil.Base\obj\Debug\RequerimentosWebl.Base.csprojResolveAssemblyReference.cache

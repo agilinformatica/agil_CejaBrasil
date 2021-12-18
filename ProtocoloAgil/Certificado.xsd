@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Certificado" targetNamespace="http://tempuri.org/Certificado.xsd" xmlns:mstns="http://tempuri.org/Certificado.xsd" xmlns="http://tempuri.org/Certificado.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Certificado" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Certificado" msprop:Generator_UserDSName="Certificado">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Certificado" msprop:Generator_TableClassName="CertificadoDataTable" msprop:Generator_TableVarName="tableCertificado" msprop:Generator_TablePropName="_Certificado" msprop:Generator_RowDeletingName="CertificadoRowDeleting" msprop:Generator_RowChangingName="CertificadoRowChanging" msprop:Generator_RowEvHandlerName="CertificadoRowChangeEventHandler" msprop:Generator_RowDeletedName="CertificadoRowDeleted" msprop:Generator_UserTableName="Certificado" msprop:Generator_RowChangedName="CertificadoRowChanged" msprop:Generator_RowEvArgName="CertificadoRowChangeEvent" msprop:Generator_RowClassName="CertificadoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="descricao" msprop:Generator_ColumnVarNameInTable="columndescricao" msprop:Generator_ColumnPropNameInRow="descricao" msprop:Generator_ColumnPropNameInTable="descricaoColumn" msprop:Generator_UserColumnName="descricao" type="xs:string" minOccurs="0" />
+              <xs:element name="dataInicio" msprop:Generator_ColumnVarNameInTable="columndataInicio" msprop:Generator_ColumnPropNameInRow="dataInicio" msprop:Generator_ColumnPropNameInTable="dataInicioColumn" msprop:Generator_UserColumnName="dataInicio" type="xs:string" minOccurs="0" />
+              <xs:element name="dataFim" msprop:Generator_ColumnVarNameInTable="columndataFim" msprop:Generator_ColumnPropNameInRow="dataFim" msprop:Generator_ColumnPropNameInTable="dataFimColumn" msprop:Generator_UserColumnName="dataFim" type="xs:string" minOccurs="0" />
+              <xs:element name="nome" msprop:Generator_ColumnVarNameInTable="columnnome" msprop:Generator_ColumnPropNameInRow="nome" msprop:Generator_ColumnPropNameInTable="nomeColumn" msprop:Generator_UserColumnName="nome" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

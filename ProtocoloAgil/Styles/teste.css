@@ -1,0 +1,163 @@
+﻿body 
+{
+    font-family: Arial, sans-serif;
+    font-size: 9pt ;
+    color: #3D3E40;
+}
+
+
+h1
+{
+    font-family: Arial, sans-serif;
+    font-size: 10pt ;
+    color: #042740;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 7px 20px 0 20px;
+}
+
+
+h2
+{
+    font-family: Arial, sans-serif;
+    font-size: 9pt ;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 10px 30px 0 30px;
+    color: #042740;
+}
+
+h3
+{
+    font-family: Arial, sans-serif;
+    font-size: 9pt ;
+    color: #3D3E40;
+    margin: 2px 30px 0 30px;
+}
+
+h4
+{
+    font-family: Arial, sans-serif;
+    font-size: 9pt ;
+    color: #3D3E40;
+    margin: 0 30px 0 30px;
+    padding-top: 20px;
+}
+
+ h5
+{
+     font-family: Arial, sans-serif;
+    font-size: 12pt ;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px 30px 10px 30px;
+    color: #042740;
+    text-align: center;
+}
+
+p
+{
+    font-size: 10pt ;
+    text-align: justify;
+    margin: 7px 30px 0 40px;
+}
+
+
+.assinaturas
+{
+    font-family: Arial, sans-serif;
+    font-size: 9pt ;
+    color: #3D3E40;
+    text-align: center;
+}
+
+
+.rubrica
+{
+    width: 60px;
+    height: 60px;
+    float: right;
+}
+
+.blocoAssinatura
+{
+    width: 100%;
+    clear: both;
+    text-align: right;
+    height: 60px;
+}
+
+
+.assinatura
+{
+    width: 100px;
+    height: 60px;
+    z-index: -999;
+    float: left;
+    margin-top: 10px;
+    position: relative;
+}
+
+table
+{
+    width: 90%;
+    margin-left:150px;
+    border-collapse: collapse;
+}
+
+th
+{
+    border: 0px;
+    border-collapse: collapse;
+    padding: 1px;
+    border-spacing: 0;
+}
+
+td
+{
+    border: solid 1px #5E5E5E;
+    border-collapse: collapse;
+    padding: 1px;
+    border-spacing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.fonteTab
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: left;
+    font-weight: bold;
+    color: #5E5E5E;
+    margin-left: 0px;
+}
+
+
+.list
+{
+    list-style-image: url('../Images/check.png');
+}
+
+.list li
+{
+    padding: 8px 30px 0 70px;
+    text-align: justify;
+}
+
+
+.typelist
+{ 
+    text-align: justify;
+    font-size: 9pt;
+    display: block;
+    padding: 8px 50px 1px 30px;
+}
+
+
+li
+{
+    width: 100px;
+    text-align: justify;
+}
+
+

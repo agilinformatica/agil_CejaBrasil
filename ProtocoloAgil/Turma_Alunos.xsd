@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Turma_Alunos" targetNamespace="http://tempuri.org/Turma_Alunos.xsd" xmlns:mstns="http://tempuri.org/Turma_Alunos.xsd" xmlns="http://tempuri.org/Turma_Alunos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ProtocoloAgilConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProtocoloAgilConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ProtocoloAgilConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Turma_AlunosTableAdapter" GeneratorDataComponentClassName="View_Turma_AlunosTableAdapter" Name="View_Turma_Alunos" UserDataComponentName="View_Turma_AlunosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="admin_ceducbh.dbo.View_Turma_Alunos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Apr_Codigo, Apr_Nome, Apr_Sexo, UniNome, AreaDescricao, StaAbreviatura, Apr_Telefone, Apr_Email, CurDescricao, TurNome, PlanDescricao, StaCodigo, Apr_DataDeNascimento, DPTurma, DPProf, EducNome, DisDescricao, DpOrdem, Apr_Situacao, ALAAprendiz FROM dbo.View_Turma_Alunos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="Apr_Sexo" DataSetColumn="Apr_Sexo" />
+              <Mapping SourceColumn="UniNome" DataSetColumn="UniNome" />
+              <Mapping SourceColumn="AreaDescricao" DataSetColumn="AreaDescricao" />
+              <Mapping SourceColumn="StaAbreviatura" DataSetColumn="StaAbreviatura" />
+              <Mapping SourceColumn="Apr_Telefone" DataSetColumn="Apr_Telefone" />
+              <Mapping SourceColumn="Apr_Email" DataSetColumn="Apr_Email" />
+              <Mapping SourceColumn="CurDescricao" DataSetColumn="CurDescricao" />
+              <Mapping SourceColumn="TurNome" DataSetColumn="TurNome" />
+              <Mapping SourceColumn="PlanDescricao" DataSetColumn="PlanDescricao" />
+              <Mapping SourceColumn="StaCodigo" DataSetColumn="StaCodigo" />
+              <Mapping SourceColumn="Apr_DataDeNascimento" DataSetColumn="Apr_DataDeNascimento" />
+              <Mapping SourceColumn="DPTurma" DataSetColumn="DPTurma" />
+              <Mapping SourceColumn="DPProf" DataSetColumn="DPProf" />
+              <Mapping SourceColumn="EducNome" DataSetColumn="EducNome" />
+              <Mapping SourceColumn="DisDescricao" DataSetColumn="DisDescricao" />
+              <Mapping SourceColumn="DpOrdem" DataSetColumn="DpOrdem" />
+              <Mapping SourceColumn="Apr_Situacao" DataSetColumn="Apr_Situacao" />
+              <Mapping SourceColumn="ALAAprendiz" DataSetColumn="ALAAprendiz" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Turma_Alunos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Turma_Alunos" msprop:Generator_UserDSName="Turma_Alunos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Turma_Alunos" msprop:Generator_TableClassName="View_Turma_AlunosDataTable" msprop:Generator_TableVarName="tableView_Turma_Alunos" msprop:Generator_TablePropName="View_Turma_Alunos" msprop:Generator_RowDeletingName="View_Turma_AlunosRowDeleting" msprop:Generator_RowChangingName="View_Turma_AlunosRowChanging" msprop:Generator_RowEvHandlerName="View_Turma_AlunosRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Turma_AlunosRowDeleted" msprop:Generator_UserTableName="View_Turma_Alunos" msprop:Generator_RowChangedName="View_Turma_AlunosRowChanged" msprop:Generator_RowEvArgName="View_Turma_AlunosRowChangeEvent" msprop:Generator_RowClassName="View_Turma_AlunosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apr_Codigo" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Sexo" msprop:Generator_ColumnVarNameInTable="columnApr_Sexo" msprop:Generator_ColumnPropNameInRow="Apr_Sexo" msprop:Generator_ColumnPropNameInTable="Apr_SexoColumn" msprop:Generator_UserColumnName="Apr_Sexo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniNome" msprop:Generator_ColumnVarNameInTable="columnUniNome" msprop:Generator_ColumnPropNameInRow="UniNome" msprop:Generator_ColumnPropNameInTable="UniNomeColumn" msprop:Generator_UserColumnName="UniNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AreaDescricao" msprop:Generator_ColumnVarNameInTable="columnAreaDescricao" msprop:Generator_ColumnPropNameInRow="AreaDescricao" msprop:Generator_ColumnPropNameInTable="AreaDescricaoColumn" msprop:Generator_UserColumnName="AreaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaAbreviatura" msprop:Generator_ColumnVarNameInTable="columnStaAbreviatura" msprop:Generator_ColumnPropNameInRow="StaAbreviatura" msprop:Generator_ColumnPropNameInTable="StaAbreviaturaColumn" msprop:Generator_UserColumnName="StaAbreviatura" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Telefone" msprop:Generator_ColumnVarNameInTable="columnApr_Telefone" msprop:Generator_ColumnPropNameInRow="Apr_Telefone" msprop:Generator_ColumnPropNameInTable="Apr_TelefoneColumn" msprop:Generator_UserColumnName="Apr_Telefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Email" msprop:Generator_ColumnVarNameInTable="columnApr_Email" msprop:Generator_ColumnPropNameInRow="Apr_Email" msprop:Generator_ColumnPropNameInTable="Apr_EmailColumn" msprop:Generator_UserColumnName="Apr_Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurDescricao" msprop:Generator_ColumnVarNameInTable="columnCurDescricao" msprop:Generator_ColumnPropNameInRow="CurDescricao" msprop:Generator_ColumnPropNameInTable="CurDescricaoColumn" msprop:Generator_UserColumnName="CurDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PlanDescricao" msprop:Generator_ColumnVarNameInTable="columnPlanDescricao" msprop:Generator_ColumnPropNameInRow="PlanDescricao" msprop:Generator_ColumnPropNameInTable="PlanDescricaoColumn" msprop:Generator_UserColumnName="PlanDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StaCodigo" msprop:Generator_ColumnVarNameInTable="columnStaCodigo" msprop:Generator_ColumnPropNameInRow="StaCodigo" msprop:Generator_ColumnPropNameInTable="StaCodigoColumn" msprop:Generator_UserColumnName="StaCodigo" type="xs:int" />
+              <xs:element name="Apr_DataDeNascimento" msprop:Generator_ColumnVarNameInTable="columnApr_DataDeNascimento" msprop:Generator_ColumnPropNameInRow="Apr_DataDeNascimento" msprop:Generator_ColumnPropNameInTable="Apr_DataDeNascimentoColumn" msprop:Generator_UserColumnName="Apr_DataDeNascimento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DPTurma" msprop:Generator_ColumnVarNameInTable="columnDPTurma" msprop:Generator_ColumnPropNameInRow="DPTurma" msprop:Generator_ColumnPropNameInTable="DPTurmaColumn" msprop:Generator_UserColumnName="DPTurma" type="xs:int" />
+              <xs:element name="DPProf" msprop:Generator_ColumnVarNameInTable="columnDPProf" msprop:Generator_ColumnPropNameInRow="DPProf" msprop:Generator_ColumnPropNameInTable="DPProfColumn" msprop:Generator_UserColumnName="DPProf" type="xs:int" />
+              <xs:element name="EducNome" msprop:Generator_ColumnVarNameInTable="columnEducNome" msprop:Generator_ColumnPropNameInRow="EducNome" msprop:Generator_ColumnPropNameInTable="EducNomeColumn" msprop:Generator_UserColumnName="EducNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DisDescricao" msprop:Generator_ColumnVarNameInTable="columnDisDescricao" msprop:Generator_ColumnPropNameInRow="DisDescricao" msprop:Generator_ColumnPropNameInTable="DisDescricaoColumn" msprop:Generator_UserColumnName="DisDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DpOrdem" msprop:Generator_ColumnVarNameInTable="columnDpOrdem" msprop:Generator_ColumnPropNameInRow="DpOrdem" msprop:Generator_ColumnPropNameInTable="DpOrdemColumn" msprop:Generator_UserColumnName="DpOrdem" type="xs:int" />
+              <xs:element name="Apr_Situacao" msprop:Generator_ColumnVarNameInTable="columnApr_Situacao" msprop:Generator_ColumnPropNameInRow="Apr_Situacao" msprop:Generator_ColumnPropNameInTable="Apr_SituacaoColumn" msprop:Generator_UserColumnName="Apr_Situacao" type="xs:int" minOccurs="0" />
+              <xs:element name="ALAAprendiz" msprop:Generator_ColumnVarNameInTable="columnALAAprendiz" msprop:Generator_ColumnPropNameInRow="ALAAprendiz" msprop:Generator_ColumnPropNameInTable="ALAAprendizColumn" msprop:Generator_UserColumnName="ALAAprendiz" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

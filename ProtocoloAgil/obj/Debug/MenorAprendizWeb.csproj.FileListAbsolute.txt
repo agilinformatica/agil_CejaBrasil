@@ -1,0 +1,316 @@
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\obj\Debug\RdlCompile.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\EntityFramework.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\EntityFramework.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\RdlCompile.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\RdlCompile.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\EntityFramework.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\EntityFramework.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\RdlCompile.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\RdlCompile.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Projov\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\RdlCompile.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\EntityFramework.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\EntityFramework.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\RdlCompile.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\RdlCompile.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\RdlCompile.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\ProtocoloAgil.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\ProtocoloAgil.pdb
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.xml
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\RdlCompile.cache
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\ProtocoloAgil.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\RdlCompile.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\ProtocoloAgil.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\RdlCompile.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPContagemFaltasPeriodo.rdlc
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPListaAlunosPresencaIntrodutorio.rdlc
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPListaAlunosPresencaCapacitacao.rdlc
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\reports\RPListaAlunosPresenca.rdlc
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x64\msvcr100.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x86\msvcr100.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\ProtocoloAgil.dll.config
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\ProtocoloAgil.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\ProtocoloAgil.pdb
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.SqlServer.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\MenorAprendizWeb.Base.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\Microsoft.ReportViewer.WebForms.DLL
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\Microsoft.SqlServer.Types.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\MenorAprendizWeb.Base.pdb
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.xml
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\bin\EntityFramework.SqlServer.xml
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\MenorAprendizWeb.csprojResolveAssemblyReference.cache
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll.licenses
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\RdlCompile.cache
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\RdlCompile.compiled
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\ProtocoloAgil.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil\obj\Debug\ProtocoloAgil.pdb

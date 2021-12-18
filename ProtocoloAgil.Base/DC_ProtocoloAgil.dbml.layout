@@ -1,0 +1,701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 80.375, 56.125" name="DC_ProtocoloAgil">
+  <DataContextMoniker Name="/DC_ProtocoloAgilDataContext" />
+  <nestedChildShapes>
+    <classShape Id="68971d82-6cc6-4b33-932c-15f707c66b70" absoluteBounds="39.375, 0.625, 2, 4.2708154296875">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_controle_frequencia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2b32ca00-2806-44e1-bfd6-8adb714923d5" absoluteBounds="39.39, 1.085, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c388bc92-7c72-4cf2-999b-de012148d9d3" absoluteBounds="12.75, 1.875, 2, 1.5785953776041668">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_AreaAtuacao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e511c977-fa4f-4ee1-80f9-e80907697635" absoluteBounds="12.765, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="aec6d9a9-1246-4597-a81c-21c08cb4d009" absoluteBounds="17.75, 5.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_AutorizacaoUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f4c16bb-a94f-4f68-9b76-4fe171c9e7b7" absoluteBounds="17.765, 6.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cdda5e66-a108-49e1-b945-3aebbd64ff8f" absoluteBounds="3.75, 1.875, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Bairro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3cc27837-59eb-45d4-a778-c1a004a82529" absoluteBounds="3.765, 2.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="db0163d9-4d0d-4755-95fe-3c72a84be169" absoluteBounds="6.75, 18.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Conceito" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbcf7a07-be31-4329-a265-85481194b166" absoluteBounds="6.765, 19.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9e8a569f-058c-4bc4-b142-b0f012b9de97" absoluteBounds="6.75, 4, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Curso" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2393e5c8-3937-498f-86f2-62fe92a39fb2" absoluteBounds="6.765, 4.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="372affff-bb35-4e91-9f22-118c44f6418a" absoluteBounds="9.75, 18.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_DatasEncontro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75a12128-5d85-404c-9398-9bad91924e2a" absoluteBounds="9.765, 19.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2f600021-455f-441a-a732-a1d13489bfb8" absoluteBounds="9.5, 8.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Disciplina" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9edce91c-d3b7-4d83-b39b-9283f1a776de" absoluteBounds="9.515, 8.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f310cf73-cc22-473c-8277-a405decaebdf" absoluteBounds="12.75, 18.875, 2, 6.9630354817708309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_DisciplinasAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6c808e6-92cc-4bac-9915-867ecb1aaa92" absoluteBounds="12.765, 19.335, 1.9700000000000002, 6.403035481770833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="10857d1e-d734-4896-a475-125bf4d35e4f" absoluteBounds="12.25, 4.375, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_DisciplinasTurmaProf" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92c00825-f6a7-44bc-a589-8968a739ebab" absoluteBounds="12.265, 4.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="569c40d9-6d42-4d9d-9017-d9ab273db0ed" absoluteBounds="15.75, 18.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Documento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65bfc6a8-803c-4b91-9757-92acfd141d00" absoluteBounds="15.765, 19.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4e7a53bc-721c-49e9-8369-6aec96b95e0b" absoluteBounds="18.75, 16.875, 2, 4.0785139973958309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_DocumentosAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8706eaea-fbc7-4471-8c79-44d1fa2dcd25" absoluteBounds="18.765, 17.335, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc82afe5-7a33-46a1-9cb6-8ff51de20df3" absoluteBounds="20.75, 1.875, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Escola" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f04ec9b0-71c6-4713-bcad-a57617af8b4f" absoluteBounds="20.765, 2.335, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c953d9f7-7a72-41de-a3ae-b0cc8845d83d" absoluteBounds="0.75, 26.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Evento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="443a4bdb-e248-41d8-8ece-5a1a853c74af" absoluteBounds="0.765, 27.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef822123-c560-4fb3-850a-7de406f43401" absoluteBounds="20.75, 5.875, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Fechamento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2c81293-51fe-42c2-96a1-5deb909053c6" absoluteBounds="20.765, 6.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30b1b745-c58d-41fd-81a9-87790b570fce" absoluteBounds="6.75, 21.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Feriado" />
+      <nestedChildShapes>
+        <elementListCompartment Id="200968c5-d639-4869-86c1-dcf91954a868" absoluteBounds="6.765, 22.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7678ec8c-6ed9-4185-ab59-4edc99b7e494" absoluteBounds="20.75, 9.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Frequecia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bbc52fa3-29d1-4d31-a3d1-c940ff07e69f" absoluteBounds="20.765, 10.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ec33f7c-4679-45a1-af3f-9f7077ed9659" absoluteBounds="20.75, 13.875, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_funcoesSistema" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f78a0ddb-32f8-4984-b7a4-a4de60ac42de" absoluteBounds="20.765, 14.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a5bc857-dd62-4784-9e40-d0a7124b118c" absoluteBounds="18.75, 21.875, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_GrauEscolaridade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e00262f-1051-4969-97ad-146348388a9b" absoluteBounds="18.765, 22.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68f03c51-12c1-442e-a3f8-728ec5e9a722" absoluteBounds="3.75, 6.875, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_GrauParentesco" />
+      <nestedChildShapes>
+        <elementListCompartment Id="465fbdf3-ed99-4f54-8361-c7cddb64247e" absoluteBounds="3.765, 7.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30bfa97f-3601-4874-b59d-8fe48236394e" absoluteBounds="21.75, 16.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_IndicesSociai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ae553d7-8d62-4907-aaf1-1b912293bb06" absoluteBounds="21.765, 17.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bf18791a-e04a-4c75-8cd7-cbfaddbb9fe5" absoluteBounds="15.75, 23.875, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Itinerario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="013a6f16-08f1-463c-81fc-76609a074ef0" absoluteBounds="15.765, 24.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20f26fef-c502-433b-845e-430d45cb410f" absoluteBounds="23.75, 1.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_MotivoDesligamento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a764e421-10bc-41a9-a49e-1787673b9bd1" absoluteBounds="23.765, 2.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7cf5dcbd-004d-4e3d-b6f7-83ca836f58b3" absoluteBounds="23.75, 3.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_NotasAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b30fe47-7b22-406c-a9ff-e05f85e93b42" absoluteBounds="23.765, 4.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2931bd57-da68-4cd7-8ddb-27d6712eed6b" absoluteBounds="0.75, 0.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Ocorrencia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c89f186-df9c-4e98-86b4-374114140c57" absoluteBounds="0.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="012dfad9-b0f0-4a59-895f-88f5fbe1c353" absoluteBounds="3.5, 9, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_OcorrenciasAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="187d0c67-f18e-44b4-9172-a461a2d8f116" absoluteBounds="3.515, 9.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a91de94-4228-41c4-8223-408e052061e9" absoluteBounds="23.75, 6.875, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_OcorrenciasdoAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd3142e9-812f-48cf-976f-31a3061f3ce3" absoluteBounds="23.765, 7.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14b0fdc3-0a0a-4cf1-b78d-6508ccca836b" absoluteBounds="6.75, 24.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Opcoe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61a5e59a-7882-4574-b994-96252acd7b76" absoluteBounds="6.765, 25.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0dff1c53-ce13-412a-8569-e07551c6b2fb" absoluteBounds="23.75, 10.875, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Orientador" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9ba1be86-fa0a-4b3f-844c-56c9b2147ce2" absoluteBounds="23.765, 11.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="48b10edd-9a44-4813-ac9e-8bf8c5bdbd16" absoluteBounds="3.5, 12.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Participante" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09d2d7e2-f83c-4f78-a91d-f74cf78dd1f9" absoluteBounds="3.515, 13.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc1b33fc-70e2-435d-8bdc-e21aba997e2e" absoluteBounds="23.75, 13.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Pesquisa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2fc48b66-589c-4d02-8d1a-6e3ae11e53e4" absoluteBounds="23.765, 14.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e885c61-1501-4390-b370-a3b9d314cd51" absoluteBounds="24.75, 16.875, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Pesquisa_Parceiro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1dceb998-4654-420e-8e9b-7026d9ca65ec" absoluteBounds="24.765, 17.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6f5bde85-9fe4-41c2-a2a9-3ce8cfcb268e" absoluteBounds="12.25, 8.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_PlanoCurricular" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd785ef9-1dba-428f-af81-71c6edd97a95" absoluteBounds="12.265, 9.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c8a53fcd-8ff3-463f-909e-db787d01fff4" absoluteBounds="9.5, 2.25, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Plano" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19f8ece1-6e5b-4a8e-a67f-88196f5fe2be" absoluteBounds="9.515, 2.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f2410f6-fbbb-414e-9063-e67e79f34c4f" absoluteBounds="3.75, 18.875, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Profissoe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2cb91cac-0373-4d23-9910-c2051b7749fb" absoluteBounds="3.765, 19.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1a717028-4c99-46f4-b7d2-25b9996a6ae8" absoluteBounds="15.75, 25.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Questao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2758ce22-d711-4fe2-9f2f-0b5e5aac68ad" absoluteBounds="15.765, 26.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bdbcbb0c-a283-4edf-bd00-b8e0712f2f12" absoluteBounds="12.75, 12.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_RamosAtividade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="abe8d88d-bbde-4ac5-839c-db04f0cd377e" absoluteBounds="12.765, 13.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dfe85b1c-fe9c-4772-aee2-52200726953a" absoluteBounds="18.75, 25.875, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Regioe" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d36167f2-33ef-4fb7-84f9-10a7bba0147b" absoluteBounds="18.765, 26.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a56a2d63-b159-4518-a072-b4e2e4147a4d" absoluteBounds="24.75, 20.875, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Resposta_Parceiro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e65ef3f-ebed-4038-a719-bd8de5a956ee" absoluteBounds="24.765, 21.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="84d1a117-f458-47ef-8701-b335eb457a56" absoluteBounds="21.75, 25.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_SessionActive" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd5b4827-f57a-455c-bfff-2a381d259768" absoluteBounds="21.765, 26.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d0f71dc-4986-433d-b7c3-e7efeec80518" absoluteBounds="24.75, 23.875, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_SituacaoAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79353de3-1777-42dd-9661-b17fc04113b5" absoluteBounds="24.765, 24.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e08f8e7-9238-416a-aa2c-5c466ad303f1" absoluteBounds="9.75, 26.875, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_StatusEncaminhamento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1bc06519-ff0d-4578-9a44-d798f3f9c991" absoluteBounds="9.765, 27.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4b926d7c-28d7-4862-b8b4-3b7c0223eb9b" absoluteBounds="26.75, 1.875, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_UnidadesTeste" />
+      <nestedChildShapes>
+        <elementListCompartment Id="149309d9-1f82-4432-8e46-b7793c47799b" absoluteBounds="26.765, 2.335, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7c5e83bf-8529-4622-ae43-d21b0d85cf81" absoluteBounds="26.75, 6.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Usuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6a671055-2f34-4031-93a6-e358ee632cae" absoluteBounds="26.765, 7.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3181ad64-2a84-4585-952f-637fccdbfd45" absoluteBounds="26.75, 9.875, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_UsuarioUnidade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a113d281-be04-4e26-b0d1-8646cc018008" absoluteBounds="26.765, 10.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c192c804-d90f-4d00-9763-06a92a55b4f0" absoluteBounds="26.75, 11.875, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Vale_Transporte" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2dfe957f-e8da-41fd-a7ca-c6c643aae0dc" absoluteBounds="26.765, 12.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95886cf1-b4ad-4427-aa84-d62fbbec0c22" absoluteBounds="3.75, 4.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Vinculo_Empregaticio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="07aa1e24-8331-44ff-a576-84b0c36d04c4" absoluteBounds="3.765, 5.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1cc8f685-7e9d-4f2c-b8d0-1132bc00fbdb" absoluteBounds="6.75, 28.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/MA_Municipio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90b16800-6d05-4cd0-af5e-f161b579ef3c" absoluteBounds="6.765, 29.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.5 : 8.25); (11.6910744349011 : 8.05892556509888 : JumpStart); (11.8089255650989 : 7.94107443490112 : JumpEnd); (11.875 : 7.875); (11.875 : 5.83735270182292); (12.25 : 5.83735270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Disciplina/CA_Disciplina_CA_DisciplinasTurmaProf" />
+      <nodes>
+        <classShapeMoniker Id="2f600021-455f-441a-a732-a1d13489bfb8" />
+        <classShapeMoniker Id="10857d1e-d734-4896-a475-125bf4d35e4f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.28125); (3.59375 : 1.28125); (3.59375 : 9)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Ocorrencia/CA_Ocorrencia_CA_OcorrenciasAprendiz" />
+      <nodes>
+        <classShapeMoniker Id="2931bd57-da68-4cd7-8ddb-27d6712eed6b" />
+        <classShapeMoniker Id="012dfad9-b0f0-4a59-895f-88f5fbe1c353" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 27.4142976888021); (3.59375 : 27.4142976888021); (3.59375 : 14.2035953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Evento/CA_Evento_CA_Participante" />
+      <nodes>
+        <classShapeMoniker Id="c953d9f7-7a72-41de-a3ae-b0cc8845d83d" />
+        <classShapeMoniker Id="48b10edd-9a44-4813-ac9e-8bf8c5bdbd16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.5 : 9.28929768880208); (11.6666666666667 : 9.28929768880208 : JumpStart); (11.8333333333333 : 9.28929768880208 : JumpEnd); (12.25 : 9.28929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Disciplina/CA_Disciplina_CA_PlanoCurricular" />
+      <nodes>
+        <classShapeMoniker Id="2f600021-455f-441a-a732-a1d13489bfb8" />
+        <classShapeMoniker Id="6f5bde85-9fe4-41c2-a2a9-3ce8cfcb268e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.75 : 4); (9.125 : 3.625); (9.125 : 4.0112939453125); (9.5 : 3.6362939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Curso/CA_Curso_CA_Plano" />
+      <nodes>
+        <classShapeMoniker Id="9e8a569f-058c-4bc4-b142-b0f012b9de97" />
+        <classShapeMoniker Id="c8a53fcd-8ff3-463f-909e-db787d01fff4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0a834865-5952-4fcc-9c34-ce5fcbcb1744" absoluteBounds="9.75, 21.75, 2, 2.9247054036458309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Advertencias_aprendize" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6d43dded-bd91-44f4-bbba-417374ee79fe" absoluteBounds="9.765, 22.21, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="82865c88-a3fb-4f78-9c46-5e8e0ee268e2" absoluteBounds="27.75, 14.75, 2, 31.769920247395831">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_AulasDisciplinasAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc1ae48f-2c45-4f2c-8dab-9a5715be7519" absoluteBounds="27.765, 15.21, 1.9700000000000002, 31.209920247395832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6504181-0c73-4e07-8608-33a8c3270f63" absoluteBounds="15.75, 28.75, 2, 4.8477197265625023">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_CronogramaAula" />
+      <nestedChildShapes>
+        <elementListCompartment Id="395bc873-dd8a-4ff0-8ad6-0be51eab9752" absoluteBounds="15.765, 29.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b85a5c07-d601-4bd6-807e-ca70363951e5" absoluteBounds="18.75, 28.75, 2, 12.539777018229163">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_DiarioAprendize" />
+      <nestedChildShapes>
+        <elementListCompartment Id="39f41e22-13f5-4e51-bae5-4359c903d7a5" absoluteBounds="18.765, 29.21, 1.9700000000000002, 11.979777018229166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="90b767cc-6a93-408b-ba46-1139f21802ad" absoluteBounds="21.75, 28.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_DisciplinasProfessore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="676c3280-4d68-492b-9c32-4f2aa31d08b3" absoluteBounds="21.765, 29.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4239576-9257-420b-80d5-249d9b82eec9" absoluteBounds="29.75, 0.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_Familiare" />
+      <nestedChildShapes>
+        <elementListCompartment Id="592d8843-99da-4b04-a185-e2569763accd" absoluteBounds="29.765, 1.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a357b0c4-6621-4fc8-ae7d-9a6c2747dc72" absoluteBounds="0.75, 29.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_Fechamento_Mensal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69e5374c-344e-4b71-8301-5dba84ead284" absoluteBounds="0.765, 30.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b3b14c5-5f4d-4718-9d0f-52c47f9c0216" absoluteBounds="29.75, 3.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_Notas_do_Aprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31bb14da-13db-43fc-aa10-1bcc47943f81" absoluteBounds="29.765, 4.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b791ebb3-35da-4910-8ae1-bb94b3f6f60f" absoluteBounds="3.75, 29.75, 2, 7.347638346354163">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Carometro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c6dd7cf1-af10-4239-a6c4-0d0379ede028" absoluteBounds="3.765, 30.21, 1.9700000000000002, 6.7876383463541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="78cd60a6-13d2-47df-a4c7-644d508f9197" absoluteBounds="30.75, 6.75, 2, 16.385805664062502">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Contrato_Aprediz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2a76de4c-0ea5-4d19-a50f-066b69ea9234" absoluteBounds="30.765, 7.21, 1.9700000000000002, 15.8258056640625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03ef5ec7-839d-49fe-a320-2aff684a4f10" absoluteBounds="30.75, 24.75, 2, 6.0015283203125023">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_ControlePresenca" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2e2dfa1-fec0-45bb-a202-94f30d7aed8d" absoluteBounds="30.765, 25.21, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a1d18c8-77e2-441f-be2c-d000240cae2f" absoluteBounds="30.75, 31.75, 2, 5.8092268880208309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_ControlePresencaAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fa5bec47-9e3e-4413-ad85-26e5b0787a10" absoluteBounds="30.765, 32.21, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="983d357b-b5fa-4318-9ada-a1f69819026c" absoluteBounds="6.75, 32.75, 2, 23.116355794270831">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_DataMace" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df369dbf-fc19-422a-9299-7a0f635a2fec" absoluteBounds="6.765, 33.21, 1.9700000000000002, 22.556355794270832" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="20483d33-2a6e-492f-a498-6c597ad0eb8a" absoluteBounds="33.75, 0.75, 2, 15.231997070312499">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Ficha_Aprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="54c6a555-bf7e-4118-adeb-5bc34d80958e" absoluteBounds="33.765, 1.21, 1.9700000000000002, 14.6719970703125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a962a09-2ee0-43b6-b4ff-4a896e2e6ddc" absoluteBounds="33.75, 16.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Idade_Alocacao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="484b24d9-bce0-46d9-918b-2a55a6d9e692" absoluteBounds="33.765, 17.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c941248d-2e52-4a23-bf20-b0d0570a0593" absoluteBounds="33.75, 20.75, 2, 4.6554182942708309">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Notas_Falta" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b33abd0-8c06-4e64-a09c-b19539f574cc" absoluteBounds="33.765, 21.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="887979d6-5a48-4033-8118-3bd95f46f09f" absoluteBounds="21.75, 33.75, 2, 3.3093082682291595">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_parecer_Tecnico" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2428c9a2-155c-4d29-88e5-4f4ae2a883c0" absoluteBounds="21.765, 34.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="73a9cdde-22bd-4ecb-8f5c-d0cb6b456860" absoluteBounds="33.75, 26.75, 2, 3.1170068359375023">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Pequisa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84c15bd8-6665-4a6e-8830-8c5553094fc2" absoluteBounds="33.765, 27.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="286506f4-91e2-45ac-98bd-430ebdf43ee7" absoluteBounds="33.75, 30.75, 2, 5.4246240234375023">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Pesquisas_Realizada" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17e41f4d-5a47-4318-8a65-49cb53c387da" absoluteBounds="33.765, 31.21, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="be32c9ad-ca6f-466a-9845-584aecf64691" absoluteBounds="9.75, 35.75, 2, 3.8862125651041595">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Resposta_Pesquisa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc60ca2b-ed5c-45be-a136-71d5d9c18ccb" absoluteBounds="9.765, 36.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f4a77d77-ce04-40d3-b928-20d253021e8a" absoluteBounds="14.625, 35.75, 2, 6.0015283203125023">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Resultado_Final" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fba9431e-ea52-4921-8c2b-c496a69c44b1" absoluteBounds="14.64, 36.21, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a739e1d-0620-4c87-b8c3-f66050a56149" absoluteBounds="38.5, 5.75, 2, 4.8477197265624987">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_Turma_Aluno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9740a31b-5388-4fe0-8097-abd7283bbc51" absoluteBounds="38.515, 6.21, 1.9700000000000002, 4.2877197265625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2d81019b-5e07-44d0-883b-2e1a4f523d31" absoluteBounds="50.875, 2, 2, 2.5401025390625">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_CapacitacaoAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="657744ae-c9fb-4b7e-858a-d4148a7d1537" absoluteBounds="50.89, 2.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a647d04d-4ffb-498b-8237-dc9ed252254d" absoluteBounds="57.75, 0.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_PerfilUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3182c70f-01d2-4ca3-bb2b-c36f94805a31" absoluteBounds="57.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c673566d-d6ef-4b88-b34d-48362ae53c46" absoluteBounds="3.875, 15.625, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Encaminhamento" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d345ef56-79de-40e7-9e5c-f6e21ebed4c6" absoluteBounds="3.89, 16.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1de9afc5-5d08-4c2b-85e1-59f91c091103" absoluteBounds="7, 13.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Membro_Familia" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a787293-16c7-4b49-a84c-cc3cab04c153" absoluteBounds="7.015, 14.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 7.72996256510417); (8.65625 : 7.72996256510417); (8.65625 : 13.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_GrauParentesco/CA_GrauParentesco_CA_Membro_Familia" />
+      <nodes>
+        <classShapeMoniker Id="68f03c51-12c1-442e-a3f8-728ec5e9a722" />
+        <classShapeMoniker Id="1de9afc5-5d08-4c2b-85e1-59f91c091103" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 19.4719962565104); (6.5 : 19.4719962565104); (6.5 : 18.625); (8 : 18.625); (8 : 16.4824039713542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Profissoe/CA_Profissoe_CA_Membro_Familia" />
+      <nodes>
+        <classShapeMoniker Id="5f2410f6-fbbb-414e-9063-e67e79f34c4f" />
+        <classShapeMoniker Id="1de9afc5-5d08-4c2b-85e1-59f91c091103" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 5.94399251302083); (4.75 : 6.625); (6 : 6.625); (6 : 15.1162019856771); (7 : 15.1162019856771)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Vinculo_Empregaticio/CA_Vinculo_Empregaticio_CA_Membro_Familia" />
+      <nodes>
+        <classShapeMoniker Id="95886cf1-b4ad-4427-aa84-d62fbbec0c22" />
+        <classShapeMoniker Id="1de9afc5-5d08-4c2b-85e1-59f91c091103" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a62c9814-6e3b-4e35-a40a-c3c28e931590" absoluteBounds="9.5, 4.125, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Turma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a6a4cdd-0088-418f-ba67-a8b81ec81082" absoluteBounds="9.515, 4.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.5 : 5.04367635091146); (12.25 : 5.04367635091146)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Turma/CA_Turma_CA_DisciplinasTurmaProf" />
+      <nodes>
+        <classShapeMoniker Id="a62c9814-6e3b-4e35-a40a-c3c28e931590" />
+        <classShapeMoniker Id="10857d1e-d734-4896-a475-125bf4d35e4f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="22a0ff56-dbfd-45a8-9d65-a454f931221f" absoluteBounds="60.75, 1.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_FaltasCapacitacao" />
+      <nestedChildShapes>
+        <elementListCompartment Id="032ccf93-a1a7-4f62-9ce3-dd20c2181bea" absoluteBounds="60.765, 1.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b2e0e1f-3c4c-4171-8780-163af1c561ec" absoluteBounds="64, 1.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_Contagem_Faltas_Aprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3c97af7c-bc02-4798-9804-0a5028c679f0" absoluteBounds="64.015, 1.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="873dff5d-732c-4fdb-99bc-9fb99286f280" absoluteBounds="17.25, 2.625, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_AulasDisciplinasTurmaProf" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0dd6e93b-31bd-4645-a3f9-f0ab52f50d8c" absoluteBounds="17.265, 3.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a571fef-9023-4dc5-990f-92314125a212" absoluteBounds="55.25, 1.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_AulasCapacitacaoAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f9c5b15-e792-4f85-b55e-a76058c775bd" absoluteBounds="55.265, 2.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c5dea42-17c2-4adc-a25b-2d93103a4e95" absoluteBounds="44.5, 1.5, 2, 4.2708154296875">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_ListaCandidato" />
+      <nestedChildShapes>
+        <elementListCompartment Id="80ac601c-8363-4955-8bf9-8a6e10cf89ca" absoluteBounds="44.515, 1.96, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b93bcaf-5fbb-4765-bff0-ed1cd141a35a" absoluteBounds="48.5, 2, 2, 5.4246240234375">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_RequisicoesVaga" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9283b027-2368-464a-8894-a6b627d2a40b" absoluteBounds="48.515, 2.46, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2540cb7c-9242-4f1f-93eb-bcd24490ebb1" absoluteBounds="66.625, 1.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_CA_JovensPesquisa" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b33ca038-16c6-438a-b2c0-9819479a839a" absoluteBounds="66.64, 1.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9448d2bf-74a3-4bfe-8fde-1faa30ac3a27" absoluteBounds="24.875, 25.625, 2, 6.0015283203125">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Unidade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8043166-c710-44fd-b231-386926f0b8d4" absoluteBounds="24.89, 26.085, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="afa85ea7-1d52-4c2b-993b-382c7495c3e7" absoluteBounds="36.125, 0.875, 2, 13.693585611979165">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/View_AlocacoesAluno" />
+      <nestedChildShapes>
+        <elementListCompartment Id="28600045-653a-4fb0-b187-e5697789f748" absoluteBounds="36.14, 1.335, 1.9700000000000002, 13.133585611979166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a8d4dfc3-1c09-4691-a56f-61febc02453a" absoluteBounds="6.25, 0.75, 2, 6.5784326171875">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_AlocacaoAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="46a0a4ef-01e1-4989-8748-2574979c5a30" absoluteBounds="6.265, 1.21, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f0451e75-cfff-45ac-8bd0-1889fc7afad7" absoluteBounds="15.75, 4.625, 2, 3.1170068359375">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_AulasDisciplinasAprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="357274a2-d169-4155-a9e3-b6f2722d9f5b" absoluteBounds="15.765, 5.085, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d32da889-7d44-4cdd-a0ac-ef686083dbd4" absoluteBounds="69.625, 0.875, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Contato" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cfe872b3-14c7-47af-a6dd-8f1ade7679e6" absoluteBounds="69.64, 1.335, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f4d71cba-b4f8-47f5-9f15-4f3482af6c16" absoluteBounds="73.875, 0.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_fechamentosContato" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f711b895-3ed8-4bd7-920b-7160688f01e2" absoluteBounds="73.89, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="931ffe9e-7bc1-4c57-8281-f8f88d8a3037" absoluteBounds="76, 0.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_TiposContato" />
+      <nestedChildShapes>
+        <elementListCompartment Id="acc47f5f-bedb-47da-8ab1-fe2ad7edb2af" absoluteBounds="76.015, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c83e5292-c2d8-4f1f-8d22-1b0f7d928961" absoluteBounds="78.125, 0.875, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_StatusCliente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="460b03da-2ceb-40a6-9a3c-c3d022147d4f" absoluteBounds="78.14, 1.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="617e3727-a35b-4216-b6f8-a39deba51acb" absoluteBounds="71.75, 0.875, 2, 6.0015283203125">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_CadastroCliente" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a2d1869-a34d-4026-ae9c-68d25b7ec4d2" absoluteBounds="71.765, 1.335, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7581e63f-2812-45c4-aa06-f43154597cf0" absoluteBounds="0.625, 2.25, 2, 25.231671549479167">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Aprendiz" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3da1557-020a-4174-9641-1ce1976b210a" absoluteBounds="0.63999999999999968, 2.71, 1.9700000000000002, 24.671671549479164" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 10.4623527018229); (3.5 : 10.4623527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Aprendiz/CA_Aprendiz_CA_OcorrenciasAprendiz" />
+      <nodes>
+        <classShapeMoniker Id="7581e63f-2812-45c4-aa06-f43154597cf0" />
+        <classShapeMoniker Id="012dfad9-b0f0-4a59-895f-88f5fbe1c353" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 13.4142976888021); (3.5 : 13.4142976888021)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Aprendiz/CA_Aprendiz_CA_Participante" />
+      <nodes>
+        <classShapeMoniker Id="7581e63f-2812-45c4-aa06-f43154597cf0" />
+        <classShapeMoniker Id="48b10edd-9a44-4813-ac9e-8bf8c5bdbd16" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 17.0873527018229); (3.875 : 17.0873527018229)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Aprendiz/CA_Aprendiz_CA_Encaminhamento" />
+      <nodes>
+        <classShapeMoniker Id="7581e63f-2812-45c4-aa06-f43154597cf0" />
+        <classShapeMoniker Id="c673566d-d6ef-4b88-b34d-48362ae53c46" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 14.6286486816406); (7 : 14.6286486816406)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Aprendiz/CA_Aprendiz_CA_Membro_Familia" />
+      <nodes>
+        <classShapeMoniker Id="7581e63f-2812-45c4-aa06-f43154597cf0" />
+        <classShapeMoniker Id="1de9afc5-5d08-4c2b-85e1-59f91c091103" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 3.90949625651042); (3.51041666666667 : 3.90949625651042 : JumpStart); (3.67708333333333 : 3.90949625651042 : JumpEnd); (6.25 : 3.90949625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Aprendiz/CA_Aprendiz_CA_AlocacaoAprendiz" />
+      <nodes>
+        <classShapeMoniker Id="7581e63f-2812-45c4-aa06-f43154597cf0" />
+        <classShapeMoniker Id="a8d4dfc3-1c09-4691-a56f-61febc02453a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d01cf006-36b4-41c3-bc57-d2a699a7e2bf" absoluteBounds="22.375, 18.875, 2, 4.2708154296875">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_InstituicoesParceira" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7d637ad-bc2d-47db-9eff-3391bc9b4a9e" absoluteBounds="22.39, 19.335, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb2a9a6d-f93e-4e3b-aa34-b18c2e0d49f1" absoluteBounds="15, 8.25, 2, 9.6552555338541648">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Parceiro" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ee5f39fe-3980-4880-a813-4d7f67b3e7f0" absoluteBounds="15.015, 8.71, 1.9700000000000002, 9.0952555338541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(14.75 : 13.3469962565104); (15 : 13.3469962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_RamosAtividade/CA_RamosAtividade_CA_Parceiro" />
+      <nodes>
+        <classShapeMoniker Id="bdbcbb0c-a283-4edf-bd00-b8e0712f2f12" />
+        <classShapeMoniker Id="cb2a9a6d-f93e-4e3b-aa34-b18c2e0d49f1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="03981693-b780-4c3c-a4f9-d0107b73c8e2" absoluteBounds="18.5, 7.875, 2, 5.6169254557291657">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_ParceirosUnidade" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a66fd43a-6a37-46c1-8fe9-b7bdd091f736" absoluteBounds="18.515, 8.335, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(17 : 10.8709627278646); (18.5 : 10.8709627278646)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Parceiro/CA_Parceiro_CA_ParceirosUnidade" />
+      <nodes>
+        <classShapeMoniker Id="cb2a9a6d-f93e-4e3b-aa34-b18c2e0d49f1" />
+        <classShapeMoniker Id="03981693-b780-4c3c-a4f9-d0107b73c8e2" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c59b04af-a413-4686-987f-1c1a8c299cac" absoluteBounds="9.75, 11, 2, 7.5399397786458326">
+      <DataClassMoniker Name="/DC_ProtocoloAgilDataContext/CA_Educadore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d51f4022-cfa1-4e72-83d7-3ffde459e02c" absoluteBounds="9.765, 11.46, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.75 : 11); (10.75 : 10.0785953776042); (11.75 : 10.0785953776042); (11.75 : 5.83735270182292); (12.25 : 5.83735270182292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DC_ProtocoloAgilDataContext/CA_Educadore/CA_Educadore_CA_DisciplinasTurmaProf" />
+      <nodes>
+        <classShapeMoniker Id="c59b04af-a413-4686-987f-1c1a8c299cac" />
+        <classShapeMoniker Id="10857d1e-d734-4896-a475-125bf4d35e4f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

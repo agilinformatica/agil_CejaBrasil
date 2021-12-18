@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RPCronogramaTurmaDisciplina" targetNamespace="http://tempuri.org/RPCronogramaTurmaDisciplina.xsd" xmlns:mstns="http://tempuri.org/RPCronogramaTurmaDisciplina.xsd" xmlns="http://tempuri.org/RPCronogramaTurmaDisciplina.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RPCronogramaTurmaDisciplina" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RPCronogramaTurmaDisciplina" msprop:Generator_UserDSName="RPCronogramaTurmaDisciplina">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CronogramaTurmaDisciplina" msprop:Generator_TableClassName="CronogramaTurmaDisciplinaDataTable" msprop:Generator_TableVarName="tableCronogramaTurmaDisciplina" msprop:Generator_TablePropName="CronogramaTurmaDisciplina" msprop:Generator_RowDeletingName="CronogramaTurmaDisciplinaRowDeleting" msprop:Generator_RowChangingName="CronogramaTurmaDisciplinaRowChanging" msprop:Generator_RowEvHandlerName="CronogramaTurmaDisciplinaRowChangeEventHandler" msprop:Generator_RowDeletedName="CronogramaTurmaDisciplinaRowDeleted" msprop:Generator_UserTableName="CronogramaTurmaDisciplina" msprop:Generator_RowChangedName="CronogramaTurmaDisciplinaRowChanged" msprop:Generator_RowEvArgName="CronogramaTurmaDisciplinaRowChangeEvent" msprop:Generator_RowClassName="CronogramaTurmaDisciplinaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DataAula" msprop:Generator_ColumnVarNameInTable="columnDataAula" msprop:Generator_ColumnPropNameInRow="DataAula" msprop:Generator_ColumnPropNameInTable="DataAulaColumn" msprop:Generator_UserColumnName="DataAula" type="xs:string" minOccurs="0" />
+              <xs:element name="Turma" msprop:Generator_ColumnVarNameInTable="columnTurma" msprop:Generator_ColumnPropNameInRow="Turma" msprop:Generator_ColumnPropNameInTable="TurmaColumn" msprop:Generator_UserColumnName="Turma" type="xs:string" minOccurs="0" />
+              <xs:element name="Professor" msprop:Generator_ColumnVarNameInTable="columnProfessor" msprop:Generator_ColumnPropNameInRow="Professor" msprop:Generator_ColumnPropNameInTable="ProfessorColumn" msprop:Generator_UserColumnName="Professor" type="xs:string" minOccurs="0" />
+              <xs:element name="Disciplina" msprop:Generator_ColumnVarNameInTable="columnDisciplina" msprop:Generator_ColumnPropNameInRow="Disciplina" msprop:Generator_ColumnPropNameInTable="DisciplinaColumn" msprop:Generator_UserColumnName="Disciplina" type="xs:string" minOccurs="0" />
+              <xs:element name="Sequencia" msprop:Generator_ColumnVarNameInTable="columnSequencia" msprop:Generator_ColumnPropNameInRow="Sequencia" msprop:Generator_ColumnPropNameInTable="SequenciaColumn" msprop:Generator_UserColumnName="Sequencia" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

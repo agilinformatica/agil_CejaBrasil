@@ -1,0 +1,1076 @@
+@charset "utf-8";
+/* Mestre Ágil - Gestão Acadêmica e Financeira */
+/* Classes de formatação da tela de login */
+body{
+	background:url(../Images/bg_body.jpg);
+	font-family:Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+}
+#all_login{
+	width:760px;
+	height:640px;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -380px;
+	margin-top: -320px;
+}
+#all_login .page_title{
+	background:url(../images/login_icon.png) no-repeat;
+	height:45px;
+	margin-bottom:25px;
+}
+#all_login .page_title h1{
+	font-weight:lighter;
+	font-size:30px;
+	color:#797979;
+	margin-left: 52px;
+	padding-top: 5px;
+}
+#all_login .content{
+	width:700px;
+	height:340px;
+	background:#fff;
+	border: solid 1px #dfdfdf;
+	padding:40px 30px 40px 30px;
+}
+#all_login .left{
+	width:310px;
+	height:300px;
+	padding:20px 20px 30px 20px;
+	float:left;
+}
+#all_login .left h2{
+	font-size:18px;
+	color:#00599f;
+	text-align:center;
+	margin:15px 38px 3px 25px;
+}
+#all_login .left p.url{
+	font-size:13px;
+	color:#4b8efb;
+	text-align:center;
+	margin:0 38px 5px 0;
+}
+#all_login .left p{
+	font-size:13px;
+	color:#787878;
+	text-align:center;
+	width:220px;
+	float:right;
+	margin:5px 38px 0 0;
+	line-height:20px;
+}
+#all_login .right{
+	width:290px;
+	height:290px;
+	padding:05px 30px 30px 10px;
+	float:left;
+}
+#all_login .right form{
+	height:268px;
+	padding:30px 0 0 0;
+}
+#all_login .label_login{
+	font-size:13px;
+	color:#787878;
+	padding: 10px 0 7px 0;
+}
+#all_login .field_login select{
+	font-size:13px;
+	color:#000;
+	width:286px;
+	border: solid 1px #e5e5e5;
+	line-height:20px;
+	height:20px;
+}
+#all_login .field_login input{
+	font-size:13px;
+	color:#000;
+	width:279px;
+	border: solid 1px #e5e5e5;
+	vertical-align:middle;
+	line-height:20px;
+	height:20px;
+	padding-left:3px;
+}
+#all_login .field_login input:hover{
+	border: solid 1px #a0a0a0;
+}
+#all_login .links_pass{
+	float:left;
+	width:225px;
+	padding-top:27px;
+}
+#all_login .links_pass a{
+	display:block;
+	font-size:13px;
+	color:#4b8efb;
+	text-decoration:none;
+}
+#all_login .button_login{
+	float:left;
+	width:60px;
+	padding-top:24px;
+}
+
+#all_login .button_login input{
+	display:block;
+	width:60px;
+	font-size:13px;
+	font-weight:bold;
+	background:#4b8efb;
+	color:#fff;
+	border:solid 1px #3079ed;
+	padding:8px 0 8px 0;
+}
+#all_login .button_login input:hover{
+	background:#357ae8;
+	border:solid 1px #2f5bb7;
+}
+#all_login .footer{
+	width:660px;
+	height:90px;
+	border-top: solid 1px #dfdfdf;
+	padding:12px 40px 0 60px;
+	margin-top: 30px;
+}
+#all_login .system_logo{
+	width:94px;
+	height:58px;
+	float: left;
+}
+#all_login .system_logo a{
+	width:94px;
+	height:58px;
+	display:block;
+	background:url(../images/logo_mestre_agil.png) no-repeat;
+	text-indent:-2000px;
+	overflow:hidden;
+}
+#all_login .text_footer{
+	margin: 20px 0 0 25px;
+	float:left;
+}	
+#all_login .text_footer p{
+	margin:0;
+	font-size:11px;
+	color:#797979;
+}	
+/* Classes de formatação da masterpage base do sistema*/
+
+#all_master{
+	width:95%;
+	margin: auto;
+	height:100%;
+    background: #fff;
+}
+#all_master .top{
+	text-align:center;
+	
+}
+#all_master .welcome{
+	background:url(../images/icon_big_user.png) no-repeat 10px 22px;
+	width:33%;
+	height:43px;
+	float:left;
+	text-align:left;
+	padding-top: 22px;
+}
+#all_master .welcome p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#797979;
+	padding-left:40px;
+	margin:0;
+}
+#all_master .date{
+	width:33%;
+	height:45px;
+	float:left;
+	text-align:center;
+	padding-top:20px;
+}
+#all_master .date p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#797979;
+}
+#all_master .userlinks{
+	width:34%;
+	height:35px;
+	float:left;
+	text-align:right;
+	padding-top:30px;
+}
+#all_master .userlinks a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#797979;
+	text-decoration:none;
+	display:block;
+	float:right;
+	margin-right:20px;
+}
+#all_master .userlinks a.help{
+	width:96px;
+	background:url(../images/icon_help.png) no-repeat;
+}
+#all_master .userlinks a.profile{
+	width:58px;
+	background:url(../images/icon_small_user.png) no-repeat;
+}
+#all_master .userlinks a.quit{
+	width:35px;
+	background:url(../images/icon_quit.png) no-repeat;
+}
+#all_master .content{
+	width:100%;
+	background:#fff;
+	border:solid 1px #dfdfdf;
+	min-height:300px;
+	clear:left;
+	margin-top:30px;
+	padding-bottom:30px;
+}
+
+#all_master .content_Back{
+	width:100%;
+	background:#fff; 
+	border:solid 1px #dfdfdf;
+	min-height:300px;
+	clear:left;
+}
+#all_master .content_home{
+	width:100%;
+	background:#fff;
+	border:solid 1px #dfdfdf;
+	min-height:420px;
+	clear:left;
+	margin-top:30px;
+	padding-bottom:30px;
+}
+#all_master .header{
+	width:100%;
+	height:177px;
+}
+#all_master .logo{
+	width:21%;
+	height:156px;
+	float:left;
+	padding-top:20px;
+	text-align:center;
+}
+#all_master .text_school{
+	width:20%;
+	height:138px;
+	float:left;
+	padding-top:38px;
+  
+}
+#all_master .text_school xy{
+	font-family:sans-serif;
+	text-transform: none;
+	font-weight:lighter;
+	font-size:18px;
+	color:#00599c;
+	
+	}
+#all_master .text_school a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#4b8efb;
+
+	text-decoration:none;
+}
+#all_master .text_school p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#797979;
+	width:100%;
+
+}
+
+#all_master .text_titulo{
+	
+	height:15px;
+	margin:0 auto;
+	float:inherit;
+	padding-top:20px;
+}
+#all_master .text_titulo h1{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:lighter;
+    text-align: center;
+	font-size:18px;
+	color:#00599c;
+	margin: 0 auto;
+}
+#all_master .topmenu{
+	width:57%;
+	height:176px;	
+	float:left;
+}
+#menu{
+	list-style: none;
+	list-style-position: outside;
+}
+#menu li{
+	display:block;
+	float:left;
+	height:50px;
+	padding:110px 0 0 0;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#484848;
+	text-decoration:none;
+	text-align:center;
+	cursor: pointer;
+}
+
+
+#menu li#configuracoes{
+	width:15%;
+	background:url(../Images/topmenu2.png) no-repeat center -16px;
+}
+#menu li#configuracoes.active, #menu li#configuracoes.active:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -194px!important;
+	color:#00599c;
+}
+#menu li#configuracoes:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -372px;
+	color:#00599c;
+}
+
+
+#menu li#aprendiz{
+	width:13%;
+	background:url(../Images/topmenu2.png) no-repeat center -547px;
+}
+#menu li#aprendiz.active, #menu li#aprendiz.active:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -725px!important;
+	color:#00599c;
+}
+#menu li#aprendiz:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -902px;
+	color:#00599c;
+}
+
+#menu li#empresa{
+	width:14%;
+	background:url(../Images/topmenu2.png) no-repeat center -1078px;
+}
+#menu li#empresa.active, #menu li#empresa.active:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -1256px!important;
+	color:#00599c;
+}
+#menu li#empresa:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -1434px;
+	color:#00599c;
+}
+
+/*************************************************************************/
+
+
+#menu li#acompanhamento{
+	width:14%;
+	background:url(../Images/topmenu2.png) no-repeat center -1609px;
+}
+#menu li#acompanhamento.active, #menu li#acompanhamento.active:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -1788px!important;
+	color:#00599c;
+}
+#menu li#acompanhamento:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -1964px;
+	color:#00599c;
+}
+
+#menu li#pedagogico{
+	width:13%;
+	background:url(../Images/topmenu2.png) no-repeat center -2140px;
+}
+#menu li#pedagogico.active, #menu li#pedagogico.active:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -2319px!important;
+	color:#00599c;
+}
+#menu li#pedagogico:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -2497px;
+	color:#00599c;
+}
+
+
+/*************************************************************************/
+#menu li#recursos{
+	width:18%;
+	background:url(../Images/topmenu2.png) no-repeat center -2671px;
+}
+#menu li#recursos.active, #menu li#recursos.active:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -2850px!important;
+	color:#00599c;
+}
+#menu li#recursos:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -3027px;
+	color:#00599c;
+}
+#menu li#estatisticas{
+	width:13%;
+	background:url(../Images/topmenu2.png) no-repeat center -3203px;
+}
+#menu li#estatisticas.active, #menu li#estatisticas.active:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -3381px!important;
+	color:#00599c;
+}
+#menu li#estatisticas:hover{
+	background:url(../Images/topmenu2.png) no-repeat center -3558px;
+	color:#00599c;
+}
+
+#menu li#secretariaalunos{
+	width:20%;
+	background:url(../Images/topmenu_alunos.png) no-repeat center -16px;
+}
+#menu li#secretariaalunos.active, #menu li#secretariaalunos.active:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -194px!important;
+	color:#00599c;
+}
+#menu li#secretariaalunos:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -371px;
+	color:#00599c;
+}
+#menu li#academicoalunos{
+	width:20%;
+	background:url(../Images/topmenu_alunos.png) no-repeat center -547px;
+}
+#menu li#academicoalunos.active, #menu li#academicoalunos.active:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -725px!important;
+	color:#00599c;
+}
+#menu li#academicoalunos:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -903px;
+	color:#00599c;
+}
+#menu li#infofinancealunos{
+	width:20%;
+	background:url(../Images/topmenu_alunos.png) no-repeat center -1078px;
+}
+#menu li#infofinancealunos.active, #menu li#infofinancealunos.active:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -1256px!important;
+	color:#00599c;
+}
+#menu li#infofinancealunos:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -1433px;
+	color:#00599c;
+}
+#menu li#bibliotecaalunos{
+	width:20%;
+	background:url(../Images/topmenu_alunos.png) no-repeat center -1609px;
+}
+#menu li#bibliotecaalunos.active, #menu li#bibliotecaalunos.active:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -1787px!important;
+	color:#00599c;
+}
+#menu li#bibliotecaalunos:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -1964px;
+	color:#00599c;
+}
+#menu li#arquivosalunos{
+	width:14%;
+	background:url(../Images/topmenu_alunos.png) no-repeat center -2140px;
+}
+#menu li#arquivosalunos.active, #menu li#arquivosalunos.active:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -2318px!important;
+	color:#00599c;
+}
+#menu li#arquivosalunos:hover{
+	background:url(../Images/topmenu_alunos.png) no-repeat center -2495px;
+	color:#00599c;
+}
+#menu li#geralprofessores{
+	width:20%;
+	background:url(../Images/topmenu_professores.png) no-repeat center -16px;
+}
+#menu li#geralprofessores.active, #menu li#geralprofessores.active:hover{
+	background:url(../Images/topmenu_professores.png) no-repeat center -194px!important;
+	color:#00599c;
+}
+#menu li#geralprofessores:hover{
+	background:url(../Images/topmenu_professores.png) no-repeat center -372px;
+	color:#00599c;
+}
+#menu li#notasprofessores{
+	width:20%;
+	background:url(../Images/topmenu_professores.png) no-repeat center -547px;
+}
+#menu li#notasprofessores.active, #menu li#notasprofessores.active:hover{
+	background:url(../Images/topmenu_professores.png) no-repeat center -725px!important;
+	color:#00599c;
+}
+#menu li#notasprofessores:hover{
+	background:url(../Images/topmenu_professores.png) no-repeat center -903px;
+	color:#00599c;
+}
+#menu li#bibliotecaprofessores{
+	width:25%;
+	background:url(../Images/topmenu_professores.png) no-repeat center -1078px;
+}
+#menu li#bibliotecaprofessores.active, #menu li#bibliotecaprofessores.active:hover{
+	background:url(../Images/topmenu_professores.png) no-repeat center -1256px!important;
+	color:#00599c;
+}
+#menu li#bibliotecaprofessores:hover{
+	background:url(../Images/topmenu_professores.png) no-repeat center -1433px;
+	color:#00599c;
+}
+#menu li#arquivosprofessores{
+	width:20%;
+	background:url(../Images/topmenu_professores.png) no-repeat center -1609px;
+}
+#menu li#arquivosprofessores.active, #menu li#arquivosprofessores.active:hover{
+	background:url(../Images/topmenu_professores.png) no-repeat center -1787px!important;
+	color:#00599c;
+}
+#menu li#arquivosprofessores:hover{
+	background:url(../Images/topmenu_professores.png) no-repeat center -1964px;
+	color:#00599c;
+}
+
+#all_master .submenu{
+	width:100%;
+	background:#00599c;
+	height:52px;
+	clear: both;
+	display:none;
+}
+#all_master .itens_submenu{
+	width:100%;
+	height:42px;
+}
+#all_master .itens_submenu td{
+	padding-top:10px;
+	width:10%;
+}
+#all_master .itens_submenu a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#fff;
+	text-decoration:none;
+	text-align:center;
+	display:block;
+	width:100%;
+}
+#all_master .itens_submenu a:hover{
+	color:#c7dcff;
+}
+#all_master .breadcrumb{
+	clear: both;
+	margin-top:63px;
+}
+#all_master .breadcrumb p{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#00599c;
+	margin-left: 20px;
+}
+#all_master .breadcrumb span{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:bold;
+	color:#4b8efb;
+}
+#all_master .controls{
+	width:96%;
+	height:30px;
+	border:solid 1px #dfdfdf;
+	margin:10px 1% 10px 1%;
+	padding:10px 1% 10px 1%;
+	clear: both;
+}
+#all_master .btn_controls{
+	height:30px;
+	border:solid 1px #dfdfdf;
+	background:#f5f5f5;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#00599c;
+	font-weight:bold;
+	margin-right: 5px;
+	padding:7px 10px 10px 10px;
+    margin-bottom: 0px;
+}
+
+#all_master .btn_add{
+	height:25px;
+	border:solid 1px #dfdfdf;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#fff;
+	font-weight:bold;
+	background:#4b8efb;
+	margin-right: 5px;
+	padding:5px 5px 5px 5px;
+}
+
+#all_master .btn_search{
+	height:30px;
+	border:solid 1px #dfdfdf;
+	background:#f5f5f5;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#00599c;
+	font-weight:bold;
+	padding:7px 10px 10px 10px;
+}
+#all_master .search_controls{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#737373;
+	width:210px;
+	border: solid 1px #dfdfdf;
+	vertical-align:middle;
+	line-height:25px;
+	height:25px;
+	padding-left:3px;
+}
+
+#all_master .search_controls_double{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#737373;
+	width:100px;
+	border: solid 1px #dfdfdf;
+	vertical-align:middle;
+	line-height:25px;
+	height:20px;
+	padding-left:3px;
+}
+
+#all_master .viewer_content{
+	text-align:center;
+}
+#all_master .list_results{
+	width:98%;
+	margin: 10px 1% 10px 1%;
+	border-top:solid 1px #dfdfdf;
+	border-left:solid 1px #dfdfdf;
+}
+#all_master .list_results td{
+	border-bottom:solid 1px #dfdfdf;
+	border-right:solid 1px #dfdfdf;
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#737373;
+}
+#all_master .list_results td.head_list_results{
+	background:#f5f5f5;
+	color:#00599c;
+	font-weight:bold;
+}
+
+
+.NomeAprendiz a{
+	color:#7f7f7f;
+    text-decoration: none;
+}
+
+
+#all_master .list_results_Menor{
+	width:98%;
+	margin: 10px 1% 10px 1%;
+	border-top:solid 1px #dfdfdf;
+	border-left:solid 1px #dfdfdf;
+}
+#all_master .list_results_Menor td{
+	border-bottom:solid 1px #dfdfdf;
+	border-right:solid 1px #dfdfdf;
+	padding:5px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:7pt;
+	color:#474646;
+}
+#all_master .list_results_Menor td.head_list_results{
+	background:#f5f5f5;
+	color:#00599c;
+	font-weight:bold;
+}
+
+#all_master .nav_results{
+	width:100%;
+	height:10px;
+	margin-top:10px;
+    text-align: center;
+}
+
+#all_master .nav_results table td a.nav{
+	width:20px;
+	height:17px;
+	background:#4b8efb;
+	/*color:#fff;*/
+    background-color: #00599c;
+	font-size:11px;
+	text-decoration:none;
+	float:left;
+	margin: 0 2px 0 2px;
+	padding-top:3px;
+}
+#all_master .nav_results table td a.nav:hover{
+	background:#c7dcff;
+}
+#all_master .nav_results table td a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:white;
+	font-weight:bold;
+    background-color: #4b8efb;
+	text-decoration:none;
+	text-align:center;
+	display: block;
+	width:30px;
+	height:17px;
+	float:left;
+	padding-top:3px;
+}
+
+#content .footer
+{
+   width:90%;
+   height:40px;
+   margin: 5px auto ;
+   text-align:center;
+}
+
+#content .content_footer{
+	height:40px;
+	padding:12px 10px 0 10px;
+	margin:0 auto;
+}
+
+
+#content .logos_pet{
+	width:69px;
+	height:40px;
+	float: right;
+    padding-right: 10px;
+	background:url(../Images/nova-marca-pet-fcdl.png) no-repeat;
+}
+
+#content .copyright
+{
+    width: 41%;
+	height:30px;
+	float: left;
+    padding-left: 5px;
+}
+
+#content .copyright p{
+	margin:0;
+	font-size:10px;
+    text-align: left;
+	color:#797979;
+}	
+
+#content .logos_cdl{
+	width:110px;
+	height:40px;
+	float: right;
+	padding: 10px;
+	background:url(../Images/logocdl.png) no-repeat;
+}
+
+#content .logos_fecomercio{
+	width:59px;
+	height:40px;
+	float: right;
+	background:url(../Images/fecomercio_rj.png) no-repeat;
+}
+
+#content .logos_senac_escola{
+	width:95px;
+	height:33px;
+	float: right;
+	padding-left: 10px;
+	background:url(../Images/senac_escola.png) no-repeat;
+}
+
+
+#content .system_logo{
+	width:94px;
+	height:58px;
+	float: left;
+}
+#content .system_logo a{
+	width:94px;
+	height:58px;
+	display:block;
+	background:url(../Images/logo_pet.png) no-repeat;
+	text-indent:-2000px;
+	overflow:hidden;
+}
+
+#all_master .system_logo{
+	width:94px;
+	height:56px;
+    margin: 0 auto;
+}
+#all_master .system_logo a{
+	width:94px;
+	height:58px;
+	display:block;
+	background:url(../Images/logo_pet.png) no-repeat;
+	text-indent:-2000px;
+	overflow:hidden;
+}
+
+
+.List_results
+{
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+    font-weight:bold;
+	color:#4b8efb;
+    background:#f5f5f5;
+	color:#00599c;
+	margin: 0px 1% 10px 1%;
+}
+
+.NomeEscola {
+	font-family:sans-serif;
+	text-transform: none;
+	font-weight:lighter;
+	font-size:18px;
+	color:#00599c;
+ 
+	}
+	
+
+#menusteps{
+height:40px;
+clear:left;
+padding:15px 0 0 0;
+}	
+#menusteps ul{
+list-style:none;
+margin:0;
+padding:0;
+}
+#menusteps ul li{
+display:inline;
+}
+#menusteps ul li a{
+height:30px;
+border:solid 1px #dfdfdf;
+background:#f5f5f5;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#737373;
+font-weight:bold;
+margin-right: 5px;
+padding:7px 10px 10px 10px;
+text-decoration:none;
+}
+#menusteps ul li a:hover{
+background:#fff;
+}
+#menusteps ul li a.selectform{
+height:30px;
+border:solid 1px #dfdfdf;
+background:#fff;
+font-family:Arial, Helvetica, sans-serif;
+font-size:11px;
+color:#737373;
+font-weight:bold;
+margin-right: 5px;
+padding:7px 10px 10px 10px;
+text-decoration:none;
+}
+#contentforms{
+clear:left;
+padding:20px 5% 20px 5%;
+}
+#contentforms fieldset{
+border: solid 1px #e5e5e5;
+}
+#contentforms legend{
+font-family:Arial, Helvetica, sans-serif;
+font-size:18px;
+color:#4b8efb;
+margin-left:20px;
+padding:8px;
+}
+#contentforms table{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#737373;
+text-align:left;
+margin:auto;
+margin-top:15px;
+margin-bottom:30px;
+}
+#contentforms table td{
+padding:10px;
+}
+#contentforms .lblforms{
+text-align:right;
+padding: 8px;
+}
+#contentforms .textforms{
+font-size:13px;
+color:#000;
+width:230px;
+border: solid 1px #e5e5e5;
+vertical-align:middle;
+line-height:20px;
+height:20px;
+padding-left:3px;
+}
+#contentforms .textforms:hover{
+border:solid 1px #a0a0a0;
+}
+#contentforms .textareaforms{
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+color:#000;
+width:230px;
+border: solid 1px #e5e5e5;
+vertical-align:middle;
+padding:3px;
+}
+#contentforms .textareaforms:hover{
+border: solid 1px #a0a0a0;
+}
+#contentforms .comboforms{
+font-family:Arial, Helvetica, sans-serif;
+font-size:13px;
+color:#000;
+width:240px;
+border: solid 1px #e5e5e5;
+vertical-align:middle;
+line-height:20px;
+height:20px;
+}
+#contentforms .btnforms{
+font-family:Arial, Helvetica, sans-serif;
+display:block;
+font-size:13px;
+font-weight:bold;
+background:#4b8efb;
+color:#fff;
+border:solid 1px #3079ed;
+padding:8px;
+}
+#contentforms .btnforms:hover{
+background:#357ae8;
+border:solid 1px #2f5bb7;
+}
+
+
+/* ---------- Styles do Site.css ------------ */
+
+
+/* 
+	DROPDOWN MENU - LEVEL ONE
+*/
+ul.dropdown{
+position: relative; 
+list-style:none; 
+margin:0; 
+padding:0;
+}
+ul.dropdown li a{
+display: block;
+width:100%;
+text-align:center;
+background:url(../images/arrow_dropdown.png) no-repeat right 9px;
+color:#fff;
+height:20px;
+padding:5px 4px 0 0;
+}
+ul.dropdown li a:hover{
+background:url(../images/arrow_dropdown_over.png) no-repeat right 9px;
+color: #c7dcff;
+}
+
+/* 
+	DROPDOWN MENU - LEVEL TWO
+*/
+ul.dropdown ul{
+width: 220px; 
+visibility: hidden; 
+position: absolute; 
+top: 100%; 
+left: -25px;
+list-style:none;
+}
+ul.dropdown ul li{
+font-weight: normal;
+background: #6CA6CD;
+border-bottom: 1px solid #c7dcff;
+float: none;
+}
+ul.dropdown ul li.submenuLL{
+background: #4b8efb url(../images/arrow_dropdown_LL.png) no-repeat right 9px;
+}
+ul.dropdown ul li.submenuLL:hover{
+background: #4b8efb url(../images/arrow_dropdown_LL_over.png) no-repeat right 9px;
+}
+ul.dropdown ul li a{
+border-right: none;
+width: 100%;
+display: inline-block; /*Hack IE*/
+background:none!important;
+text-align:left!important;
+padding:5px 4px 0 10px!important;
+} 
+
+/* 
+	DROPDOWN MENU - LEVEL THREE
+*/
+ul.dropdown ul ul{
+left: 220px;
+top: 0;
+}
+ul.dropdown ul ul li{
+border-left: 1px solid #c7dcff;
+}
+ul.dropdown li:hover > ul{
+visibility: visible;
+}
+
+.pn_pesquisa {
+    width: 98%;
+    height:135px;
+    border: 2px solid; 
+    background-color:#86C5FF; 
+    margin: 0 auto; 
+}
+
+.pn_left {
+    width: 46%; 
+    height:300px; 
+    border: solid; 
+    margin: 0 auto; 
+    float: left; 
+    margin-left: 25px;
+}
+
+.pn_right {
+    width: 46%;
+    height:300px;
+    border: solid; 
+    margin: 0 auto; 
+    float: right; 
+    margin-right: 25px;
+}
+
+ #lightbox
+        {
+            position: fixed; /* keeps the lightbox window in the current viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            text-align: center;
+        }

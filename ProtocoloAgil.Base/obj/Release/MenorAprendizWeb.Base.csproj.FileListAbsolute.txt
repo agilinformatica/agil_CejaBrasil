@@ -1,0 +1,99 @@
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CEDUC\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CEDUC\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CEDUC\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Nurap\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Projov\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.csprojResolveAssemblyReference.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_CET\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CET\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.csprojResolveAssemblyReference.cache
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+C:\Projetos atualizados 13-02-2014\Git\aprendiz_Cefort\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_Cefort\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.csprojResolveAssemblyReference.cache
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+D:\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll.config
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\MenorAprendizWeb.Base.pdb
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\EntityFramework.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\EntityFramework.xml
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\bin\Release\EntityFramework.SqlServer.xml
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.csprojResolveAssemblyReference.cache
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.dll
+\\Servidor\d\__PROJETOS_ATUALIZADOS\Git\aprendiz_CejaBrasil\ProtocoloAgil.Base\obj\Release\MenorAprendizWeb.Base.pdb

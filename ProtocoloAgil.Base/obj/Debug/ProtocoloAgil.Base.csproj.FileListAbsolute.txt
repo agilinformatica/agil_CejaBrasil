@@ -1,0 +1,6 @@
+F:\Projetos\ProtocoloAgil\ProtocoloAgil\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll.config
+F:\Projetos\ProtocoloAgil\ProtocoloAgil\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\ProtocoloAgil\ProtocoloAgil.Base\bin\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.dll
+F:\Projetos\ProtocoloAgil\ProtocoloAgil\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.pdb
+F:\Projetos\ProtocoloAgil\ProtocoloAgil\ProtocoloAgil.Base\obj\Debug\ProtocoloAgil.Base.csprojResolveAssemblyReference.cache

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_View_OcorrenciaPrendiz" targetNamespace="http://tempuri.org/DS_View_OcorrenciaPrendiz.xsd" xmlns:mstns="http://tempuri.org/DS_View_OcorrenciaPrendiz.xsd" xmlns="http://tempuri.org/DS_View_OcorrenciaPrendiz.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ProtocoloAgilConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProtocoloAgilConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ProtocoloAgilConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_OcorrenciaAprendizTableAdapter" GeneratorDataComponentClassName="View_OcorrenciaAprendizTableAdapter" Name="View_OcorrenciaAprendiz" UserDataComponentName="View_OcorrenciaAprendizTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="admin_CejaBrasil.dbo.View_OcorrenciaAprendiz" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TurNome, CurDescricao, OcoDescricao, OcaOrdem, Apr_Nome, Apr_Codigo, Apr_CarteiraDeIdentidade, ParUniDescricao, Apr_CPF FROM dbo.View_OcorrenciaAprendiz</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TurNome" DataSetColumn="TurNome" />
+              <Mapping SourceColumn="CurDescricao" DataSetColumn="CurDescricao" />
+              <Mapping SourceColumn="OcoDescricao" DataSetColumn="OcoDescricao" />
+              <Mapping SourceColumn="OcaOrdem" DataSetColumn="OcaOrdem" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_CarteiraDeIdentidade" DataSetColumn="Apr_CarteiraDeIdentidade" />
+              <Mapping SourceColumn="ParUniDescricao" DataSetColumn="ParUniDescricao" />
+              <Mapping SourceColumn="Apr_CPF" DataSetColumn="Apr_CPF" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_View_OcorrenciaPrendiz" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DS_View_OcorrenciaPrendiz" msprop:Generator_UserDSName="DS_View_OcorrenciaPrendiz">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_OcorrenciaAprendiz" msprop:Generator_TableClassName="View_OcorrenciaAprendizDataTable" msprop:Generator_TableVarName="tableView_OcorrenciaAprendiz" msprop:Generator_TablePropName="View_OcorrenciaAprendiz" msprop:Generator_RowDeletingName="View_OcorrenciaAprendizRowDeleting" msprop:Generator_RowChangingName="View_OcorrenciaAprendizRowChanging" msprop:Generator_RowEvHandlerName="View_OcorrenciaAprendizRowChangeEventHandler" msprop:Generator_RowDeletedName="View_OcorrenciaAprendizRowDeleted" msprop:Generator_UserTableName="View_OcorrenciaAprendiz" msprop:Generator_RowChangedName="View_OcorrenciaAprendizRowChanged" msprop:Generator_RowEvArgName="View_OcorrenciaAprendizRowChangeEvent" msprop:Generator_RowClassName="View_OcorrenciaAprendizRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CurDescricao" msprop:Generator_ColumnVarNameInTable="columnCurDescricao" msprop:Generator_ColumnPropNameInRow="CurDescricao" msprop:Generator_ColumnPropNameInTable="CurDescricaoColumn" msprop:Generator_UserColumnName="CurDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OcoDescricao" msprop:Generator_ColumnVarNameInTable="columnOcoDescricao" msprop:Generator_ColumnPropNameInRow="OcoDescricao" msprop:Generator_ColumnPropNameInTable="OcoDescricaoColumn" msprop:Generator_UserColumnName="OcoDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OcaOrdem" msprop:Generator_ColumnVarNameInTable="columnOcaOrdem" msprop:Generator_ColumnPropNameInRow="OcaOrdem" msprop:Generator_ColumnPropNameInTable="OcaOrdemColumn" msprop:Generator_UserColumnName="OcaOrdem" type="xs:int" minOccurs="0" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Codigo" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_CarteiraDeIdentidade" msprop:Generator_ColumnVarNameInTable="columnApr_CarteiraDeIdentidade" msprop:Generator_ColumnPropNameInRow="Apr_CarteiraDeIdentidade" msprop:Generator_ColumnPropNameInTable="Apr_CarteiraDeIdentidadeColumn" msprop:Generator_UserColumnName="Apr_CarteiraDeIdentidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_CPF" msprop:Generator_ColumnVarNameInTable="columnApr_CPF" msprop:Generator_ColumnPropNameInRow="Apr_CPF" msprop:Generator_ColumnPropNameInTable="Apr_CPFColumn" msprop:Generator_UserColumnName="Apr_CPF">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

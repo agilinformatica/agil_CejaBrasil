@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ContratoView" targetNamespace="http://tempuri.org/ContratoView.xsd" xmlns:mstns="http://tempuri.org/ContratoView.xsd" xmlns="http://tempuri.org/ContratoView.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ProtocoloAgilConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ProtocoloAgilConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ProtocoloAgilConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Contrato_ApredizTableAdapter" GeneratorDataComponentClassName="View_Contrato_ApredizTableAdapter" Name="View_Contrato_Aprediz" UserDataComponentName="View_Contrato_ApredizTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ProtocoloAgilConnectionString (Web.config)" DbObjectName="admin_nurap.dbo.View_Contrato_Aprediz" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Apr_Codigo, Apr_Nome, Apr_DataDeNascimento, Apr_Endereço, Apr_NumeroEndereco, Apr_Complemento, Apr_Bairro, Apr_Cidade, Apr_UF, Apr_CEP, Apr_CarteiraDeTrabalho, Apr_Serie_Cartrab, Apr_PIS, Apr_Responsavel, Apr_Resp_CPF, AreaDescricao, ParNomeFantasia, ParCNPJ, ParEndereco, ParNumeroEndereco, ParComplemento, ParNomeContato, ParBairro, ParCidade, ParEstado, ALAValorBolsa, ParUniDescricao, ParUniCNPJ, ParUniEndereco, ParUniNumeroEndereco, ParUniComplemento, ParUniBairro, ParUniCidade, ParUniEstado, UniNome, UniEndereco, UniNumeroEndereco, UniComplemento, UniBairro, UniCidade, UniEstado, Apr_InicioAprendizagem, Apr_PrevFimAprendizagem, GpaDescricao, ALAInicioExpediente, ALATerminoExpediente, ParDescricao, Apr_CarteiraDeIdentidade, Apr_Telefone, ParCEP, ParUniCEP, ParUniTelefone, ParTelefone, TurInicio, Termino, ALADataPrevTermino, ALADataTermino, TurCurso, ALADataInicio, UniCEP, UniTelefone, UniCGC, Apr_CPF, ParRespFundacao, ParCargoRepresentanteLegal, Apr_DataContrato, UniRepresentanteLegal, UniRepresentanteCargo, DiaDaSemana, TurDiaSemana, ALAValorTaxa, ValorCeduc, ALAValorEncargos, Apr_Escolaridade, GreDescricao, Apr_MesesContrato, TurNome FROM dbo.View_Contrato_Aprediz</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Apr_Codigo" DataSetColumn="Apr_Codigo" />
+              <Mapping SourceColumn="Apr_Nome" DataSetColumn="Apr_Nome" />
+              <Mapping SourceColumn="Apr_DataDeNascimento" DataSetColumn="Apr_DataDeNascimento" />
+              <Mapping SourceColumn="Apr_Endereço" DataSetColumn="Apr_Endereço" />
+              <Mapping SourceColumn="Apr_NumeroEndereco" DataSetColumn="Apr_NumeroEndereco" />
+              <Mapping SourceColumn="Apr_Complemento" DataSetColumn="Apr_Complemento" />
+              <Mapping SourceColumn="Apr_Bairro" DataSetColumn="Apr_Bairro" />
+              <Mapping SourceColumn="Apr_Cidade" DataSetColumn="Apr_Cidade" />
+              <Mapping SourceColumn="Apr_UF" DataSetColumn="Apr_UF" />
+              <Mapping SourceColumn="Apr_CEP" DataSetColumn="Apr_CEP" />
+              <Mapping SourceColumn="Apr_CarteiraDeTrabalho" DataSetColumn="Apr_CarteiraDeTrabalho" />
+              <Mapping SourceColumn="Apr_Serie_Cartrab" DataSetColumn="Apr_Serie_Cartrab" />
+              <Mapping SourceColumn="Apr_PIS" DataSetColumn="Apr_PIS" />
+              <Mapping SourceColumn="Apr_Responsavel" DataSetColumn="Apr_Responsavel" />
+              <Mapping SourceColumn="Apr_Resp_CPF" DataSetColumn="Apr_Resp_CPF" />
+              <Mapping SourceColumn="AreaDescricao" DataSetColumn="AreaDescricao" />
+              <Mapping SourceColumn="ParNomeFantasia" DataSetColumn="ParNomeFantasia" />
+              <Mapping SourceColumn="ParCNPJ" DataSetColumn="ParCNPJ" />
+              <Mapping SourceColumn="ParEndereco" DataSetColumn="ParEndereco" />
+              <Mapping SourceColumn="ParNumeroEndereco" DataSetColumn="ParNumeroEndereco" />
+              <Mapping SourceColumn="ParComplemento" DataSetColumn="ParComplemento" />
+              <Mapping SourceColumn="ParNomeContato" DataSetColumn="ParNomeContato" />
+              <Mapping SourceColumn="ParBairro" DataSetColumn="ParBairro" />
+              <Mapping SourceColumn="ParCidade" DataSetColumn="ParCidade" />
+              <Mapping SourceColumn="ParEstado" DataSetColumn="ParEstado" />
+              <Mapping SourceColumn="ALAValorBolsa" DataSetColumn="ALAValorBolsa" />
+              <Mapping SourceColumn="ParUniDescricao" DataSetColumn="ParUniDescricao" />
+              <Mapping SourceColumn="ParUniCNPJ" DataSetColumn="ParUniCNPJ" />
+              <Mapping SourceColumn="ParUniEndereco" DataSetColumn="ParUniEndereco" />
+              <Mapping SourceColumn="ParUniNumeroEndereco" DataSetColumn="ParUniNumeroEndereco" />
+              <Mapping SourceColumn="ParUniComplemento" DataSetColumn="ParUniComplemento" />
+              <Mapping SourceColumn="ParUniBairro" DataSetColumn="ParUniBairro" />
+              <Mapping SourceColumn="ParUniCidade" DataSetColumn="ParUniCidade" />
+              <Mapping SourceColumn="ParUniEstado" DataSetColumn="ParUniEstado" />
+              <Mapping SourceColumn="UniNome" DataSetColumn="UniNome" />
+              <Mapping SourceColumn="UniEndereco" DataSetColumn="UniEndereco" />
+              <Mapping SourceColumn="UniNumeroEndereco" DataSetColumn="UniNumeroEndereco" />
+              <Mapping SourceColumn="UniComplemento" DataSetColumn="UniComplemento" />
+              <Mapping SourceColumn="UniBairro" DataSetColumn="UniBairro" />
+              <Mapping SourceColumn="UniCidade" DataSetColumn="UniCidade" />
+              <Mapping SourceColumn="UniEstado" DataSetColumn="UniEstado" />
+              <Mapping SourceColumn="Apr_InicioAprendizagem" DataSetColumn="Apr_InicioAprendizagem" />
+              <Mapping SourceColumn="Apr_PrevFimAprendizagem" DataSetColumn="Apr_PrevFimAprendizagem" />
+              <Mapping SourceColumn="GpaDescricao" DataSetColumn="GpaDescricao" />
+              <Mapping SourceColumn="ALAInicioExpediente" DataSetColumn="ALAInicioExpediente" />
+              <Mapping SourceColumn="ALATerminoExpediente" DataSetColumn="ALATerminoExpediente" />
+              <Mapping SourceColumn="ParDescricao" DataSetColumn="ParDescricao" />
+              <Mapping SourceColumn="Apr_CarteiraDeIdentidade" DataSetColumn="Apr_CarteiraDeIdentidade" />
+              <Mapping SourceColumn="Apr_Telefone" DataSetColumn="Apr_Telefone" />
+              <Mapping SourceColumn="ParCEP" DataSetColumn="ParCEP" />
+              <Mapping SourceColumn="ParUniCEP" DataSetColumn="ParUniCEP" />
+              <Mapping SourceColumn="ParUniTelefone" DataSetColumn="ParUniTelefone" />
+              <Mapping SourceColumn="ParTelefone" DataSetColumn="ParTelefone" />
+              <Mapping SourceColumn="TurInicio" DataSetColumn="TurInicio" />
+              <Mapping SourceColumn="Termino" DataSetColumn="Termino" />
+              <Mapping SourceColumn="ALADataPrevTermino" DataSetColumn="ALADataPrevTermino" />
+              <Mapping SourceColumn="ALADataTermino" DataSetColumn="ALADataTermino" />
+              <Mapping SourceColumn="TurCurso" DataSetColumn="TurCurso" />
+              <Mapping SourceColumn="ALADataInicio" DataSetColumn="ALADataInicio" />
+              <Mapping SourceColumn="UniCEP" DataSetColumn="UniCEP" />
+              <Mapping SourceColumn="UniTelefone" DataSetColumn="UniTelefone" />
+              <Mapping SourceColumn="UniCGC" DataSetColumn="UniCGC" />
+              <Mapping SourceColumn="Apr_CPF" DataSetColumn="Apr_CPF" />
+              <Mapping SourceColumn="ParRespFundacao" DataSetColumn="ParRespFundacao" />
+              <Mapping SourceColumn="ParCargoRepresentanteLegal" DataSetColumn="ParCargoRepresentanteLegal" />
+              <Mapping SourceColumn="Apr_DataContrato" DataSetColumn="Apr_DataContrato" />
+              <Mapping SourceColumn="UniRepresentanteLegal" DataSetColumn="UniRepresentanteLegal" />
+              <Mapping SourceColumn="UniRepresentanteCargo" DataSetColumn="UniRepresentanteCargo" />
+              <Mapping SourceColumn="DiaDaSemana" DataSetColumn="DiaDaSemana" />
+              <Mapping SourceColumn="TurDiaSemana" DataSetColumn="TurDiaSemana" />
+              <Mapping SourceColumn="ALAValorTaxa" DataSetColumn="ALAValorTaxa" />
+              <Mapping SourceColumn="ValorCeduc" DataSetColumn="ValorCeduc" />
+              <Mapping SourceColumn="ALAValorEncargos" DataSetColumn="ALAValorEncargos" />
+              <Mapping SourceColumn="Apr_Escolaridade" DataSetColumn="Apr_Escolaridade" />
+              <Mapping SourceColumn="GreDescricao" DataSetColumn="GreDescricao" />
+              <Mapping SourceColumn="Apr_MesesContrato" DataSetColumn="Apr_MesesContrato" />
+              <Mapping SourceColumn="TurNome" DataSetColumn="TurNome" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ContratoView" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ContratoView" msprop:Generator_UserDSName="ContratoView">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Contrato_Aprediz" msprop:Generator_TableClassName="View_Contrato_ApredizDataTable" msprop:Generator_TableVarName="tableView_Contrato_Aprediz" msprop:Generator_TablePropName="View_Contrato_Aprediz" msprop:Generator_RowDeletingName="View_Contrato_ApredizRowDeleting" msprop:Generator_RowChangingName="View_Contrato_ApredizRowChanging" msprop:Generator_RowEvHandlerName="View_Contrato_ApredizRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Contrato_ApredizRowDeleted" msprop:Generator_UserTableName="View_Contrato_Aprediz" msprop:Generator_RowChangedName="View_Contrato_ApredizRowChanged" msprop:Generator_RowEvArgName="View_Contrato_ApredizRowChangeEvent" msprop:Generator_RowClassName="View_Contrato_ApredizRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apr_Codigo" msprop:Generator_ColumnVarNameInTable="columnApr_Codigo" msprop:Generator_ColumnPropNameInRow="Apr_Codigo" msprop:Generator_ColumnPropNameInTable="Apr_CodigoColumn" msprop:Generator_UserColumnName="Apr_Codigo" type="xs:int" />
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_DataDeNascimento" msprop:Generator_ColumnVarNameInTable="columnApr_DataDeNascimento" msprop:Generator_ColumnPropNameInRow="Apr_DataDeNascimento" msprop:Generator_ColumnPropNameInTable="Apr_DataDeNascimentoColumn" msprop:Generator_UserColumnName="Apr_DataDeNascimento" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Apr_Endereço" msprop:Generator_ColumnVarNameInTable="columnApr_Endereço" msprop:Generator_ColumnPropNameInRow="Apr_Endereço" msprop:Generator_ColumnPropNameInTable="Apr_EndereçoColumn" msprop:Generator_UserColumnName="Apr_Endereço" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_NumeroEndereco" msprop:Generator_ColumnVarNameInTable="columnApr_NumeroEndereco" msprop:Generator_ColumnPropNameInRow="Apr_NumeroEndereco" msprop:Generator_ColumnPropNameInTable="Apr_NumeroEnderecoColumn" msprop:Generator_UserColumnName="Apr_NumeroEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Complemento" msprop:Generator_ColumnVarNameInTable="columnApr_Complemento" msprop:Generator_ColumnPropNameInRow="Apr_Complemento" msprop:Generator_ColumnPropNameInTable="Apr_ComplementoColumn" msprop:Generator_UserColumnName="Apr_Complemento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Bairro" msprop:Generator_ColumnVarNameInTable="columnApr_Bairro" msprop:Generator_ColumnPropNameInRow="Apr_Bairro" msprop:Generator_ColumnPropNameInTable="Apr_BairroColumn" msprop:Generator_UserColumnName="Apr_Bairro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Cidade" msprop:Generator_ColumnVarNameInTable="columnApr_Cidade" msprop:Generator_ColumnPropNameInRow="Apr_Cidade" msprop:Generator_ColumnPropNameInTable="Apr_CidadeColumn" msprop:Generator_UserColumnName="Apr_Cidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_UF" msprop:Generator_ColumnVarNameInTable="columnApr_UF" msprop:Generator_ColumnPropNameInRow="Apr_UF" msprop:Generator_ColumnPropNameInTable="Apr_UFColumn" msprop:Generator_UserColumnName="Apr_UF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_CEP" msprop:Generator_ColumnVarNameInTable="columnApr_CEP" msprop:Generator_ColumnPropNameInRow="Apr_CEP" msprop:Generator_ColumnPropNameInTable="Apr_CEPColumn" msprop:Generator_UserColumnName="Apr_CEP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_CarteiraDeTrabalho" msprop:Generator_ColumnVarNameInTable="columnApr_CarteiraDeTrabalho" msprop:Generator_ColumnPropNameInRow="Apr_CarteiraDeTrabalho" msprop:Generator_ColumnPropNameInTable="Apr_CarteiraDeTrabalhoColumn" msprop:Generator_UserColumnName="Apr_CarteiraDeTrabalho" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Serie_Cartrab" msprop:Generator_ColumnVarNameInTable="columnApr_Serie_Cartrab" msprop:Generator_ColumnPropNameInRow="Apr_Serie_Cartrab" msprop:Generator_ColumnPropNameInTable="Apr_Serie_CartrabColumn" msprop:Generator_UserColumnName="Apr_Serie_Cartrab" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_PIS" msprop:Generator_ColumnVarNameInTable="columnApr_PIS" msprop:Generator_ColumnPropNameInRow="Apr_PIS" msprop:Generator_ColumnPropNameInTable="Apr_PISColumn" msprop:Generator_UserColumnName="Apr_PIS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Responsavel" msprop:Generator_ColumnVarNameInTable="columnApr_Responsavel" msprop:Generator_ColumnPropNameInRow="Apr_Responsavel" msprop:Generator_ColumnPropNameInTable="Apr_ResponsavelColumn" msprop:Generator_UserColumnName="Apr_Responsavel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Resp_CPF" msprop:Generator_ColumnVarNameInTable="columnApr_Resp_CPF" msprop:Generator_ColumnPropNameInRow="Apr_Resp_CPF" msprop:Generator_ColumnPropNameInTable="Apr_Resp_CPFColumn" msprop:Generator_UserColumnName="Apr_Resp_CPF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AreaDescricao" msprop:Generator_ColumnVarNameInTable="columnAreaDescricao" msprop:Generator_ColumnPropNameInRow="AreaDescricao" msprop:Generator_ColumnPropNameInTable="AreaDescricaoColumn" msprop:Generator_UserColumnName="AreaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParNomeFantasia" msprop:Generator_ColumnVarNameInTable="columnParNomeFantasia" msprop:Generator_ColumnPropNameInRow="ParNomeFantasia" msprop:Generator_ColumnPropNameInTable="ParNomeFantasiaColumn" msprop:Generator_UserColumnName="ParNomeFantasia" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParCNPJ" msprop:Generator_ColumnVarNameInTable="columnParCNPJ" msprop:Generator_ColumnPropNameInRow="ParCNPJ" msprop:Generator_ColumnPropNameInTable="ParCNPJColumn" msprop:Generator_UserColumnName="ParCNPJ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParEndereco" msprop:Generator_ColumnVarNameInTable="columnParEndereco" msprop:Generator_ColumnPropNameInRow="ParEndereco" msprop:Generator_ColumnPropNameInTable="ParEnderecoColumn" msprop:Generator_UserColumnName="ParEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParNumeroEndereco" msprop:Generator_ColumnVarNameInTable="columnParNumeroEndereco" msprop:Generator_ColumnPropNameInRow="ParNumeroEndereco" msprop:Generator_ColumnPropNameInTable="ParNumeroEnderecoColumn" msprop:Generator_UserColumnName="ParNumeroEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParComplemento" msprop:Generator_ColumnVarNameInTable="columnParComplemento" msprop:Generator_ColumnPropNameInRow="ParComplemento" msprop:Generator_ColumnPropNameInTable="ParComplementoColumn" msprop:Generator_UserColumnName="ParComplemento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParNomeContato" msprop:Generator_ColumnVarNameInTable="columnParNomeContato" msprop:Generator_ColumnPropNameInRow="ParNomeContato" msprop:Generator_ColumnPropNameInTable="ParNomeContatoColumn" msprop:Generator_UserColumnName="ParNomeContato" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParBairro" msprop:Generator_ColumnVarNameInTable="columnParBairro" msprop:Generator_ColumnPropNameInRow="ParBairro" msprop:Generator_ColumnPropNameInTable="ParBairroColumn" msprop:Generator_UserColumnName="ParBairro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParCidade" msprop:Generator_ColumnVarNameInTable="columnParCidade" msprop:Generator_ColumnPropNameInRow="ParCidade" msprop:Generator_ColumnPropNameInTable="ParCidadeColumn" msprop:Generator_UserColumnName="ParCidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParEstado" msprop:Generator_ColumnVarNameInTable="columnParEstado" msprop:Generator_ColumnPropNameInRow="ParEstado" msprop:Generator_ColumnPropNameInTable="ParEstadoColumn" msprop:Generator_UserColumnName="ParEstado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALAValorBolsa" msprop:Generator_ColumnVarNameInTable="columnALAValorBolsa" msprop:Generator_ColumnPropNameInRow="ALAValorBolsa" msprop:Generator_ColumnPropNameInTable="ALAValorBolsaColumn" msprop:Generator_UserColumnName="ALAValorBolsa" type="xs:float" minOccurs="0" />
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniCNPJ" msprop:Generator_ColumnVarNameInTable="columnParUniCNPJ" msprop:Generator_ColumnPropNameInRow="ParUniCNPJ" msprop:Generator_ColumnPropNameInTable="ParUniCNPJColumn" msprop:Generator_UserColumnName="ParUniCNPJ" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniEndereco" msprop:Generator_ColumnVarNameInTable="columnParUniEndereco" msprop:Generator_ColumnPropNameInRow="ParUniEndereco" msprop:Generator_ColumnPropNameInTable="ParUniEnderecoColumn" msprop:Generator_UserColumnName="ParUniEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniNumeroEndereco" msprop:Generator_ColumnVarNameInTable="columnParUniNumeroEndereco" msprop:Generator_ColumnPropNameInRow="ParUniNumeroEndereco" msprop:Generator_ColumnPropNameInTable="ParUniNumeroEnderecoColumn" msprop:Generator_UserColumnName="ParUniNumeroEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniComplemento" msprop:Generator_ColumnVarNameInTable="columnParUniComplemento" msprop:Generator_ColumnPropNameInRow="ParUniComplemento" msprop:Generator_ColumnPropNameInTable="ParUniComplementoColumn" msprop:Generator_UserColumnName="ParUniComplemento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniBairro" msprop:Generator_ColumnVarNameInTable="columnParUniBairro" msprop:Generator_ColumnPropNameInRow="ParUniBairro" msprop:Generator_ColumnPropNameInTable="ParUniBairroColumn" msprop:Generator_UserColumnName="ParUniBairro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniCidade" msprop:Generator_ColumnVarNameInTable="columnParUniCidade" msprop:Generator_ColumnPropNameInRow="ParUniCidade" msprop:Generator_ColumnPropNameInTable="ParUniCidadeColumn" msprop:Generator_UserColumnName="ParUniCidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniEstado" msprop:Generator_ColumnVarNameInTable="columnParUniEstado" msprop:Generator_ColumnPropNameInRow="ParUniEstado" msprop:Generator_ColumnPropNameInTable="ParUniEstadoColumn" msprop:Generator_UserColumnName="ParUniEstado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniNome" msprop:Generator_ColumnVarNameInTable="columnUniNome" msprop:Generator_ColumnPropNameInRow="UniNome" msprop:Generator_ColumnPropNameInTable="UniNomeColumn" msprop:Generator_UserColumnName="UniNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniEndereco" msprop:Generator_ColumnVarNameInTable="columnUniEndereco" msprop:Generator_ColumnPropNameInRow="UniEndereco" msprop:Generator_ColumnPropNameInTable="UniEnderecoColumn" msprop:Generator_UserColumnName="UniEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniNumeroEndereco" msprop:Generator_ColumnVarNameInTable="columnUniNumeroEndereco" msprop:Generator_ColumnPropNameInRow="UniNumeroEndereco" msprop:Generator_ColumnPropNameInTable="UniNumeroEnderecoColumn" msprop:Generator_UserColumnName="UniNumeroEndereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniComplemento" msprop:Generator_ColumnVarNameInTable="columnUniComplemento" msprop:Generator_ColumnPropNameInRow="UniComplemento" msprop:Generator_ColumnPropNameInTable="UniComplementoColumn" msprop:Generator_UserColumnName="UniComplemento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniBairro" msprop:Generator_ColumnVarNameInTable="columnUniBairro" msprop:Generator_ColumnPropNameInRow="UniBairro" msprop:Generator_ColumnPropNameInTable="UniBairroColumn" msprop:Generator_UserColumnName="UniBairro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniCidade" msprop:Generator_ColumnVarNameInTable="columnUniCidade" msprop:Generator_ColumnPropNameInRow="UniCidade" msprop:Generator_ColumnPropNameInTable="UniCidadeColumn" msprop:Generator_UserColumnName="UniCidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniEstado" msprop:Generator_ColumnVarNameInTable="columnUniEstado" msprop:Generator_ColumnPropNameInRow="UniEstado" msprop:Generator_ColumnPropNameInTable="UniEstadoColumn" msprop:Generator_UserColumnName="UniEstado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_InicioAprendizagem" msprop:Generator_ColumnVarNameInTable="columnApr_InicioAprendizagem" msprop:Generator_ColumnPropNameInRow="Apr_InicioAprendizagem" msprop:Generator_ColumnPropNameInTable="Apr_InicioAprendizagemColumn" msprop:Generator_UserColumnName="Apr_InicioAprendizagem" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Apr_PrevFimAprendizagem" msprop:Generator_ColumnVarNameInTable="columnApr_PrevFimAprendizagem" msprop:Generator_ColumnPropNameInRow="Apr_PrevFimAprendizagem" msprop:Generator_ColumnPropNameInTable="Apr_PrevFimAprendizagemColumn" msprop:Generator_UserColumnName="Apr_PrevFimAprendizagem" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GpaDescricao" msprop:Generator_ColumnVarNameInTable="columnGpaDescricao" msprop:Generator_ColumnPropNameInRow="GpaDescricao" msprop:Generator_ColumnPropNameInTable="GpaDescricaoColumn" msprop:Generator_UserColumnName="GpaDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALAInicioExpediente" msprop:Generator_ColumnVarNameInTable="columnALAInicioExpediente" msprop:Generator_ColumnPropNameInRow="ALAInicioExpediente" msprop:Generator_ColumnPropNameInTable="ALAInicioExpedienteColumn" msprop:Generator_UserColumnName="ALAInicioExpediente" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ALATerminoExpediente" msprop:Generator_ColumnVarNameInTable="columnALATerminoExpediente" msprop:Generator_ColumnPropNameInRow="ALATerminoExpediente" msprop:Generator_ColumnPropNameInTable="ALATerminoExpedienteColumn" msprop:Generator_UserColumnName="ALATerminoExpediente" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ParDescricao" msprop:Generator_ColumnVarNameInTable="columnParDescricao" msprop:Generator_ColumnPropNameInRow="ParDescricao" msprop:Generator_ColumnPropNameInTable="ParDescricaoColumn" msprop:Generator_UserColumnName="ParDescricao">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_CarteiraDeIdentidade" msprop:Generator_ColumnVarNameInTable="columnApr_CarteiraDeIdentidade" msprop:Generator_ColumnPropNameInRow="Apr_CarteiraDeIdentidade" msprop:Generator_ColumnPropNameInTable="Apr_CarteiraDeIdentidadeColumn" msprop:Generator_UserColumnName="Apr_CarteiraDeIdentidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_Telefone" msprop:Generator_ColumnVarNameInTable="columnApr_Telefone" msprop:Generator_ColumnPropNameInRow="Apr_Telefone" msprop:Generator_ColumnPropNameInTable="Apr_TelefoneColumn" msprop:Generator_UserColumnName="Apr_Telefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParCEP" msprop:Generator_ColumnVarNameInTable="columnParCEP" msprop:Generator_ColumnPropNameInRow="ParCEP" msprop:Generator_ColumnPropNameInTable="ParCEPColumn" msprop:Generator_UserColumnName="ParCEP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniCEP" msprop:Generator_ColumnVarNameInTable="columnParUniCEP" msprop:Generator_ColumnPropNameInRow="ParUniCEP" msprop:Generator_ColumnPropNameInTable="ParUniCEPColumn" msprop:Generator_UserColumnName="ParUniCEP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParUniTelefone" msprop:Generator_ColumnVarNameInTable="columnParUniTelefone" msprop:Generator_ColumnPropNameInRow="ParUniTelefone" msprop:Generator_ColumnPropNameInTable="ParUniTelefoneColumn" msprop:Generator_UserColumnName="ParUniTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParTelefone" msprop:Generator_ColumnVarNameInTable="columnParTelefone" msprop:Generator_ColumnPropNameInRow="ParTelefone" msprop:Generator_ColumnPropNameInTable="ParTelefoneColumn" msprop:Generator_UserColumnName="ParTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TurInicio" msprop:Generator_ColumnVarNameInTable="columnTurInicio" msprop:Generator_ColumnPropNameInRow="TurInicio" msprop:Generator_ColumnPropNameInTable="TurInicioColumn" msprop:Generator_UserColumnName="TurInicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Termino" msprop:Generator_ColumnVarNameInTable="columnTermino" msprop:Generator_ColumnPropNameInRow="Termino" msprop:Generator_ColumnPropNameInTable="TerminoColumn" msprop:Generator_UserColumnName="Termino" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ALADataPrevTermino" msprop:Generator_ColumnVarNameInTable="columnALADataPrevTermino" msprop:Generator_ColumnPropNameInRow="ALADataPrevTermino" msprop:Generator_ColumnPropNameInTable="ALADataPrevTerminoColumn" msprop:Generator_UserColumnName="ALADataPrevTermino" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ALADataTermino" msprop:Generator_ColumnVarNameInTable="columnALADataTermino" msprop:Generator_ColumnPropNameInRow="ALADataTermino" msprop:Generator_ColumnPropNameInTable="ALADataTerminoColumn" msprop:Generator_UserColumnName="ALADataTermino" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TurCurso" msprop:Generator_ColumnVarNameInTable="columnTurCurso" msprop:Generator_ColumnPropNameInRow="TurCurso" msprop:Generator_ColumnPropNameInTable="TurCursoColumn" msprop:Generator_UserColumnName="TurCurso" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALADataInicio" msprop:Generator_ColumnVarNameInTable="columnALADataInicio" msprop:Generator_ColumnPropNameInRow="ALADataInicio" msprop:Generator_ColumnPropNameInTable="ALADataInicioColumn" msprop:Generator_UserColumnName="ALADataInicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UniCEP" msprop:Generator_ColumnVarNameInTable="columnUniCEP" msprop:Generator_ColumnPropNameInRow="UniCEP" msprop:Generator_ColumnPropNameInTable="UniCEPColumn" msprop:Generator_UserColumnName="UniCEP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniTelefone" msprop:Generator_ColumnVarNameInTable="columnUniTelefone" msprop:Generator_ColumnPropNameInRow="UniTelefone" msprop:Generator_ColumnPropNameInTable="UniTelefoneColumn" msprop:Generator_UserColumnName="UniTelefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniCGC" msprop:Generator_ColumnVarNameInTable="columnUniCGC" msprop:Generator_ColumnPropNameInRow="UniCGC" msprop:Generator_ColumnPropNameInTable="UniCGCColumn" msprop:Generator_UserColumnName="UniCGC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_CPF" msprop:Generator_ColumnVarNameInTable="columnApr_CPF" msprop:Generator_ColumnPropNameInRow="Apr_CPF" msprop:Generator_ColumnPropNameInTable="Apr_CPFColumn" msprop:Generator_UserColumnName="Apr_CPF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParRespFundacao" msprop:Generator_ColumnVarNameInTable="columnParRespFundacao" msprop:Generator_ColumnPropNameInRow="ParRespFundacao" msprop:Generator_ColumnPropNameInTable="ParRespFundacaoColumn" msprop:Generator_UserColumnName="ParRespFundacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ParCargoRepresentanteLegal" msprop:Generator_ColumnVarNameInTable="columnParCargoRepresentanteLegal" msprop:Generator_ColumnPropNameInRow="ParCargoRepresentanteLegal" msprop:Generator_ColumnPropNameInTable="ParCargoRepresentanteLegalColumn" msprop:Generator_UserColumnName="ParCargoRepresentanteLegal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_DataContrato" msprop:Generator_ColumnVarNameInTable="columnApr_DataContrato" msprop:Generator_ColumnPropNameInRow="Apr_DataContrato" msprop:Generator_ColumnPropNameInTable="Apr_DataContratoColumn" msprop:Generator_UserColumnName="Apr_DataContrato" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UniRepresentanteLegal" msprop:Generator_ColumnVarNameInTable="columnUniRepresentanteLegal" msprop:Generator_ColumnPropNameInRow="UniRepresentanteLegal" msprop:Generator_ColumnPropNameInTable="UniRepresentanteLegalColumn" msprop:Generator_UserColumnName="UniRepresentanteLegal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UniRepresentanteCargo" msprop:Generator_ColumnVarNameInTable="columnUniRepresentanteCargo" msprop:Generator_ColumnPropNameInRow="UniRepresentanteCargo" msprop:Generator_ColumnPropNameInTable="UniRepresentanteCargoColumn" msprop:Generator_UserColumnName="UniRepresentanteCargo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DiaDaSemana" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDiaDaSemana" msprop:Generator_ColumnPropNameInRow="DiaDaSemana" msprop:Generator_ColumnPropNameInTable="DiaDaSemanaColumn" msprop:Generator_UserColumnName="DiaDaSemana" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TurDiaSemana" msprop:Generator_ColumnVarNameInTable="columnTurDiaSemana" msprop:Generator_ColumnPropNameInRow="TurDiaSemana" msprop:Generator_ColumnPropNameInTable="TurDiaSemanaColumn" msprop:Generator_UserColumnName="TurDiaSemana" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALAValorTaxa" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnALAValorTaxa" msprop:Generator_ColumnPropNameInRow="ALAValorTaxa" msprop:Generator_ColumnPropNameInTable="ALAValorTaxaColumn" msprop:Generator_UserColumnName="ALAValorTaxa" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ValorCeduc" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnValorCeduc" msprop:Generator_ColumnPropNameInRow="ValorCeduc" msprop:Generator_ColumnPropNameInTable="ValorCeducColumn" msprop:Generator_UserColumnName="ValorCeduc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ALAValorEncargos" msprop:Generator_ColumnVarNameInTable="columnALAValorEncargos" msprop:Generator_ColumnPropNameInRow="ALAValorEncargos" msprop:Generator_ColumnPropNameInTable="ALAValorEncargosColumn" msprop:Generator_UserColumnName="ALAValorEncargos" type="xs:float" minOccurs="0" />
+              <xs:element name="Apr_Escolaridade" msprop:Generator_ColumnVarNameInTable="columnApr_Escolaridade" msprop:Generator_ColumnPropNameInRow="Apr_Escolaridade" msprop:Generator_ColumnPropNameInTable="Apr_EscolaridadeColumn" msprop:Generator_UserColumnName="Apr_Escolaridade" type="xs:int" minOccurs="0" />
+              <xs:element name="GreDescricao" msprop:Generator_ColumnVarNameInTable="columnGreDescricao" msprop:Generator_ColumnPropNameInRow="GreDescricao" msprop:Generator_ColumnPropNameInTable="GreDescricaoColumn" msprop:Generator_UserColumnName="GreDescricao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Apr_MesesContrato" msprop:Generator_ColumnVarNameInTable="columnApr_MesesContrato" msprop:Generator_ColumnPropNameInRow="Apr_MesesContrato" msprop:Generator_ColumnPropNameInTable="Apr_MesesContratoColumn" msprop:Generator_UserColumnName="Apr_MesesContrato" type="xs:short" minOccurs="0" />
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Contrato_Aprediz" />
+      <xs:field xpath="mstns:Apr_Codigo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

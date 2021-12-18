@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Ocorr" targetNamespace="http://tempuri.org/Ocorr.xsd" xmlns:mstns="http://tempuri.org/Ocorr.xsd" xmlns="http://tempuri.org/Ocorr.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Ocorr" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Ocorr" msprop:Generator_UserDSName="Ocorr">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ocorr" msprop:Generator_TableClassName="OcorrDataTable" msprop:Generator_TableVarName="tableOcorr" msprop:Generator_TablePropName="_Ocorr" msprop:Generator_RowDeletingName="OcorrRowDeleting" msprop:Generator_RowChangingName="OcorrRowChanging" msprop:Generator_RowEvHandlerName="OcorrRowChangeEventHandler" msprop:Generator_RowDeletedName="OcorrRowDeleted" msprop:Generator_UserTableName="Ocorr" msprop:Generator_RowChangedName="OcorrRowChanged" msprop:Generator_RowEvArgName="OcorrRowChangeEvent" msprop:Generator_RowClassName="OcorrRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Apr_Nome" msprop:Generator_ColumnVarNameInTable="columnApr_Nome" msprop:Generator_ColumnPropNameInRow="Apr_Nome" msprop:Generator_ColumnPropNameInTable="Apr_NomeColumn" msprop:Generator_UserColumnName="Apr_Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="Apr_CarteiraDeIdentidade" msprop:Generator_ColumnVarNameInTable="columnApr_CarteiraDeIdentidade" msprop:Generator_ColumnPropNameInRow="Apr_CarteiraDeIdentidade" msprop:Generator_ColumnPropNameInTable="Apr_CarteiraDeIdentidadeColumn" msprop:Generator_UserColumnName="Apr_CarteiraDeIdentidade" type="xs:string" minOccurs="0" />
+              <xs:element name="OcoDescricao" msprop:Generator_ColumnVarNameInTable="columnOcoDescricao" msprop:Generator_ColumnPropNameInRow="OcoDescricao" msprop:Generator_ColumnPropNameInTable="OcoDescricaoColumn" msprop:Generator_UserColumnName="OcoDescricao" type="xs:string" minOccurs="0" />
+              <xs:element name="OcaDataOcorrencia" msprop:Generator_ColumnVarNameInTable="columnOcaDataOcorrencia" msprop:Generator_ColumnPropNameInRow="OcaDataOcorrencia" msprop:Generator_ColumnPropNameInTable="OcaDataOcorrenciaColumn" msprop:Generator_UserColumnName="OcaDataOcorrencia" type="xs:string" minOccurs="0" />
+              <xs:element name="ParUniCidade" msprop:Generator_ColumnVarNameInTable="columnParUniCidade" msprop:Generator_ColumnPropNameInRow="ParUniCidade" msprop:Generator_ColumnPropNameInTable="ParUniCidadeColumn" msprop:Generator_UserColumnName="ParUniCidade" type="xs:string" minOccurs="0" />
+              <xs:element name="ParUniDescricao" msprop:Generator_ColumnVarNameInTable="columnParUniDescricao" msprop:Generator_ColumnPropNameInRow="ParUniDescricao" msprop:Generator_ColumnPropNameInTable="ParUniDescricaoColumn" msprop:Generator_UserColumnName="ParUniDescricao" type="xs:string" minOccurs="0" />
+              <xs:element name="UniCidade" msprop:Generator_ColumnVarNameInTable="columnUniCidade" msprop:Generator_ColumnPropNameInRow="UniCidade" msprop:Generator_ColumnPropNameInTable="UniCidadeColumn" msprop:Generator_UserColumnName="UniCidade" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

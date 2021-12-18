@@ -1,0 +1,46 @@
+﻿
+        #Panel_popup
+        {
+            width: 430px;
+            height: 220px;
+            background: #FFFFFF;
+            display: none;
+        }
+        
+         #Panel_popup .title
+        {
+            width: 100%;
+            height:20px;
+            background: #6495ED;
+            text-align: right; 
+        }
+        
+           #Panel_popup .title a
+        {
+            
+            margin-right: 30px;
+            color: #FFFFFF;
+            font: 10pt verdana;
+            text-decoration: none;
+        }
+        
+        #Panel_popup .mensagem
+        {
+            width: 80%;
+            margin: 30px auto 0 auto;
+        }
+        
+          #Panel_popup .mensagem span
+        {
+            color: #7f7f7f;
+            font: 11pt verdana;
+            text-align: left;
+        }
+        
+         #Panel_popup .buttons
+        {
+        
+            width: 80%;
+            margin: 30px auto;
+            text-align: center;
+        }

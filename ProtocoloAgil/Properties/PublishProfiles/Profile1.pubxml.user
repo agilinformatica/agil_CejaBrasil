@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2014-02-12T15:57:22.7950064-02:00</TimeStampOfAssociatedLegacyPublishXmlFile>
+    <_PublishTargetUrl>c:\compilado</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Account/ChangePassword.aspx">
+      <publishTime>11/01/2012 09:02:55</publishTime>
+    </File>
+    <File Include="Account/ChangePasswordSuccess.aspx">
+      <publishTime>11/01/2012 09:02:56</publishTime>
+    </File>
+    <File Include="Account/Login.aspx">
+      <publishTime>11/01/2012 09:02:56</publishTime>
+    </File>
+    <File Include="Account/Register.aspx">
+      <publishTime>11/01/2012 09:02:56</publishTime>
+    </File>
+    <File Include="Account/Web.config">
+      <publishTime>11/01/2012 09:02:56</publishTime>
+    </File>
+    <File Include="App_Data/App.config">
+      <publishTime>03/06/2013 12:00:13</publishTime>
+    </File>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>09/27/2011 11:30:28</publishTime>
+    </File>
+    <File Include="bin/AmCharts.Windows.QuickCharts.dll">
+      <publishTime>08/11/2011 13:07:04</publishTime>
+    </File>
+    <File Include="bin/CalendarExtenderPlus.dll">
+      <publishTime>09/10/2009 21:29:46</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>03/12/2014 13:01:10</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>03/12/2014 13:01:10</publishTime>
+    </File>
+    <File Include="bin/FreeTextBox.dll">
+      <publishTime>01/29/2011 07:51:50</publishTime>
+    </File>
+    <File Include="bin/Ionic.Zip.dll">
+      <publishTime>08/06/2011 21:01:40</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>09/16/2013 11:21:44</publishTime>
+    </File>
+    <File Include="bin/itextsharp.xmlworker.dll">
+      <publishTime>09/16/2013 11:21:50</publishTime>
+    </File>
+    <File Include="bin/MenorAprendizWeb.Base.dll">
+      <publishTime>06/16/2014 14:03:09</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.Common.dll">
+      <publishTime>03/25/2014 09:38:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.DataVisualization.dll">
+      <publishTime>03/25/2014 09:38:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.ProcessingObjectModel.dll">
+      <publishTime>03/25/2014 09:38:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ReportViewer.WebForms.DLL">
+      <publishTime>03/27/2014 13:41:05</publishTime>
+    </File>
+    <File Include="bin/Microsoft.SqlServer.Types.dll">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="bin/ProtocoloAgil.dll">
+      <publishTime>06/16/2014 14:08:24</publishTime>
+    </File>
+    <File Include="bin/ProtocoloAgil.XmlSerializers.dll">
+      <publishTime>06/16/2014 14:08:25</publishTime>
+    </File>
+    <File Include="bin/reports/RPListaAlunosPresenca.rdlc">
+      <publishTime>06/11/2014 13:08:29</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x64/msvcr100.dll">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x64/SqlServerSpatial110.dll">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x86/msvcr100.dll">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="bin/SqlServerTypes/x86/SqlServerSpatial110.dll">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="bin/TimePicker.dll">
+      <publishTime>05/24/2010 14:37:16</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>03/12/2014 11:58:40</publishTime>
+    </File>
+    <File Include="files/boletos/boletoBB.html">
+      <publishTime>11/01/2012 09:31:27</publishTime>
+    </File>
+    <File Include="files/fotos/semfoto.jpg">
+      <publishTime>11/08/2013 11:47:56</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/01/2012 09:02:56</publishTime>
+    </File>
+    <File Include="images/01.png">
+      <publishTime>11/01/2013 09:15:27</publishTime>
+    </File>
+    <File Include="images/02.png">
+      <publishTime>11/01/2013 09:15:27</publishTime>
+    </File>
+    <File Include="images/03.png">
+      <publishTime>11/01/2013 09:15:27</publishTime>
+    </File>
+    <File Include="images/04.png">
+      <publishTime>11/01/2013 09:15:27</publishTime>
+    </File>
+    <File Include="images/05.png">
+      <publishTime>11/01/2013 09:15:27</publishTime>
+    </File>
+    <File Include="images/06.png">
+      <publishTime>11/01/2013 09:15:27</publishTime>
+    </File>
+    <File Include="images/07.png">
+      <publishTime>11/01/2013 09:15:27</publishTime>
+    </File>
+    <File Include="images/08.png">
+      <publishTime>11/01/2013 09:15:27</publishTime>
+    </File>
+    <File Include="images/AddButton.jpg">
+      <publishTime>07/09/2013 11:56:17</publishTime>
+    </File>
+    <File Include="images/alterar.jpg">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/arrow_dropdown.png">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/arrow_dropdown_LL.png">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/arrow_dropdown_LL_over.png">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/arrow_dropdown_over.png">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/Assinaturas/IsabelaCC.jpg">
+      <publishTime>05/20/2014 14:36:54</publishTime>
+    </File>
+    <File Include="images/Assinaturas/JaniceFernandes.jpg">
+      <publishTime>05/08/2014 11:54:17</publishTime>
+    </File>
+    <File Include="images/Assinaturas/SaraLopes.jpg">
+      <publishTime>05/08/2014 14:22:56</publishTime>
+    </File>
+    <File Include="images/b.gif">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/barra.gif">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/BBLogo.gif">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/bg-pattern.jpg">
+      <publishTime>01/09/2013 11:45:24</publishTime>
+    </File>
+    <File Include="images/bg-top.png">
+      <publishTime>04/22/2013 08:45:37</publishTime>
+    </File>
+    <File Include="images/bg_body.jpg">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/botao_voltar.gif">
+      <publishTime>05/24/2013 12:15:37</publishTime>
+    </File>
+    <File Include="images/camera.png">
+      <publishTime>11/06/2013 16:15:06</publishTime>
+    </File>
+    <File Include="images/check.png">
+      <publishTime>07/19/2013 08:48:18</publishTime>
+    </File>
+    <File Include="images/confirmar.png">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/corte.gif">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/cs_print.gif">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/detalhes_icone.gif">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/download.jpg">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/down_button.gif">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/fecomercio_rj.png">
+      <publishTime>01/10/2013 11:08:28</publishTime>
+    </File>
+    <File Include="images/FERMER2.BMP">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/Icon-save.png">
+      <publishTime>09/24/2013 13:31:28</publishTime>
+    </File>
+    <File Include="images/iconeAlterar.gif">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/icon_big_user.png">
+      <publishTime>11/01/2012 09:31:28</publishTime>
+    </File>
+    <File Include="images/icon_edit.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/icon_help.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/icon_quit.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/icon_remove.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/icon_reset.jpg">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/icon_small_user.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/icon_upload.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/IMGcorVerde.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/IMGcorVermelha.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/login_icon.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/logocdl.png">
+      <publishTime>02/06/2013 14:54:32</publishTime>
+    </File>
+    <File Include="images/logofundacao.png">
+      <publishTime>03/12/2014 11:51:05</publishTime>
+    </File>
+    <File Include="images/logo_cliente.jpg">
+      <publishTime>01/09/2013 11:45:28</publishTime>
+    </File>
+    <File Include="images/logo_fundacao_732.jpg">
+      <publishTime>03/12/2014 11:53:23</publishTime>
+    </File>
+    <File Include="images/logo_fundacao_bw.png">
+      <publishTime>03/18/2014 16:03:45</publishTime>
+    </File>
+    <File Include="images/logo_interna_cliente.jpg">
+      <publishTime>01/09/2013 11:45:28</publishTime>
+    </File>
+    <File Include="images/logo_mestre_agil.jpg">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/logo_mestre_agil.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/logo_pet.png">
+      <publishTime>02/07/2013 11:53:26</publishTime>
+    </File>
+    <File Include="images/lupa.png">
+      <publishTime>01/18/2013 14:49:23</publishTime>
+    </File>
+    <File Include="images/nova-marca-pet-fcdl.png">
+      <publishTime>02/06/2013 14:49:46</publishTime>
+    </File>
+    <File Include="images/p.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/pet.jpg">
+      <publishTime>02/07/2014 16:35:34</publishTime>
+    </File>
+    <File Include="images/pet.png">
+      <publishTime>09/03/2013 08:51:21</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/btnNext.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/btnPrevious.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/contentPattern.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/default_thumbnail.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/loader.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/sprite.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/btnNext.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/btnPrevious.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/contentPattern.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/default_thumbnail.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/loader.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/sprite.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/default_thumb.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/loader.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite_next.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite_prev.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite_x.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite_y.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/btnNext.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/btnPrevious.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/contentPatternBottom.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/contentPatternLeft.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/contentPatternRight.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/contentPatternTop.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/default_thumbnail.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/loader.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/sprite.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/btnNext.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/btnPrevious.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/default_thumbnail.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/loader.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/sprite.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_square/btnNext.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_square/btnPrevious.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_square/default_thumbnail.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_square/loader.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_square/sprite.png">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/progress-wheel.gif">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/prog_trabalho.png">
+      <publishTime>07/19/2013 09:20:44</publishTime>
+    </File>
+    <File Include="images/senac-rj.png">
+      <publishTime>01/10/2013 11:35:23</publishTime>
+    </File>
+    <File Include="images/senac_escola.png">
+      <publishTime>01/10/2013 11:10:13</publishTime>
+    </File>
+    <File Include="images/sesc_rio.png">
+      <publishTime>01/09/2013 15:47:23</publishTime>
+    </File>
+    <File Include="images/seta_primeiro.jpg">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/seta_ultimo.jpg">
+      <publishTime>11/01/2012 09:31:29</publishTime>
+    </File>
+    <File Include="images/topmenu_alunos.png">
+      <publishTime>04/23/2013 08:52:57</publishTime>
+    </File>
+    <File Include="images/topmenu_professores.png">
+      <publishTime>04/17/2013 16:14:48</publishTime>
+    </File>
+    <File Include="images/up_button.gif">
+      <publishTime>11/01/2012 09:31:30</publishTime>
+    </File>
+    <File Include="images/visualizar.png">
+      <publishTime>01/24/2013 09:51:58</publishTime>
+    </File>
+    <File Include="MaAluno.Master">
+      <publishTime>04/03/2014 15:55:39</publishTime>
+    </File>
+    <File Include="MaEducador.Master">
+      <publishTime>04/03/2014 15:54:57</publishTime>
+    </File>
+    <File Include="MaParceiro.Master">
+      <publishTime>04/03/2014 15:54:57</publishTime>
+    </File>
+    <File Include="MPusers.Master">
+      <publishTime>04/03/2014 15:54:17</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/16/2014 11:48:55</publishTime>
+    </File>
+    <File Include="pages/AlocacaoAlunos.aspx">
+      <publishTime>04/04/2014 11:55:09</publishTime>
+    </File>
+    <File Include="pages/AlteraSenha.aspx">
+      <publishTime>05/24/2013 12:16:05</publishTime>
+    </File>
+    <File Include="pages/AniversariantesPeriodo.aspx">
+      <publishTime>08/19/2013 15:56:00</publishTime>
+    </File>
+    <File Include="pages/AprendizesParceiro.aspx">
+      <publishTime>11/11/2013 10:35:01</publishTime>
+    </File>
+    <File Include="pages/Arquivos.aspx">
+      <publishTime>06/11/2013 10:46:51</publishTime>
+    </File>
+    <File Include="pages/ArquivosAlunos.aspx">
+      <publishTime>10/29/2013 08:58:05</publishTime>
+    </File>
+    <File Include="pages/Avaliacao.aspx">
+      <publishTime>07/05/2013 13:35:10</publishTime>
+    </File>
+    <File Include="pages/AvaliacaoOrientador.aspx">
+      <publishTime>10/23/2013 11:37:15</publishTime>
+    </File>
+    <File Include="pages/AvaliacaoParceiro.aspx">
+      <publishTime>07/19/2013 12:01:54</publishTime>
+    </File>
+    <File Include="pages/BoletimAprendiz.aspx">
+      <publishTime>06/07/2013 09:03:09</publishTime>
+    </File>
+    <File Include="pages/CadastroAprendiz.aspx">
+      <publishTime>05/20/2014 13:17:48</publishTime>
+    </File>
+    <File Include="pages/CadastroAreaAtuacao.aspx">
+      <publishTime>07/23/2013 11:54:52</publishTime>
+    </File>
+    <File Include="pages/CadastroBairro.aspx">
+      <publishTime>11/12/2013 14:04:08</publishTime>
+    </File>
+    <File Include="pages/CadastroConceito.aspx">
+      <publishTime>04/23/2013 15:47:49</publishTime>
+    </File>
+    <File Include="pages/CadastroCurso.aspx">
+      <publishTime>08/19/2013 10:36:24</publishTime>
+    </File>
+    <File Include="pages/CadastroDisciplina.aspx">
+      <publishTime>04/10/2014 10:57:26</publishTime>
+    </File>
+    <File Include="pages/CadastroEscolas.aspx">
+      <publishTime>04/03/2014 16:26:11</publishTime>
+    </File>
+    <File Include="pages/CadastroEvento.aspx">
+      <publishTime>02/04/2014 11:09:17</publishTime>
+    </File>
+    <File Include="pages/CadastroFeriado.aspx">
+      <publishTime>07/04/2013 10:32:42</publishTime>
+    </File>
+    <File Include="pages/CadastroGrauEscolaridade.aspx">
+      <publishTime>06/17/2013 14:00:56</publishTime>
+    </File>
+    <File Include="pages/CadastroGrauParentesco.aspx">
+      <publishTime>06/17/2013 14:17:36</publishTime>
+    </File>
+    <File Include="pages/CadastroIndicesSociais.aspx">
+      <publishTime>06/24/2013 12:02:06</publishTime>
+    </File>
+    <File Include="pages/CadastroItinerarios.aspx">
+      <publishTime>08/14/2013 16:12:57</publishTime>
+    </File>
+    <File Include="pages/CadastroModulo.aspx">
+      <publishTime>06/11/2013 11:08:39</publishTime>
+    </File>
+    <File Include="pages/CadastroMotDesligamento.aspx">
+      <publishTime>06/17/2013 13:54:59</publishTime>
+    </File>
+    <File Include="pages/CadastroOcorrencias.aspx">
+      <publishTime>06/17/2013 11:20:22</publishTime>
+    </File>
+    <File Include="pages/CadastroOpcao.aspx">
+      <publishTime>08/06/2013 15:07:04</publishTime>
+    </File>
+    <File Include="pages/CadastroOrientadores.aspx">
+      <publishTime>11/22/2013 09:03:30</publishTime>
+    </File>
+    <File Include="pages/CadastroParceiros.aspx">
+      <publishTime>05/20/2014 09:05:46</publishTime>
+    </File>
+    <File Include="pages/CadastroParceirosUnidades.aspx">
+      <publishTime>04/22/2014 08:56:56</publishTime>
+    </File>
+    <File Include="pages/CadastroProfissao.aspx">
+      <publishTime>06/17/2013 11:21:02</publishTime>
+    </File>
+    <File Include="pages/CadastroRamoAtividade.aspx">
+      <publishTime>06/28/2013 13:36:02</publishTime>
+    </File>
+    <File Include="pages/CadastroRegiao.aspx">
+      <publishTime>11/12/2013 15:10:04</publishTime>
+    </File>
+    <File Include="pages/CadastroTurma.aspx">
+      <publishTime>11/08/2013 12:00:34</publishTime>
+    </File>
+    <File Include="pages/ContatoSecretaria.aspx">
+      <publishTime>06/12/2013 14:09:30</publishTime>
+    </File>
+    <File Include="pages/Contrato.aspx">
+      <publishTime>05/12/2014 14:39:56</publishTime>
+    </File>
+    <File Include="pages/ControleAcesso.aspx">
+      <publishTime>02/08/2013 11:24:50</publishTime>
+    </File>
+    <File Include="pages/ControleAlocados.aspx">
+      <publishTime>01/15/2014 09:19:21</publishTime>
+    </File>
+    <File Include="pages/ControleAlunos.aspx">
+      <publishTime>06/16/2014 08:47:43</publishTime>
+    </File>
+    <File Include="pages/ControleEducadores.aspx">
+      <publishTime>03/25/2014 09:48:22</publishTime>
+    </File>
+    <File Include="pages/ControleFrequencia.aspx">
+      <publishTime>10/03/2013 09:10:54</publishTime>
+    </File>
+    <File Include="pages/ControlePesquisa.aspx">
+      <publishTime>09/19/2013 15:28:44</publishTime>
+    </File>
+    <File Include="pages/Cronograma.aspx">
+      <publishTime>04/10/2014 08:21:45</publishTime>
+    </File>
+    <File Include="pages/CronogramaAprendizes.aspx">
+      <publishTime>06/11/2013 09:27:09</publishTime>
+    </File>
+    <File Include="pages/DadosProfessores.aspx">
+      <publishTime>09/03/2013 11:18:27</publishTime>
+    </File>
+    <File Include="pages/Destaques.aspx">
+      <publishTime>09/17/2013 13:48:58</publishTime>
+    </File>
+    <File Include="pages/DisciplinasDiario.aspx">
+      <publishTime>09/16/2013 15:13:51</publishTime>
+    </File>
+    <File Include="pages/DisciplinasProfessores.aspx">
+      <publishTime>03/09/2013 16:30:58</publishTime>
+    </File>
+    <File Include="pages/DisciplinasProfessores_old.aspx">
+      <publishTime>03/25/2014 11:06:43</publishTime>
+    </File>
+    <File Include="pages/EnvioEmail.aspx">
+      <publishTime>02/04/2014 08:36:53</publishTime>
+    </File>
+    <File Include="pages/ErrorPage.aspx">
+      <publishTime>02/25/2013 08:37:11</publishTime>
+    </File>
+    <File Include="pages/EstatisticaAlunos.aspx">
+      <publishTime>05/15/2014 12:06:59</publishTime>
+    </File>
+    <File Include="pages/EstatisticaAprendizes.aspx">
+      <publishTime>04/14/2014 08:44:44</publishTime>
+    </File>
+    <File Include="pages/EstatisticaPesquisa.aspx">
+      <publishTime>11/13/2013 12:08:06</publishTime>
+    </File>
+    <File Include="pages/EstatisticaRealizadas.aspx">
+      <publishTime>02/07/2014 09:53:59</publishTime>
+    </File>
+    <File Include="pages/EventosAprendizes.aspx">
+      <publishTime>02/06/2014 15:18:35</publishTime>
+    </File>
+    <File Include="pages/Excluir.aspx">
+      <publishTime>02/07/2013 13:51:25</publishTime>
+    </File>
+    <File Include="pages/FechamentoMensal.aspx">
+      <publishTime>06/27/2013 16:35:39</publishTime>
+    </File>
+    <File Include="pages/GeraDiario.aspx">
+      <publishTime>08/20/2013 15:45:53</publishTime>
+    </File>
+    <File Include="pages/Inicial.aspx">
+      <publishTime>03/12/2014 12:24:57</publishTime>
+    </File>
+    <File Include="pages/LancamentoFaltas.aspx">
+      <publishTime>04/04/2014 11:40:05</publishTime>
+    </File>
+    <File Include="pages/LancamentoOcorrencia.aspx">
+      <publishTime>11/20/2013 09:04:19</publishTime>
+    </File>
+    <File Include="pages/ListaAtivos.aspx">
+      <publishTime>11/21/2013 16:38:49</publishTime>
+    </File>
+    <File Include="pages/ListaCursantes.aspx">
+      <publishTime>03/25/2014 09:50:22</publishTime>
+    </File>
+    <File Include="pages/ListaPresenca.aspx">
+      <publishTime>04/01/2014 11:50:00</publishTime>
+    </File>
+    <File Include="pages/MeusDados.aspx">
+      <publishTime>11/07/2013 10:53:44</publishTime>
+    </File>
+    <File Include="pages/MultiviewUsuarios.aspx">
+      <publishTime>05/21/2014 14:25:33</publishTime>
+    </File>
+    <File Include="pages/NotasFaltas.aspx">
+      <publishTime>02/03/2014 16:00:00</publishTime>
+    </File>
+    <File Include="pages/NotasPeriodo.aspx">
+      <publishTime>09/19/2013 11:42:00</publishTime>
+    </File>
+    <File Include="pages/NotasPeriodoParceiro.aspx">
+      <publishTime>01/15/2014 10:29:41</publishTime>
+    </File>
+    <File Include="pages/ParametrosEscolares.aspx">
+      <publishTime>06/16/2014 09:12:17</publishTime>
+    </File>
+    <File Include="pages/PlanoCurricular.aspx">
+      <publishTime>04/07/2014 16:25:29</publishTime>
+    </File>
+    <File Include="pages/PopupCadastroEscolas.aspx">
+      <publishTime>07/03/2013 10:01:11</publishTime>
+    </File>
+    <File Include="pages/PopupCadastroProfissao.aspx">
+      <publishTime>07/03/2013 09:17:30</publishTime>
+    </File>
+    <File Include="pages/popup_escolas.aspx">
+      <publishTime>05/23/2013 13:29:53</publishTime>
+    </File>
+    <File Include="pages/popup_faltas.aspx">
+      <publishTime>01/17/2014 12:55:00</publishTime>
+    </File>
+    <File Include="pages/RealocarAprendizes.aspx">
+      <publishTime>02/06/2014 15:18:03</publishTime>
+    </File>
+    <File Include="pages/SituacaoAprendiz.aspx">
+      <publishTime>06/28/2013 13:34:40</publishTime>
+    </File>
+    <File Include="pages/VinculoEmpregaticio.aspx">
+      <publishTime>06/17/2013 11:10:57</publishTime>
+    </File>
+    <File Include="pages/visualizador.aspx">
+      <publishTime>03/31/2014 10:31:43</publishTime>
+    </File>
+    <File Include="pages/_DisciplinasProfessores_Retirado.aspx">
+      <publishTime>04/02/2014 11:23:11</publishTime>
+    </File>
+    <File Include="pages/_GeraDiario_Retirado.aspx">
+      <publishTime>04/02/2014 11:22:47</publishTime>
+    </File>
+    <File Include="pages/_NotasFaltas_Retirado.aspx">
+      <publishTime>04/02/2014 11:21:26</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1-vsdoc.js">
+      <publishTime>11/01/2012 09:02:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.js">
+      <publishTime>11/01/2012 09:02:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.min.js">
+      <publishTime>11/01/2012 09:02:56</publishTime>
+    </File>
+    <File Include="Scripts/jquery.prettyPhoto.js">
+      <publishTime>01/24/2013 10:56:17</publishTime>
+    </File>
+    <File Include="Scripts/Mascara.js">
+      <publishTime>04/16/2014 09:27:35</publishTime>
+    </File>
+    <File Include="Scripts/spin.js">
+      <publishTime>11/26/2012 15:51:46</publishTime>
+    </File>
+    <File Include="Scripts/tabs.js">
+      <publishTime>04/22/2013 10:13:09</publishTime>
+    </File>
+    <File Include="Scripts/tabs_alunos.js">
+      <publishTime>04/23/2013 08:59:59</publishTime>
+    </File>
+    <File Include="Scripts/tabs_Parceiros.js">
+      <publishTime>06/06/2013 08:54:00</publishTime>
+    </File>
+    <File Include="Scripts/tabs_prof.js">
+      <publishTime>04/17/2013 16:32:22</publishTime>
+    </File>
+    <File Include="SqlServerTypes/readme.htm">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x64/msvcr100.dll">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x64/SqlServerSpatial110.dll">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x86/msvcr100.dll">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="SqlServerTypes/x86/SqlServerSpatial110.dll">
+      <publishTime>06/16/2014 11:48:54</publishTime>
+    </File>
+    <File Include="Styles/cdl_bh.css">
+      <publishTime>05/09/2014 08:33:53</publishTime>
+    </File>
+    <File Include="Styles/contrato.css">
+      <publishTime>11/05/2013 15:01:41</publishTime>
+    </File>
+    <File Include="Styles/pesquisa.css">
+      <publishTime>02/06/2014 12:13:47</publishTime>
+    </File>
+    <File Include="Styles/popup.css">
+      <publishTime>08/26/2013 11:39:06</publishTime>
+    </File>
+    <File Include="Styles/prettyPhoto.css">
+      <publishTime>01/24/2013 10:58:30</publishTime>
+    </File>
+    <File Include="Styles/Site.css">
+      <publishTime>06/18/2013 11:35:44</publishTime>
+    </File>
+    <File Include="Styles/style.css">
+      <publishTime>02/03/2014 16:07:13</publishTime>
+    </File>
+    <File Include="Styles/teste.css">
+      <publishTime>11/05/2013 15:14:41</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/16/2014 14:08:26</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

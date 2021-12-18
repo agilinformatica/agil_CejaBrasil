@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RPListaTurmas" targetNamespace="http://tempuri.org/RPListaTurmas.xsd" xmlns:mstns="http://tempuri.org/RPListaTurmas.xsd" xmlns="http://tempuri.org/RPListaTurmas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RPListaTurmas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RPListaTurmas" msprop:Generator_UserDSName="RPListaTurmas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RPListaTurmas" msprop:Generator_TableClassName="RPListaTurmasDataTable" msprop:Generator_TableVarName="tableRPListaTurmas" msprop:Generator_TablePropName="_RPListaTurmas" msprop:Generator_RowDeletingName="RPListaTurmasRowDeleting" msprop:Generator_RowChangingName="RPListaTurmasRowChanging" msprop:Generator_RowEvHandlerName="RPListaTurmasRowChangeEventHandler" msprop:Generator_RowDeletedName="RPListaTurmasRowDeleted" msprop:Generator_UserTableName="RPListaTurmas" msprop:Generator_RowChangedName="RPListaTurmasRowChanged" msprop:Generator_RowEvArgName="RPListaTurmasRowChangeEvent" msprop:Generator_RowClassName="RPListaTurmasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TurCodigo" msprop:Generator_ColumnVarNameInTable="columnTurCodigo" msprop:Generator_ColumnPropNameInRow="TurCodigo" msprop:Generator_ColumnPropNameInTable="TurCodigoColumn" msprop:Generator_UserColumnName="TurCodigo" type="xs:string" minOccurs="0" />
+              <xs:element name="TurCurso" msprop:Generator_ColumnVarNameInTable="columnTurCurso" msprop:Generator_ColumnPropNameInRow="TurCurso" msprop:Generator_ColumnPropNameInTable="TurCursoColumn" msprop:Generator_UserColumnName="TurCurso" type="xs:string" minOccurs="0" />
+              <xs:element name="TurNome" msprop:Generator_ColumnVarNameInTable="columnTurNome" msprop:Generator_ColumnPropNameInRow="TurNome" msprop:Generator_ColumnPropNameInTable="TurNomeColumn" msprop:Generator_UserColumnName="TurNome" type="xs:string" minOccurs="0" />
+              <xs:element name="TurDiaSemana" msprop:Generator_ColumnVarNameInTable="columnTurDiaSemana" msprop:Generator_ColumnPropNameInRow="TurDiaSemana" msprop:Generator_ColumnPropNameInTable="TurDiaSemanaColumn" msprop:Generator_UserColumnName="TurDiaSemana" type="xs:string" minOccurs="0" />
+              <xs:element name="TurInicio" msprop:Generator_ColumnVarNameInTable="columnTurInicio" msprop:Generator_ColumnPropNameInRow="TurInicio" msprop:Generator_ColumnPropNameInTable="TurInicioColumn" msprop:Generator_UserColumnName="TurInicio" type="xs:string" minOccurs="0" />
+              <xs:element name="Termino" msprop:Generator_ColumnVarNameInTable="columnTermino" msprop:Generator_ColumnPropNameInRow="Termino" msprop:Generator_ColumnPropNameInTable="TerminoColumn" msprop:Generator_UserColumnName="Termino" type="xs:string" minOccurs="0" />
+              <xs:element name="TurObservacoes" msprop:Generator_ColumnVarNameInTable="columnTurObservacoes" msprop:Generator_ColumnPropNameInRow="TurObservacoes" msprop:Generator_ColumnPropNameInTable="TurObservacoesColumn" msprop:Generator_UserColumnName="TurObservacoes" type="xs:string" minOccurs="0" />
+              <xs:element name="TurUsuario" msprop:Generator_ColumnVarNameInTable="columnTurUsuario" msprop:Generator_ColumnPropNameInRow="TurUsuario" msprop:Generator_ColumnPropNameInTable="TurUsuarioColumn" msprop:Generator_UserColumnName="TurUsuario" type="xs:string" minOccurs="0" />
+              <xs:element name="TurStatus" msprop:Generator_ColumnVarNameInTable="columnTurStatus" msprop:Generator_ColumnPropNameInRow="TurStatus" msprop:Generator_ColumnPropNameInTable="TurStatusColumn" msprop:Generator_UserColumnName="TurStatus" type="xs:string" minOccurs="0" />
+              <xs:element name="TurPlanoCurricular" msprop:Generator_ColumnVarNameInTable="columnTurPlanoCurricular" msprop:Generator_ColumnPropNameInRow="TurPlanoCurricular" msprop:Generator_ColumnPropNameInTable="TurPlanoCurricularColumn" msprop:Generator_UserColumnName="TurPlanoCurricular" type="xs:string" minOccurs="0" />
+              <xs:element name="TurUnidade" msprop:Generator_ColumnVarNameInTable="columnTurUnidade" msprop:Generator_ColumnPropNameInRow="TurUnidade" msprop:Generator_ColumnPropNameInTable="TurUnidadeColumn" msprop:Generator_UserColumnName="TurUnidade" type="xs:string" minOccurs="0" />
+              <xs:element name="TurNumeroMeses" msprop:Generator_ColumnVarNameInTable="columnTurNumeroMeses" msprop:Generator_ColumnPropNameInRow="TurNumeroMeses" msprop:Generator_ColumnPropNameInTable="TurNumeroMesesColumn" msprop:Generator_UserColumnName="TurNumeroMeses" type="xs:string" minOccurs="0" />
+              <xs:element name="CursoDescricao" msprop:Generator_ColumnVarNameInTable="columnCursoDescricao" msprop:Generator_ColumnPropNameInRow="CursoDescricao" msprop:Generator_ColumnPropNameInTable="CursoDescricaoColumn" msprop:Generator_UserColumnName="CursoDescricao" type="xs:string" minOccurs="0" />
+              <xs:element name="NomeUnidade" msprop:Generator_ColumnVarNameInTable="columnNomeUnidade" msprop:Generator_ColumnPropNameInRow="NomeUnidade" msprop:Generator_ColumnPropNameInTable="NomeUnidadeColumn" msprop:Generator_UserColumnName="NomeUnidade" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
