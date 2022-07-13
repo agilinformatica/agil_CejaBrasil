@@ -400,7 +400,7 @@ namespace ProtocoloAgil.Base
                Body = texto,
                Subject = "Mestre Agil Web - Solicitação de informações de acesso."
            };
-           var credenciais = new NetworkCredential("eli@agilsistemas.com", "mestre3415");
+           var credenciais = new NetworkCredential("aprendizagem@agilsistemas.com", "Apr991060@");
            cliente.Credentials = credenciais;
            cliente.Send(mensagem);
        }
@@ -416,7 +416,7 @@ namespace ProtocoloAgil.Base
                Body = texto,
                Subject = "Gestão do Programa Jovem Aprendiz - Avaliação de Aprendizagem."
            };
-           var credenciais = new NetworkCredential("eli@agilsistemas.com", "mestre3415");
+           var credenciais = new NetworkCredential("aprendizagem@agilsistemas.com", "Apr991060@");
            cliente.Credentials = credenciais;
            cliente.Send(mensagem);
        }
